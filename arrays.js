@@ -26,9 +26,7 @@ const courses = [
   { id: 2, name: "SAAD" },
 ];
 
-const course = courses.find((course) => {
-  return course.name === "AZGHOUR";
-});
+const course = courses.find((course) => course.name === "AZGHOUR");
 
 console.log(course);
 

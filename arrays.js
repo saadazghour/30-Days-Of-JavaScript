@@ -141,13 +141,9 @@ arrayOfObject.sort((a, b) => {
   // a > b => 1
   // a === b => 0
 
-  if (a.name < b.name) {
-    return -1;
-  } else if (a.name > b.name) {
-    return 1;
-  } else if (a.name === b.name) {
-    return 0;
-  }
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
 });
 
 console.log(arrayOfObject);

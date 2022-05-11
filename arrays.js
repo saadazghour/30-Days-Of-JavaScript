@@ -141,9 +141,84 @@ arrayOfObject.sort((a, b) => {
   // a > b => 1
   // a === b => 0
 
-  if (a.name < b.name) return -1;
-  if (a.name > b.name) return 1;
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
   return 0;
 });
 
 console.log(arrayOfObject);
+
+// ------------- Testing the Elements of an Array
+
+// every() ==> check every element in given array matches the given crteria!
+// some() ==> check if we have at least one element that matches the given crteria!
+
+// ------------------------------------------------------------------------
+
+// const arrayPostive = [1, 2, 3, 4, 5, 20];
+
+// const allPositive = arrayPostive.every((value) => {
+//   return value >= 0;
+// });
+
+// console.log(allPositive);
+
+const num = [-8, -5, 4, 5, 20];
+
+const atLeastOnePositive = num.some((value) => {
+  return value >= 0;
+});
+
+console.log(atLeastOnePositive);
+
+// ------------- Filtering an Array ==> new Array not modify orriginal Array!
+
+const posNumbers = [2, 5, -5, -4, -5];
+
+// Loop through array! ==> new array!
+const filtered = posNumbers.filter((n) => n >= 0);
+
+console.log(filtered);
+
+// ------------- Mapping an Array ==> new Array not modify orriginal Array!
+
+const items = filtered.map((n) => `<li>${n}</li>`);
+const html = `<ul>${items.join("")}</ul>`;
+console.log(html);
+
+objItems = filtered.map((n) => ({ value: n }));
+console.log(objItems);
+
+// ------------- Chaining Filter && Map!!
+
+const posNumbersChain = [10, 2, 3, 8, -5];
+
+const itemsChain = posNumbersChain
+  .filter((n) => n >= 0)
+  .map((n) => ({ value: n }))
+  .filter((obj) => obj.value > 3)
+  .map((obj) => obj.value);
+
+console.log(itemsChain);
+
+// ------------- Reducing an Array!!
+
+const numbersReduce = [1, 2, 3, 8, -2];
+
+// numbersReduce.map((n) => (sum += n));
+
+// Explanation!
+// a = 0, c = 1 ==> a = 1
+// a = 1, c = 2 ==> a = 3
+// a = 3, c = 3 ==> a = 6
+// a = 6, c = 8 ==> a = 14
+// a = 14, c = -2 ==> a = 12
+
+const sum = numbersReduce.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(sum);

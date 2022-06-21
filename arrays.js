@@ -189,7 +189,7 @@ const items = filtered.map((n) => `<li>${n}</li>`);
 const html = `<ul>${items.join("")}</ul>`;
 console.log(html);
 
-objItems = filtered.map((n) => ({ value: n }));
+const objItems = filtered.map((n) => ({ value: n }));
 console.log(objItems);
 
 // ------------- Chaining Filter && Map!!
@@ -222,3 +222,55 @@ const sum = numbersReduce.reduce((accumulator, currentValue) => {
 }, 0);
 
 console.log(sum);
+
+// ------------- Array from Range!!
+
+const arrayFromRange = (min, max) => {
+  const range = [];
+
+  for (let i = min; i <= max; i++) range.push(i);
+  return range;
+};
+
+// const fromRange = arrayFromRange(-10,-4);
+const fromRange = arrayFromRange(1, 4);
+console.log(fromRange);
+
+// ----------------- Includes!
+// Implement Include method!
+
+const include = (arrayNumbers, searchElement) => {
+  for (const num of arrayNumbers) if (num === searchElement) return true;
+  return false;
+};
+
+console.log(include(fromRange, 3));
+
+// ----------------- Except
+// Implement except method!
+
+const except = (fromRange, excludeRange) => {
+  const result = [];
+  fromRange.forEach((num) => {
+    if (!excludeRange.includes(num)) result.push(num);
+  });
+  return result;
+};
+
+console.log(except(fromRange, [1, 2]));
+
+// ------------  Moving an Element (Implimentation of Array.prototype.move)
+
+const move = (array, fromIndex, toIndex) => {
+  const pos = toIndex;
+  if (pos >= array.length || pos < 0) {
+    throw new Error("Invalid index");
+  }
+
+  const newArray = [...array];
+  const element = newArray.splice(fromIndex, 1)[0];
+  newArray.splice(toIndex, 0, element);
+  return newArray;
+};
+
+console.log(move([1, 2, 3, 4], 1, -1));

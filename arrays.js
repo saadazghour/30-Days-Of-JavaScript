@@ -269,7 +269,7 @@ const move = (array, fromIndex, toIndex) => {
 
   const newArray = [...array];
   const element = newArray.splice(fromIndex, 1)[0];
-  newArray.splice(toIndex, 0, element);
+  newArray.splice(pos, 0, element);
   return newArray;
 };
 

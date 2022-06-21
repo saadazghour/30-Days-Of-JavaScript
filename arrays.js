@@ -262,7 +262,7 @@ console.log(except(fromRange, [1, 2]));
 // ------------  Moving an Element (Implimentation of Array.prototype.move)
 
 const move = (array, fromIndex, toIndex) => {
-  const pos = toIndex;
+  const pos = fromIndex + toIndex;
   if (pos >= array.length || pos < 0) {
     throw new Error("Invalid index");
   }
@@ -273,4 +273,4 @@ const move = (array, fromIndex, toIndex) => {
   return newArray;
 };
 
-console.log(move([1, 2, 3, 4], 1, -1));
+console.log(move([1, 2, 3, 4], 1, -2));

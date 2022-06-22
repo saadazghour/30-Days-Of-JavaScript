@@ -273,4 +273,38 @@ const move = (array, fromIndex, toIndex) => {
   return newArray;
 };
 
-console.log(move([1, 2, 3, 4], 1, -2));
+// console.log(move([1, 2, 3, 4], 1, -2));
+
+// ------------  Get Max (Implimentation of Array.prototype.max)
+
+const getMax = (array) => {
+  let max = array[0]; // We assume the first element is the max
+  if (array.length === 0 || array[0] < 0) return undefined;
+
+  for (const num of array) {
+    if (num > max) max = num; // set max to the current number
+  }
+  return max;
+};
+
+console.log(getMax([1, 2, 3, 4]));
+
+// implimentation using reduce function in array
+// explanation:
+// [1, 2, 3, 4]
+
+// a = 0, c = 1 ==> a = 1
+// a = 1, c = 2 ==> a = 3
+// a = 3, c = 3 ==> a = 6
+// a = 6, c = 4 ==> a = 10
+
+// Best way to implement max in array!!
+const getMaxReduce = (array) => {
+  if (array[0] < 0) return undefined;
+  return array.reduce((acc, cur) => {
+    // return acc > cur ? acc : cur; // another way to do it!!
+    return acc > cur ? acc : cur; // set accumulator to the current number
+  }, undefined);
+};
+
+console.log(getMaxReduce([1, 2, 3, 4]));

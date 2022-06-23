@@ -354,3 +354,29 @@ anonyGreet();
 // referencing same anonymous function, both in the same object in memory!
 const anonyGreet2 = anonyGreet;
 anonyGreet2();
+
+// ----------------- Hoisting
+
+// function hoisting
+// Move function declaration to the top of the file and that happens automatically by the javascript engine!!
+
+// The keys defference between function declarations and function expressions is that function declarations are hoisted to the top of their scope becase JavaScript engine it move all functions to the top, while function expressions are not hoisted.
+
+// function declaration
+
+greetHoisting();
+function greetHoisting() {
+  console.log("hi greet");
+}
+
+// Anonymous function expression
+
+// In this case, the function expression is not hoisted, so it will throw an error.
+// anonyGreetHoisting(); // error
+const anonyGreetHoisting = function () {
+  console.log("hi anonyGreet");
+};
+
+anonyGreetHoisting();
+const anonyGreet2Hoisting = anonyGreetHoisting;
+anonyGreet2Hoisting();

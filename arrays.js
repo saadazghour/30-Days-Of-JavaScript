@@ -308,3 +308,32 @@ const getMaxReduce = (array) => {
 };
 
 console.log(getMaxReduce([1, 2, 3, 4]));
+
+// ------------  Movies Array of Objects!!
+const movies = [
+  { title: "a", year: 2018, rating: 4.5 },
+  { title: "b", year: 2018, rating: 4.7 },
+  { title: "c", year: 2018, rating: 3 },
+  { title: "d", year: 2017, rating: 4.5 },
+];
+
+// get all movies from 2018 with rating higher than 4
+// Sort them by the rating in descending order
+// Pick the title property of each movie object
+
+// the result should be: ["Avebgers; Endgame", "Avengers"]
+
+const getAllMovies = (movies) => {
+  const result = movies
+    .filter((movie) => movie.year === 2018 && movie.rating > 4)
+    // explanation:
+    // sort method
+    // if a < b => -1
+    // if a === b => 0
+    // if a > b => 1
+    .sort((a, b) => b.rating - a.rating)
+    .map((movie) => movie.title);
+  return result;
+};
+
+console.log(getAllMovies(movies));

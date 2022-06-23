@@ -337,3 +337,20 @@ const getAllMovies = (movies) => {
 };
 
 console.log(getAllMovies(movies));
+
+//  Function Declarations vs. Expressions
+
+// function declaration
+function greet() {
+  console.log("hi greet");
+}
+
+// Anonymous function expression
+const anonyGreet = function () {
+  console.log("hi anonyGreet");
+};
+
+anonyGreet();
+// referencing same anonymous function, both in the same object in memory!
+const anonyGreet2 = anonyGreet;
+anonyGreet2();

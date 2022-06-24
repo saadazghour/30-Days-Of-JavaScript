@@ -380,3 +380,31 @@ const anonyGreetHoisting = function () {
 anonyGreetHoisting();
 const anonyGreet2Hoisting = anonyGreetHoisting;
 anonyGreet2Hoisting();
+
+// ----------------- Arguments
+// JavaScript are dynamic languages, so we can pass any number of arguments to a function.
+
+let x = 1;
+x = "another Value";
+console.log(x);
+
+function add(a, b) {
+  // we can remove the a and b argument, and it will work!!
+  // because we don't use the arguments.
+
+  arguments;
+  let totalSum = 0;
+  // console.log(arguments.length);
+  for (const num of arguments) {
+    totalSum += num;
+  }
+  return totalSum;
+
+  // console.log(b);
+
+  // // this is not a valid operation
+  // return a + b; // 1 + undefined = NaN
+}
+
+// console.log(add(1)); // NaN
+console.log(add(1, 2, 3, 4, 5, 10));

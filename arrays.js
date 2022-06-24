@@ -444,3 +444,31 @@ function addRestDiscount(discount, ...prices) {
 // 10% pr discount => 0.1 * 10 = 1
 console.log(addRestDiscount(0.1, 20, 30)); //
 console.log(addRestDiscount(0.2, 20, 30)); //
+
+// -----------------  Default Parameters (Implimentation of ES6)
+
+function totalInterest(principal, rate = 3.5, years) {
+  // default parameters for rate and years
+  // rate = rate || 3.5;
+  // years = years || 5;
+
+  return ((principal * rate) / 100) * years;
+}
+
+// default parameters for rate and years
+console.log(totalInterest(10000));
+
+// Not set default value for years we get NaN
+// We pass 5, for the years, but we don't pass the rate, so it will use the default value of 3.5 => the result is NaN
+// the is confusing, because JavaScript don't know the value 5 we passed is years or rate, so it will use the default value of rate 3.5 and throw an error of NaN
+console.log(totalInterest(10000, 5)); //
+console.log(totalInterest(10000)); //
+
+// trick to fix it:
+// we can pass rate as undefined, and it will use the default value of 3.5 and year will be set to 5.
+console.log(totalInterest(10000, undefined, 5)); //
+
+console.log(totalInterest(10000, 3.5, 5)); //
+
+// best practice to use default parameters
+// make sure that parameters are the last parameters in the list of parameters

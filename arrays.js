@@ -391,6 +391,9 @@ console.log(x);
 // we can remove the a and b argument, and it will work!!
 // because we don't use the arguments.
 function add(a, b) {
+  // it's an object, this object has an iterator, so we can use the length property to get the number of arguments.
+
+  // console.log(arguments.length);
   arguments;
   let totalSum = 0;
   // console.log(arguments.length);

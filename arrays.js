@@ -388,10 +388,9 @@ let x = 1;
 x = "another Value";
 console.log(x);
 
+// we can remove the a and b argument, and it will work!!
+// because we don't use the arguments.
 function add(a, b) {
-  // we can remove the a and b argument, and it will work!!
-  // because we don't use the arguments.
-
   arguments;
   let totalSum = 0;
   // console.log(arguments.length);

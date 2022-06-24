@@ -409,4 +409,38 @@ function add(a, b) {
 }
 
 // console.log(add(1)); // NaN
-console.log(add(1, 2, 3, 4, 5, 10));
+console.log(add(1, 2, 3, 4, 6)); //
+
+// ----------------- The Rest Operator
+// if you have a function that takes a variable number of arguments, you can use the rest operator to represent all the remaining arguments as an array.
+
+function addRest(a, b, ...rest) {
+  console.log(rest);
+
+  // let totalSum = 0;
+  // for (const num of rest) {
+  //   totalSum += num;
+  // }
+  // return totalSum;
+
+  // better way to do it, using reduce function, one line of code!!
+  return rest.reduce((acc, cur) => acc + cur);
+}
+
+console.log(addRest(1, 2, 3, 4, 5, 6, 7, 8)); //
+
+// Dicount function with the rest operator
+function addRestDiscount(discount, ...prices) {
+  const totalSum = prices.reduce((acc, cur) => acc + cur);
+  let discountSum = 0;
+
+  discount === 0.1
+    ? (discountSum = totalSum * (1 - discount))
+    : (discountSum = totalSum);
+
+  return discountSum;
+}
+
+// 10% pr discount => 0.1 * 10 = 1
+console.log(addRestDiscount(0.1, 20, 30)); //
+console.log(addRestDiscount(0.2, 20, 30)); //

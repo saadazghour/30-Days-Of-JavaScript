@@ -517,3 +517,48 @@ person.fullNameSet = "Set newValue";
 
 console.log(person.fullNameGet);
 console.log(person);
+
+// -----------------  Error Handling
+// Error handling is the process of handling errors in a program.
+// It is done by using try and catch statements.
+// try: try to do something, if it fails, it will throw an error.
+// catch: if the error happens, it will catch it and do something with it.
+
+const personHandling = {
+  firstName: "SAAD",
+  lastName: "AZGHOUR",
+  fullNameHandling() {
+    // console.log(`${person.firstName} ${person.lastName}`);
+    return `${this.firstName} ${this.lastName}`;
+  },
+  get fullNameGet() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  set fullNameSet(newValue) {
+    // console.log(typeof newValue);
+    if (typeof newValue !== "string") {
+      throw new Error("The value must be a string");
+    }
+
+    const parts = newValue.split(" ");
+    // console.log(parts);
+
+    if (parts.length < 2 || parts.length === 0) {
+      throw new Error("You must enter a first and last name.");
+    }
+
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
+
+console.log(personHandling.fullNameHandling());
+
+try {
+  personHandling.fullNameSet = "";
+} catch (error) {
+  console.log(error);
+}
+
+console.log(personHandling.fullNameGet);
+console.log(personHandling);

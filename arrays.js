@@ -691,7 +691,7 @@ video.stop();
 video.play();
 
 // a rugular function is a function that is not a method of an object.
-// is a methos of a global object, window object, browser object.
+// is a method of a global object, window object, browser object.
 // it is not a method of an object, it is a regular function.
 const playVideo = (params) => {
   // we get window object, because this is a regular function.
@@ -714,4 +714,4 @@ Video();
 // like this: {}
 
 const v = new Video("title constructor");
-console.log(v);
+console.log(v); // { title: 'title constructor' }

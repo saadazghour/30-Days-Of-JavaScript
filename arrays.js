@@ -562,3 +562,47 @@ try {
 
 console.log(personHandling.fullNameGet);
 console.log(personHandling);
+
+// ----------------- Local Scope vs. Global Scope
+// Local scope is the scope that is created by a function.
+// Global scope is the scope that is created by the global object.
+// Global scope is the scope that is created by the window object.
+// Global scope is the scope that is created by the browser.
+
+const start = (params) => {
+  for (let i = 0; i <= 5; i++) {
+    console.log(i);
+  }
+
+  // color variable is a global scope variable, we can acess it anywhere in the code.
+  console.log(color);
+
+  // i variable is not defined in global scop, so it will throw an error, it's defined only in local scope.
+  console.log(i);
+
+  if (true) {
+    // another variable will be defined only in local scope.
+    const anoter = "hello";
+    console.log(anoter);
+
+    // here the color variable is defined in local scope of if statement, so it will execute the blue color first, because it's in the local scope.
+    const color = "blue";
+    console.log(color);
+  }
+
+  // this will throw an error, because the variable anoter is not defined in the global scope.
+  console.log(anoter);
+
+  // color variable is a global scope variable, we can acess it anywhere in the code.
+  console.log(color);
+
+  // this will throw an error, because message is not defined in local scope of the function.
+  console.log(message);
+};
+
+// the scop of the variable color is the global scope.
+const color = "red";
+console.log(color);
+
+start();
+console.log(message); // undefined

@@ -650,3 +650,68 @@ console.log(age);
 const sayHi = (second) => {
   console.log("Hi");
 };
+
+// -----------------  The This Keyword
+// this keyword is referenced to the object, that is executing the current function.
+
+// The this keyword is used to access the current object.
+// this is a global object.
+// this is a window object.
+// this is a browser object.
+// this is a function object.
+// this is a constructor object.
+// this is a object object.
+// this is a array object.
+
+// if a function a part of an object, we call that function a method.
+// method => function that is part of an object => object
+// if a function is a rugular function, references to a global object, window object, browser object. (window object is the global object in the browser, global in node)
+
+const video = {
+  title: "a title",
+  tags: ["tag1", "tag2", "tag3"],
+  showTags() {
+    this.tags.forEach((tag) => {
+      console.log(this.title, tag);
+    }, this); // but not all the methods, giv you the ability to pass the this keyword here.
+  },
+  play() {
+    // this is referencing to the video object.
+    console.log(this);
+  },
+};
+
+// stop is a method of the video object.
+video.stop = function () {
+  console.log(this);
+};
+
+video.showTags();
+video.stop();
+video.play();
+
+// a rugular function is a function that is not a method of an object.
+// is a methos of a global object, window object, browser object.
+// it is not a method of an object, it is a regular function.
+const playVideo = (params) => {
+  // we get window object, because this is a regular function.
+  console.log(this);
+};
+
+playVideo();
+
+// a constructor function is a function that is used to create an object.
+function Video(title) {
+  this.title = title;
+
+  // instead we get the window object.
+  console.log(this);
+}
+
+Video();
+
+// when we use the new operator, this new operator will create a new empty object.
+// like this: {}
+
+const v = new Video("title constructor");
+console.log(v);

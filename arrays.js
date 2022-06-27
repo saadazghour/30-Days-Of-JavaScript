@@ -472,3 +472,48 @@ console.log(totalInterest(10000, 3.5, 5)); //
 
 // best practice to use default parameters
 // make sure that parameters are the last parameters in the list of parameters
+
+// -----------------  Getters and Setters
+
+// Getters and Setters are used to control access to an object's properties.
+// Getters are used to get the value of an object's property.
+// Setters are used to set the value of an object's property.
+// Setters change or mutate the value of a property.
+
+const person = {
+  firstName: "SAAD",
+  lastName: "AZGHOUR",
+  fullName() {
+    // console.log(`${person.firstName} ${person.lastName}`);
+    return `${this.firstName} ${this.lastName}`;
+  },
+  get fullNameGet() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  set fullNameSet(newValue) {
+    const parts = newValue.split(" ");
+    // console.log(parts);
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
+
+console.log(person.firstName);
+console.log(person.lastName);
+
+// the problem with this approch is that maybe there are multiple places in our application where we want to display fullName, so we need to repeat this template literal in multiple places.
+console.log(`${person.firstName} ${person.lastName}`);
+
+// the better approach is to define a method called fullName, and it will return the full name of the person.
+// bay the way, we have a probleme again here, this is read only, so we can't change the value of the (person.fullName) to a new value.
+// like this: person.fullName = "new value";
+
+// to fix it, we can use getters and setters.
+console.log(person.fullName());
+
+// using getters and setters
+console.log(person.fullNameGet);
+person.fullNameSet = "Set newValue";
+
+console.log(person.fullNameGet);
+console.log(person);

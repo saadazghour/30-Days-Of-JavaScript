@@ -604,5 +604,49 @@ const start = (params) => {
 const color = "red";
 console.log(color);
 
-start();
-console.log(message); // undefined
+// start();
+// console.log(message); // undefined
+
+// -----------------  Let vs Var
+// let is used to declare a variable that is block scoped.
+// var is used to declare a variable that is function scoped.
+
+// var ==> function scoped variables.
+// ES6 (ES2015): let, const ==> block scoped variables.
+
+const started = (params) => {
+  // if we use let, it will throw an error, because i is not defined in the global scope.
+  // but if we use var, it will print the value of i, because it is defined in the function scope.
+  for (var i = 0; i <= 5; i++) {
+    console.log(i);
+    if (true) {
+      var colored = "yellow";
+    }
+  }
+  // becaue the variable colored is defined in the function scope, it will print the value of colored it will be accessible only in the whole function scope .
+  console.log(colored);
+  console.log(i);
+};
+
+started();
+
+// when we use var outside of the function, this create a global variable, and attached that variable to the window object in the browser.
+// we should avoid using var, because it is not a good practice.
+
+// if third party librarys also have the same variable orangeColore i have,it will overide my variable, we should avoid adding variable to the window object.
+// also that will create more bugs in our programs.
+var orangeColor = "orange";
+console.log(orangeColor);
+
+// When we use let keyword, it will create a local variable, and it will not be attached to the window object in the browser.
+let age = 30;
+console.log(age);
+
+// this function also added to the window object in the browser.
+// and that's bad practice.
+// to fix it, we can use modules, and not added to the window object.
+// we can use modules to create a separate file, and import that file to our application.
+// modules are files that we can use to create our own functions, variables, and objects.
+const sayHi = (second) => {
+  console.log("Hi");
+};

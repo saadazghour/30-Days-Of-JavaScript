@@ -670,6 +670,7 @@ const sayHi = (second) => {
 const video = {
   title: "a title",
   tags: ["tag1", "tag2", "tag3"],
+  // showTags is a method, it is a function that is part of the video object.
   showTags() {
     this.tags.forEach((tag) => {
       console.log(this.title, tag);
@@ -702,6 +703,7 @@ playVideo();
 
 // a constructor function is a function that is used to create an object.
 function Video(title) {
+  // the this keyword is referencing to the object that is created by the constructor function. => {}
   this.title = title;
 
   // instead we get the window object.
@@ -715,3 +717,68 @@ Video();
 
 const v = new Video("title constructor");
 console.log(v); // { title: 'title constructor' }
+
+// -----------------  Changing the This Keyword
+// when we use the call() or apply() methods, this keyword will refer to the object that is passed as the first argument.
+// when we use the bind() method, this keyword will refer to the object that is passed as the first argument.
+// a few defference solutions to change the this keyword.
+
+const videoChangeThis = {
+  titleThis: "a title",
+  tagsThis: ["tag1", "tag2", "tag3"],
+  // showTags is a method, it is a function that is part of the video object.
+  showTags() {
+    // self is a reference to the video object.
+    const self = this;
+    this.tagsThis.forEach(function (tag) {
+      // the This keyword is referencing to the global object, window object.
+      // console.log(this.titleThis, tag);
+
+      // fix the problem by using the self variable.
+      // it is not a prefernce approach, but don't use it.
+      console.log(self.titleThis, tag);
+    });
+  },
+  showTagsThis() {
+    // using another approach to change the this keyword. intead of using the self variable.
+    this.tagsThis.forEach(
+      function (tag) {
+        console.log(this.titleThis, tag);
+      }.bind(this) // this is referencing to the video object.
+    );
+  },
+  showTagsThisBetter() {
+    // using another approach to change the this keyword. with ES6 arrow functions.
+    // the modern approach to change this keyword with arrow functions.
+    this.tagsThis.forEach((tag) => {
+      console.log(this.titleThis, tag);
+    });
+  },
+};
+
+videoChangeThis.showTags();
+videoChangeThis.showTagsThis();
+videoChangeThis.showTagsThisBetter();
+
+// another approach to change the this keyword.
+// function are Objects in javascript, so we can use the bind() method to change the this keyword && call() && apply() methods.
+function showTagsAnother(a, b) {
+  // this is referencing to the call method, object.
+  console.log(this, a, b);
+}
+
+// window object
+// showTagsAnother();
+
+// the defference between call() and apply() methods is that call() method takes the arguments, and apply() method takes the arguments as an array.
+// what we'll passed as the first argument is the object that we'll be the value of this keyword. in line above ==> 750.
+showTagsAnother.call({ name: "AZGHOUR" }, 1, 2); // { name: 'AZGHOUR' } 1 2
+
+// apply() method passes the arguments as an array.
+showTagsAnother.apply({ name: "SAAD" }, [1, 2]); // { name: 'SAAD' } 1 2
+
+// const fn = showTagsAnother.bind({ name: "return new function" }, 1, 2);
+// fn();
+
+// another approach to call the function.
+showTagsAnother.bind({ name: "return new function" }, 1, 2)(); // { name: 'return new function' } 1 2

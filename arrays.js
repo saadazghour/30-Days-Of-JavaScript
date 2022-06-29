@@ -782,3 +782,28 @@ showTagsAnother.apply({ name: "SAAD" }, [1, 2]); // { name: 'SAAD' } 1 2
 
 // another approach to call the function.
 showTagsAnother.bind({ name: "return new function" }, 1, 2)(); // { name: 'return new function' } 1 2
+
+// -----------------   Exercise 1- Sum of Arguments
+// sum(1,2,3,4) function should return the sum of all arguments passed to it.
+
+const sumAll = (...items) => {
+  // the rest operator, converts the arguments into an array.
+  // console.log(items);
+  if (items.length === 1 && Array.isArray(items[0])) items = items[0];
+
+  return items.reduce((acc, curr) => acc + curr);
+};
+
+const sumAllArray = (array) => {
+  if (Array.isArray(array)) {
+    return array.reduce((acc, curr) => acc + curr);
+  } else {
+    return "must be an array";
+  }
+};
+
+// console.log(sumAll(1, 2, 3, 4));
+
+// if we passed array as an argument, it will return the sum of all the elements in the array.
+console.log(sumAll([1, 2, 3, 4]));
+console.log(sumAllArray([1, 2, 3, 4]));

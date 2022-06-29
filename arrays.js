@@ -807,3 +807,20 @@ const sumAllArray = (array) => {
 // if we passed array as an argument, it will return the sum of all the elements in the array.
 console.log(sumAll([1, 2, 3, 4]));
 console.log(sumAllArray([1, 2, 3, 4]));
+
+// -----------------    Exercise 2- Area of Circle
+
+const circle = {
+  radius: 1,
+  // area is a method, able to read it only from the circle object.
+  // not able to set the area property.
+  // i mean not able to change the value of area property.
+  get area() {
+    // return 10;
+    return Math.PI * this.radius * this.radius;
+  },
+};
+
+circle.radius = 2;
+console.log(circle.radius);
+console.log(circle.area);

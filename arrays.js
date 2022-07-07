@@ -824,3 +824,25 @@ const circle = {
 circle.radius = 2;
 console.log(circle.radius);
 console.log(circle.area);
+
+// -----------------    - Exercise 3- Error Handling
+
+const numbersOfArrays = [1, 2, 3, 4];
+
+const countOccurrences = (array, searchElement) => {
+  if (!Array.isArray(array)) {
+    throw new Error("Opppps must be an Array!");
+  }
+  return array.reduce((acc, curr) => {
+    return curr === searchElement ? 1 : 0;
+  });
+};
+
+try {
+  console.log(countOccurrences(numbersOfArrays, 1));
+  // Opppps must be an Array!
+  countOccurrences(null, 1);
+  countOccurrences(true, 1);
+} catch (error) {
+  console.log(error);
+}

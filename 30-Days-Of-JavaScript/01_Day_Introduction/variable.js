@@ -20,3 +20,17 @@ const PI = 3.14; // geometrical constant
 let name = "SAAD",
   job = "Software Engineer",
   live = "Anywhere";
+
+const undefinedVariable = undefined;
+const nullVariable = null;
+
+// variable without assignment will be undefined
+const cars = undefined || null;
+const score = undefined || null;
+const names = undefined || null;
+const ages = undefined || null;
+
+// console log the variables
+const myAge = 30;
+console.log(`I am ${myAge} years old.`);
+console.log(`You are ${age} years old.`);

@@ -80,3 +80,188 @@ let userObj = {
 let userObj2 = userObj;
 
 console.log(userObj === userObj2); // true
+
+// ----------------------- - Numbers ----------------------------------------------------
+// Numbers are integers and decimal values which can do all the arithmetic operations. Let's see some examples of Numbers.
+// Declaring Number Data Types :
+
+let age = 30;
+const gravity = 9.8;
+let mass = 72;
+const PI = 3.14;
+
+console.log(age, gravity, mass, PI);
+
+// ------------------------ - Math Object ------------------------------------------------
+// Math Object - A collection of mathematical functions.
+// In JavaScript the Math Object provides a lots of methods to work with numbers.
+
+const mathPI = Math.PI;
+console.log(mathPI); // 3.141592653589793
+
+// Rounding to the closest number
+// if above .5 up if less 0.5 down rounding
+
+console.log(Math.round(mathPI)); // 3
+console.log(Math.round(9.8)); // 10
+console.log(Math.floor(mathPI)); // 3 ------------- // 3 rounding down
+console.log(Math.ceil(mathPI)); // 4 ------------- // 4 rounding up
+console.log(Math.min(1, 10, 20, 0, -2)); // -2 ---- // -2 is the smallest number --- // returns the smallest number
+console.log(Math.max(-5, 3, 20, 4, 5, 10)); // 20, returns the maximum value of the numbers
+
+const randomNum = Math.random(); // random number between 0 and 0.999999
+console.log(randomNum);
+
+// Create random number between 0 to 10
+const numRandom = Math.floor(Math.random() * 11); // Create random number between 0 and 10
+console.log(numRandom);
+
+// absolute value of a number
+const absoluteNum = Math.abs(-10);
+console.log(absoluteNum); // 10
+
+// square root of a number
+const squareRoot = Math.sqrt(100);
+console.log(squareRoot); //10
+
+// power of a number
+const powerNum = Math.pow(2, 3);
+console.log(powerNum); // 8
+
+// Logarithm
+// Returns the natural logarithm with base E of x, Math.log(x)
+console.log(Math.E); // 2.718281828459045
+console.log(Math.LN2); // 0.6931471805599453
+console.log(Math.LN10); // 2.302585092994046
+
+// ----------------------- - Strings ----------------------------------------------------
+
+const space = " "; // an empty space string
+const firstName = "SAAD";
+const lastName = "AZGHOUR";
+const country = "Everywhere";
+const city = "Anywhere";
+const language = "JavaScript";
+const job = "Software Engineer";
+const quote = "The saying,'Seeing is Believing' is not correct in 2020.";
+const quotWithBackTick = `The saying,'Seeing is Believing' is not correct in 2020.`;
+
+// ----------------------- - Template Literals (Template Strings) ------------------------------------------
+
+// statically writing the data
+console.log(`The sum of 2 and 3 is 5`); // The sum of 2 and 3 is 23
+
+const num1 = 3;
+const num2 = 3;
+
+// injecting the data dynamically
+console.log(`The sum of ${num1} and ${num2} is ${num1 + num2}`); // The sum of 3 and 3 is 6
+
+// ----------------------- - String Methods ----------------------------------------------------
+// Everything in JavaScript is an object.
+// String Methods - A collection of methods that can be applied to strings.
+
+// A string is a primitive data type that means we can not modify it once it is created. The string object has many string methods. There are different string methods that can help us to work with strings.
+// Counting starts from 0. The first index of the string is zero .
+
+const jsp = "JavaScript";
+
+console.log(jsp.length); // 10
+
+const lastIndex = jsp.length - 1;
+console.log(lastIndex);
+
+console.log(jsp[lastIndex]); // t
+
+// ----------------------- - substr() ----------------
+// It takes two arguments, the starting index and number of characters to slice.
+
+const string = "JavaScript";
+
+console.log(string.substr(0, 3)); // Jav
+console.log(string.substr(3, 3)); //aSc
+
+// ----------------------- - substring() ----------------
+// It takes two arguments, the starting index and the stopping index but it doesn't include the character at the stopping index.
+
+const anotherString = "JavaScript";
+console.log(anotherString.substring(0, 3)); // Jav
+console.log(anotherString.substring(3, 6)); // aSc
+
+// ----------------------- - split() ----------------
+// The split method splits a string at a specified place.
+
+const dayOfJsp = "30 Days Of JavaScript";
+
+console.log(dayOfJsp.split());
+
+//  Split to an array at each letter
+console.log(dayOfJsp.split(""));
+
+// Split to an array at space
+console.log(dayOfJsp.split(" ")); // ["30", "Days", "Of", "JavaScript"]
+
+// ----------------------- - trim() ----------------
+// Removes trailing space in the beginning or the end of a string.
+
+const trimString = "   30 Days Of JavaScript   ";
+
+console.log(trimString.trim()); // 30 Days Of JavaScript
+
+// ----------------------- - includes() ----------------
+// It takes a substring argument and it checks if substring argument exists in the string. includes() returns a boolean. If a substring exist in a string, it returns true, otherwise it returns false.
+
+const includesString = "30 Days Of JavaScript";
+
+console.log(includesString.includes("Days")); // true
+console.log(includesString.includes("days")); // false - it is case sensitive
+console.log(includesString.includes("Script")); // true
+console.log(includesString.includes("java")); // false
+console.log(includesString.includes("Java")); // true
+
+// ----------------------- - replace() ----------------
+// It takes as a parameter the old substring and a new substring.
+
+const replaceString = "30 Days Of JavaScript";
+console.log(replaceString.replace("Days", "Weeks")); // 30 Weeks Of JavaScript
+
+// ----------------------- - charAt() ----------------
+// Takes index and it returns the value at that index.
+
+const charAtString = "30 Days Of JavaScript";
+
+console.log(charAtString.charAt(0)); // 3
+console.log(charAtString.charAt(1)); // 0
+console.log(charAtString.charAt(2)); // 0
+console.log(charAtString.charAt(3)); // D
+
+const charAtLastIndex = charAtString.length - 1;
+console.log(charAtLastIndex);
+
+console.log(charAtString.charAt(charAtLastIndex)); // t
+
+// ----------------------- - charCodeAt() ----------------
+// Takes index and it returns char code (ASCII number) of the value at that index
+
+const charCodeAtString = "30 Days Of JavaScript";
+
+console.log(charCodeAtString.charCodeAt(0)); // 51
+console.log(charCodeAtString.charCodeAt(1)); // 48
+console.log(charCodeAtString.charCodeAt(3)); // 68
+
+// ----------------------- - indexOf() ----------------
+// Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1.
+
+const indexOfString = "30 Days Of JavaScript";
+
+console.log(indexOfString.indexOf("Days")); // 3
+console.log(indexOfString.indexOf("days")); // -1
+console.log(indexOfString.indexOf("Script")); // 15
+
+// ----------------------- - lastIndexOf() ----------------
+// Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1.
+
+const lastIndexOfString = "30 Days Of JavaScript";
+
+console.log(lastIndexOfString.lastIndexOf("Days")); // 3
+console.log(lastIndexOfString.lastIndexOf("days")); // -1

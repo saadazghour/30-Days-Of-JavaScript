@@ -763,7 +763,7 @@ videoChangeThis.showTagsThisBetter();
 // another approach to change the this keyword.
 // function are Objects in javascript, so we can use the bind() method to change the this keyword && call() && apply() methods.
 function showTagsAnother(a, b) {
-  // this is referencing to the call method, object.
+  // this, is referencing to the call method, object.
   console.log(this, a, b);
 }
 

@@ -330,4 +330,66 @@ console.log(textNumber.match(regex));
 const fullNameRepeat = "Saad Azghour";
 console.log(fullNameRepeat.repeat(4)); // Saad AzghourSaad AzghourSaad AzghourSaad Azghour
 
-// ----------------------- - 4 Checking Data Types and Casting -------------------------------------------------
+// ----------------------- - 4 Checking Data Types and Casting --------------------------------
+// 1.1 -----------------------Checking Data Types !!
+
+// To check the data type of a certain variable we use the typeof methos!!
+// Example :
+// Different javascript data types
+// Let's declare different data types!!
+
+const firstNameType = "Saad"; // string
+const lastNameType = "Azghour"; // string
+const countryType = "Morocco"; // string
+const cityType = "Essaouira"; // string
+const ageType = 250; // number, it is not my real age, do not worry about it
+
+let jobType; // undefined, because a value was not assigned!!
+
+console.log(typeof "Saad"); // string
+console.log(typeof firstName); // string
+console.log(typeof 10); // number
+console.log(typeof 3.14); // number
+console.log(typeof true); // boolean
+console.log(typeof false); // boolean
+console.log(typeof NaN); // number
+console.log(typeof jobType); // undefined
+console.log(typeof undefined); // undefined
+console.log(typeof null); // object
+
+// 1.2 -----------------------Changing Data Type (Casting) !!
+// Casting: Converting one data type to another data type.
+// We use parseInt(), parseFloat(), Number(), + sign, str() When we do arithmetic operations string numbers should be first converted to integer or float if not it returns an error.
+// ----------------------------------------------------------------
+// String to Int .
+// We can convert string number to a number. Any number inside a quote is a string number. An example of a string number: '10', '5', etc. We can convert string to number using the following methods:
+
+// parseInt()
+// Number()
+// Plus sign(+)
+
+console.log(typeof parseInt("10"));
+console.log(typeof Number("10"));
+console.log(typeof +"10"); // number
+
+// ----------------------------------------------------------------
+// String to Float
+
+// We can convert string float number to a float number. Any float number inside a quote is a string float number. An example of a string float number: '9.81', '3.14', '1.44', etc. We can convert string float to number using the following methods:
+
+// parseFloat()
+// Number()
+// Plus sign(+)
+
+console.log(typeof parseFloat("9.81"));
+console.log(typeof Number("10"));
+console.log(typeof +"10"); // number
+
+// ----------------------------------------------------------------
+// Float to Int
+// We can convert float numbers to integers. We use the following method to convert float to int:
+// parseInt()
+
+console.log(parseInt("9.81")); // 9
+
+// 1.3 ----------------------- Exercises !!

@@ -265,3 +265,69 @@ const lastIndexOfString = "30 Days Of JavaScript";
 
 console.log(lastIndexOfString.lastIndexOf("Days")); // 3
 console.log(lastIndexOfString.lastIndexOf("days")); // -1
+console.log(lastIndexOfString.lastIndexOf("JavaScript")); // 11
+
+// ----------------------- - concat() ----------------
+// It takes many substrings and joins them.
+// Concat syntax: string.concat(substring, substring, substring)
+
+const fullName = "Saad Azghour";
+
+console.log(`This is my full Name : ${fullName.concat("!!")}`);
+
+// ----------------------- - startsWith() ----------------
+// It takes a substring as an argument and it checks if the string starts with that specified substring. It returns a boolean(true or false).
+
+const fullNameStart = "Saad Azghour";
+
+console.log(fullNameStart.startsWith("S"));
+console.log(fullNameStart.startsWith("s"));
+
+// ----------------------- - endsWith() ----------------
+// It takes a substring as an argument and it checks if the string ends with that specified substring. It returns a boolean(true or false).
+
+const fullNameEnd = "Saad Azghour";
+
+console.log(fullNameEnd.endsWith("r"));
+console.log(fullNameEnd.endsWith("R"));
+console.log(fullNameEnd.endsWith("Azghour"));
+console.log(fullNameEnd.endsWith("Saad Azghour"));
+
+// ----------------------- - search() ----------------
+// It takes a substring as an argument and it returns the index of the first match. The search value can be a string or a regular expression pattern, (Regex)
+
+const fullNameSearch = "Saad Azghour";
+
+console.log(fullNameSearch.search("hour"));
+console.log(fullNameSearch.search(/azghour/gi)); // with Regex Patttern
+
+// ----------------------- - match() ----------------
+// It takes a substring or regular expression pattern as an argument and it returns an array if there is match if not it returns null. Let us see how a regular expression pattern looks like. It starts with / sign and ends with / sign.
+
+const fullNameMatch = "Saad Azghour";
+
+console.log(fullNameMatch.match("Saad"));
+console.log(fullNameMatch.match("S"));
+console.log(fullNameMatch.match("s")); // null
+console.log(fullNameMatch.match(/Azghour/)); // [ 'Azghour', index: 5, input: 'Saad Azghour', groups: undefined ]
+console.log(fullNameMatch.match(/azghour/gi));
+
+// Let us extract numbers from text using a regular expression!!
+const textNumber =
+  "In 2022, I'm super exited to start this challenge at 5/05/2022";
+
+// d with escape character means d not a normal d instead acts a digit
+// + means one or more digit numbers,
+// if there is g after that it means global, search everywhere.
+// i stands for ignore case in the given string. Usually referred to as case-insensitive.
+
+const regex = /\d+/gi;
+console.log(textNumber.match(regex));
+
+// ----------------------- - repeat() ----------------
+// It takes a number as argument and it returns the repeated version of the string.
+
+const fullNameRepeat = "Saad Azghour";
+console.log(fullNameRepeat.repeat(4)); // Saad AzghourSaad AzghourSaad AzghourSaad Azghour
+
+// ----------------------- - 4 Checking Data Types and Casting -------------------------------------------------

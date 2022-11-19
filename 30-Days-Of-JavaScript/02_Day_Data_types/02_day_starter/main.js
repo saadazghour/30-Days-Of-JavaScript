@@ -464,4 +464,65 @@ console.log("30 Days Of JavaScript".match("a"));
 // Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
 console.log("30 Days Of".concat("JavaScript"));
 // Use repeat() method to print 30 Days Of JavaScript 2 times
-console.log("30 Days Of JavaScript".repeat(2));
+console.log("30 Days Of JavaScript ".repeat(2));
+
+// 1.4 ----------------------- Exercises !!
+// Using console.log() print out the following statement:
+
+console.log(
+  "The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another."
+);
+
+// Using console.log() print out the following quote by Mother Teresa:
+console.log(
+  "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
+);
+
+// Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+console.log(typeof +"10" === typeof 10);
+// Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+console.log(typeof parseFloat("9.8") === typeof 10); // true
+// Check if 'on' is found in both python and jargon
+const includesStringBoth = "python and jargon";
+console.log(includesStringBoth.includes("on")); // true
+// I hope this course is not full of jargon. Check if jargon is in the sentence.
+const includesJargon = "I hope this course is not full of jargon";
+console.log(includesJargon.includes("jargon")); // true
+// Generate a random number between 0 and 100 inclusively.
+const randomInclusively = Math.floor(Math.random() * 101);
+console.log(randomInclusively);
+// Generate a random number between 50 and 100 inclusively.
+// You need to know the range of the random.
+// Between 50 and 100, the range is 50 (100 - 50 = 50), then you add 1.
+// Therefor, the random would look like this :
+const randomNumBetween = Math.floor(Math.random() * 51) + 50;
+console.log(randomNumBetween);
+// Generate a random number between 0 and 255 inclusively.
+const generateRandom = Math.floor(Math.random() * 256);
+console.log(generateRandom);
+// Access the 'JavaScript' string characters using a random number.
+const stringAccess = "Javascript";
+const randomNumber = Math.floor(Math.random() * stringAccess.length);
+// console.log(randomNumber);
+console.log(stringAccess.substring(randomNumber, randomNumber + 1));
+// Use console.log() and escape characters to print the following pattern.
+/*
+    1 1 1 1 1
+    2 1 2 4 8
+    3 1 3 9 27
+    4 1 4 16 64
+    5 1 5 25 125
+*/
+
+console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125");
+// Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
+const phrase =
+  "You cannot end a sentence with because because because is a conjunction";
+
+const pattern = /because/gi;
+console.log(phrase.slice(31, 54));
+console.log(phrase.match(pattern));
+
+console.log(
+  "You cannot end a sentence with because because because is a conjunction"
+);

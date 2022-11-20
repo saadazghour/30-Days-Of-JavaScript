@@ -526,3 +526,77 @@ console.log(phrase.match(pattern));
 console.log(
   "You cannot end a sentence with because because because is a conjunction"
 );
+
+// 1.5 ----------------------- Exercises !!
+// 'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word love in this sentence.
+const sentence =
+  "Love is the best thing in this world. Some found their love and some are still looking for their love.";
+
+const patternLove = /love/gi;
+const count = sentence.match(patternLove);
+
+console.log(count?.length);
+// Use match() to count the number of all because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+const sentenceConjuction =
+  "You cannot end a sentence with because because because is a conjunction";
+
+const patternAll = /because/gi;
+console.log(sentenceConjuction.match(patternAll)?.length);
+
+// Clean the following text and find the most frequent word (hint, use replace and regular expressions).
+const firstSentence =
+  "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
+
+const newPattern = firstSentence.replace(/[@%&#$!?.,;]/gi, "");
+console.log(newPattern);
+
+const findMostFrequentWord = (newString) => {
+  const strAarr = newString.split(" ");
+  const obj = {};
+
+  strAarr.forEach((word) => {
+    // console.log(word);
+    if (obj.hasOwnProperty(word)) {
+      obj[word]++;
+    } else {
+      obj[word] = 1;
+    }
+  });
+
+  // console.log(obj)
+  return obj;
+};
+
+console.log(findMostFrequentWord(newPattern));
+
+// Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+
+const stringPattern =
+  "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.";
+
+const calculateTotalAnnual = (str) => {
+  const strArr = str.split(" ");
+  const numberInArr = [];
+
+  strArr.forEach((ele, index) => {
+    if (ele.match(/[0-9]/gi)) {
+      numberInArr.push(ele);
+    }
+  });
+
+  const values = numberInArr.map((item) => Number(item));
+
+  const adjusted = values.map((value) =>
+    // [ 60000, 10000, 180000 ]
+    value === 10000 ? value : value * 12
+  );
+
+  // console.log(adjusted);
+
+  const result = adjusted.reduce((acc, curr) => (acc += curr));
+  // console.log(result);
+
+  return result;
+};
+
+console.log(calculateTotalAnnual(stringPattern)); // 250000

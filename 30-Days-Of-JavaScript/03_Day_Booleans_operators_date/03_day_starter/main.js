@@ -214,26 +214,26 @@ console.log(countPostDecre); // -1
 let isRainingOn = true;
 
 isRainingOn
-  ? console.log("You need a rain coat.")
+  ? console.log("You need a rain coat.") // You need a rain coat.
   : console.log("No need for a rain coat.");
 
 isRainingOn = false;
 
 isRainingOn
   ? console.log("You need a rain coat.")
-  : console.log("No need for a rain coat.");
+  : console.log("No need for a rain coat."); // No need for a rain coat.
 
 let number = 5;
 
 number > 0
-  ? console.log(`${number} is a positive number`)
+  ? console.log(`${number} is a positive number`) // 5 is a positive number
   : console.log(`${number} is a negative number`);
 
 number = -5;
 
 number > 0
   ? console.log(`${number} is a positive number`)
-  : console.log(`${number} is a negative number`);
+  : console.log(`${number} is a negative number`); // -5 is a negative number
 
 // 4-7 Operator Precedence:
 // I would like to recommend you to read about operator precedence from this link:

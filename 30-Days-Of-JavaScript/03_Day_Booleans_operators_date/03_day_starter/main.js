@@ -1,3 +1,4 @@
+// @ts-nocheck
 // 1 -- Booleans
 
 // A boolean data type represents one of the two values:true or false. Boolean value is either true or false. The use of these data types will be clear when you start the comparison operator. Any comparisons return a boolean value which is either true or false.
@@ -154,3 +155,88 @@ console.log("python".length > "dragon".length); // false
 // has an exhaustive list of comparison of data types.
 
 // 4-4 Logical Operators:
+
+// The following symbols are the common logical operators: &&(ampersand) , ||(pipe) and !(negation). The && operator gets true only if the two operands are true. The || operator gets true either of the operand is true. The ! operator negates true to false and false to true.
+
+// && ampersand operator example
+const check1 = 4 > 3 && 10 > 5; // true && true -> true
+const check2 = 4 > 3 && 10 < 5; // true && false -> false
+const check3 = 4 < 3 && 10 < 5; // false && false -> false
+
+// || pipe or operator, example
+const check4 = 4 > 3 || 10 > 5; // true  || true -> true
+const check5 = 4 > 3 || 10 < 5; // true  || false -> true
+const check6 = 4 < 3 || 10 < 5; // false || false -> false
+
+//! Negation examples
+const check7 = 4 > 3; // true
+const check8 = !(4 > 3); //  false
+const isLightOnIn = true;
+const isLightOff = !isLightOnIn; // false
+const isMarriedFirst = !false; // true
+
+// 4-5 Increment Operator:
+// In JavaScript we use the increment operator to increase a value stored in a variable. The increment could be pre or post increment. Let us see each of them:
+
+// --Pre - increment:
+let countPre = 0;
+
+console.log(++countPre); // 1
+console.log(countPre); // 1
+
+// --Post-increment:
+let countPost = 0;
+
+console.log(countPost++); // 0
+console.log(countPost); // 1
+
+// We use most of the time post-increment. At least you should remember how to use post-increment operator!!
+
+// 4-6 Decrement Operator:
+// In JavaScript we use the decrement operator to decrease a value stored in a variable. The decrement could be pre or post decrement. Let us see each of them:
+
+// --Pre - decrement:
+
+let countPreDecre = 0;
+
+console.log(--countPreDecre); // -1
+console.log(countPreDecre); // -1
+
+// -- Post-decrement:
+let countPostDecre = 0;
+
+console.log(countPostDecre--); // 0
+console.log(countPostDecre); // -1
+
+// 4-6 Ternary Operators:
+// Ternary operator allows to write a condition. Another way to write conditionals is using ternary operators. Look at the following examples:
+
+let isRainingOn = true;
+
+isRainingOn
+  ? console.log("You need a rain coat.")
+  : console.log("No need for a rain coat.");
+
+isRainingOn = false;
+
+isRainingOn
+  ? console.log("You need a rain coat.")
+  : console.log("No need for a rain coat.");
+
+let number = 5;
+
+number > 0
+  ? console.log(`${number} is a positive number`)
+  : console.log(`${number} is a negative number`);
+
+number = -5;
+
+number > 0
+  ? console.log(`${number} is a positive number`)
+  : console.log(`${number} is a negative number`);
+
+// 4-7 Operator Precedence:
+// I would like to recommend you to read about operator precedence from this link:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+// 5 -- Window Methods

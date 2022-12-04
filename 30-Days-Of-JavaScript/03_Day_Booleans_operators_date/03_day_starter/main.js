@@ -240,3 +240,31 @@ number > 0
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 
 // 5 -- Window Methods
+// 1-1 Window alert() method!!
+
+// As you have seen at very beginning alert() method displays an alert box with a specified message and an OK button. It is a builtin method and it takes on argument.
+const msg = "This is alert method!!";
+alert(msg);
+
+alert("Welcome to 30DaysOfJavaScript");
+// Do not use too much alert because it is destructing and annoying, use it just to test.
+
+// 1-2 Window prompt() method
+
+// The window prompt methods display a prompt box with an input on your browser to take input values and the input data can be stored in a variable. The prompt() method takes two arguments. The second argument is optional.
+
+prompt("required text", "optional text");
+
+const numberPrompt = prompt("Enter number", "number goes here");
+console.log(numberPrompt);
+
+// 1-3 Window confirm() method
+
+// The confirm() method displays a dialog box with a specified message, along with an OK and a Cancel button. A confirm box is often used to ask permission from a user to execute something. Window confirm() takes a string as an argument. Clicking the OK yields true value, whereas clicking the Cancel button yields false value.
+
+const agree = confirm("Are you sure you like to delete? ");
+console.log(agree); // result will be true or false based on what you click on the dialog box!!
+
+// These are not all the window methods we will have a separate section to go deeper into window methods!!
+
+// 6 -- Date Object!!

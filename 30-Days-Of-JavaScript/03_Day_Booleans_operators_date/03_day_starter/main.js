@@ -268,3 +268,96 @@ console.log(agree); // result will be true or false based on what you click on t
 // These are not all the window methods we will have a separate section to go deeper into window methods!!
 
 // 6 -- Date Object!!
+
+// Time is an important thing. We like to know the time a certain activity or event. In JavaScript current time and date is created using JavaScript Date Object. The object we create using Date object provides many methods to work with date and time.The methods we use to get date and time information from a date object values are started with a word get because it provide the information.
+
+// getFullYear(),              // Get the year as a four digit number (yyyy) 2022
+// getMonth(),                 // Get the month as a number (0 - 11) 0
+// getDate(),                 // Get the day as a number (1 - 31) 6
+// getHours(),                // Get the hour (0 - 23) 0
+// getMinutes(),              // Get the minute as a number (0 - 59) 56
+// getSeconds(),             // Get the second (0 - 59)
+// getMilliseconds(),        // Get the millisecond (0 - 999) 341
+// getTime(),                // Get the time ( milliseconds since January 1, 1970 )  // 1578092201341
+// getDay()                  // Get the weekday as a number (0 - 6)  6
+
+// 6 - 1 ------ Creating a time object
+// Once we create time object. The time object will provide information about time. Let us create a time object
+
+const now = new Date();
+console.log(now);
+
+// We have created a time object and we can access any date time information from the object using the get methods we have mentioned on the table.
+
+// 6 - 2 -------- Getting full year
+
+const year = new Date();
+console.log(year.getFullYear()); // 2022
+
+// 6 - 2 ------ Getting month
+
+const month = new Date();
+console.log(month.getMonth()); // (0 - 11) // 11
+
+// 6 - 3 ------ Getting date
+
+const date = new Date();
+console.log(date.getDate()); // 5, because the day of the month is 5th,  day(1-31)
+
+// 6 - 4 ------ Getting day
+
+const day = new Date();
+console.log(day.getDay()); // 1, because the day is Monday which is the 1th day!
+
+// 6 - 5 ------ Getting hours
+const hour = new Date();
+console.log(hour.getHours()); // 11, because the time is 11:20:00
+
+// 6 - 6 ------ Getting minutes
+const minute = new Date();
+console.log(minute.getMinutes()); // 22, because the time is 00:22:41
+
+// 6 - 7 ------ Getting seconds
+const second = new Date();
+console.log(second.getSeconds()); // 30, because the time is 00:22:30
+
+// 6 - 7 ------ Getting time
+const time = new Date().getTime();
+
+// 1670236170488, this is the number of seconds passed from January 1, 1970 to January 4, 2022  00:56:41
+console.log(time);
+
+// --- Using Date.now()
+const allSecond = Date.now();
+
+// 1670236170488, this is the number of seconds passed from January 1, 1970 to January 4, 2022  00:56:41
+console.log(allSecond);
+
+// Comparison of those two methods, getTime() && now()
+console.log(time === allSecond);
+
+// Let us format these values to a human readable time format. Example:
+const nowDate = new Date();
+console.log(nowDate);
+
+const yearFormat = nowDate.getFullYear(); // return year
+console.log(yearFormat);
+
+const monthFormat = nowDate.getMonth() + 1; // return month(0 - 11)
+console.log(monthFormat);
+
+const dateFormat = nowDate.getDate(); // return date (1 - 31)
+console.log(dateFormat);
+
+const hoursFormat = nowDate.getHours(); // return number (0 - 23)
+console.log(hoursFormat);
+
+const minutesFormat = nowDate.getMinutes(); // return number (0 -59)
+console.log(minutesFormat); // 55
+
+console.log(
+  // 5/12/2022 11:56
+  `${dateFormat}/${monthFormat}/${yearFormat} ${hoursFormat}:${minutesFormat}`
+);
+
+// Exercises!!

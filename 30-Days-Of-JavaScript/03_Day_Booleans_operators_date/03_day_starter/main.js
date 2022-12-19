@@ -309,6 +309,7 @@ console.log(date.getDate()); // 5, because the day of the month is 5th,  day(1-3
 const day = new Date();
 console.log(day.getDay()); // 1, because the day is Monday which is the 1th day!
 
+// Get the weekday as a number (0 - 6)  6
 // 6 - 5 ------ Getting hours
 const hour = new Date();
 console.log(hour.getHours()); // 11, because the time is 11:20:00
@@ -361,3 +362,137 @@ console.log(
 );
 
 // Exercises!!
+// Exercises: Level 1
+
+// 1 - Declare firstName, lastName, country, city, age, isMarried, year variable and assign value to it and use the typeof operator to check different data types.
+
+const _firstName = "Saad";
+const _lastName = "Azghour";
+const _country = "EveryWhere!!";
+const _city = "AnyWhere!!";
+const _age = "28";
+const _isMarried = false;
+const _year = "2022";
+
+console.log(typeof _firstName);
+console.log(typeof _lastName);
+console.log(typeof _country);
+console.log(typeof _city);
+console.log(typeof _age);
+console.log(typeof _isMarried);
+console.log(typeof _year);
+
+// 2 - Check if type of '10' is equal to 10
+console.log(typeof 10 == typeof "10"); // false
+
+// 3 - Check if parseInt('9.8') is equal to 10
+console.log(typeof parseInt("9.8") == typeof 10); // true
+
+// 4 - Boolean value is either true or false.
+// Write three JavaScript statement which provide truthy value.
+
+const isTruthy = true;
+
+if (true) {
+  console.log(true === isTruthy); // true
+}
+
+console.log(12 > 6); // true
+console.log(2 * 2 > 2); // true
+
+// Write three JavaScript statement which provide falsy value.
+
+const isFalsy = false;
+
+if (true) {
+  console.log(true === isFalsy); // false
+}
+
+console.log(12 > 13); // false
+console.log(2 * 2 > 6); // false
+
+// 5 - Figure out the result of the following comparison expression first without using console.log(). After you decide the result confirm it using console.log()
+
+console.log(4 > 3); // true
+console.log(4 >= 3); // true
+console.log(4 < 3); // false
+console.log(4 == 4); // true
+console.log(4 === 4); // true
+console.log(4 != 4); // false
+console.log(4 !== 4); // false
+console.log(4 != "4"); // false
+console.log(4 == "4"); // true
+console.log(4 === "4"); // false
+
+// Find the length of python and jargon and make a falsy comparison statement.
+
+const python = "python";
+const jargon = "jargon";
+
+console.log(
+  `Falsy comparison statement : ${String(python.length) === python.length}`
+);
+
+console.log(
+  `Falsy comparison statement : ${String(jargon.length) === jargon.length}`
+);
+
+console.log(python.length !== jargon.length);
+
+// 6 - Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
+
+console.log(4 > 3 && 10 < 12); // true
+console.log(4 > 3 && 10 > 12); // false
+console.log(4 > 3 || 10 < 12); // true
+
+console.log(4 > 3 || 10 > 12); // true
+console.log(!(4 > 3)); // false
+console.log(!false); // true
+console.log(!(4 > 3 && 10 < 12)); // false
+console.log(!(4 === "4")); // true
+
+// There is no 'on' in both dragon and python
+
+const _python = "python";
+const _dragon = "dragon";
+
+console.log(_python.includes("on")); // true
+console.log(_dragon.includes("on")); // true
+
+// 7 - Use the Date object to do the following activities:
+// What is the year today?
+
+const yearToday = new Date();
+console.log(yearToday.getFullYear()); // 2022
+
+// What is the month today as a number?
+const monthToday = new Date();
+
+// Get the month as a number (0 - 11) 0
+console.log(monthToday.getMonth()); // 11
+
+// What is the date today?
+const dateToday = new Date();
+console.log(dateToday.getDate()); // 19
+
+// What is the day today as a number?
+const dayToday = new Date();
+// 1, because the day is Monday which is the 1th day!
+console.log(dayToday.getDay()); // 1 // Get the weekday as a number (0 - 6)  6
+
+// What is the hours now?
+const hourToday = new Date();
+console.log(hourToday.getHours()); // 13
+
+// What is the minutes now?
+const minuteToday = new Date();
+console.log(minuteToday.getMinutes()); // 6
+
+// Find out the numbers of seconds elapsed from January 1, 1970 to now
+// const secondElapsed = new Date("January 1, 1970");
+
+const nowSecond = new Date();
+console.log(Math.round(nowSecond.getTime() / 1000)); // 1671452225
+
+// Exercises:
+// Exercises: Level 2

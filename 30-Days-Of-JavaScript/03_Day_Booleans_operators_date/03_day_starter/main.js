@@ -653,3 +653,30 @@ console.log(
 
 // Exercises:
 // Exercises: Level 3
+
+// Create a human readable time format using the Date time object.
+// The hour and the minute should be all the time two digits :
+// (7 hours should be 07 and 5 minutes should be 05 )
+// YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+
+const newDateFormat = new Date();
+
+const newFormatYear = newDateFormat.getFullYear();
+const newFormatMonth = newDateFormat.getMonth();
+const newFormatDay = newDateFormat.getDate();
+const newFormatHours = newDateFormat.getHours();
+const newFormatMinutes = newDateFormat.getMinutes();
+
+const hoursTwoDigit =
+  newFormatHours < 10 ? `0${newFormatHours}` : newFormatHours;
+
+console.log(hoursTwoDigit); // 17
+
+const minuteTwoDigit =
+  newFormatMinutes < 10 ? `0${newFormatMinutes}` : newFormatMinutes;
+
+console.log(minuteTwoDigit); // 12
+
+console.log(
+  `${newFormatYear}-${newFormatMonth}-${newFormatDay}  ${hoursTwoDigit}:${minuteTwoDigit}`
+);

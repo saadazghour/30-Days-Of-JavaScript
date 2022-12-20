@@ -664,8 +664,12 @@ const newDateFormat = new Date();
 const newFormatYear = newDateFormat.getFullYear();
 const newFormatMonth = newDateFormat.getMonth();
 const newFormatDay = newDateFormat.getDate();
-const newFormatHours = newDateFormat.getHours();
-const newFormatMinutes = newDateFormat.getMinutes();
+let newFormatHours = newDateFormat.getHours();
+// console.log(newFormatHours);
+newFormatHours = 7;
+let newFormatMinutes = newDateFormat.getMinutes();
+// console.log(newFormatMinutes);
+newFormatMinutes = 5;
 
 const hoursTwoDigit =
   newFormatHours < 10 ? `0${newFormatHours}` : newFormatHours;

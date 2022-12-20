@@ -496,3 +496,160 @@ console.log(Math.round(nowSecond.getTime() / 1000)); // 1671452225
 
 // Exercises:
 // Exercises: Level 2
+
+// 1 - Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+
+const base = prompt("Enter base  of the triangle : ", 60);
+const height = prompt("Enter height  of the triangle :", 20);
+
+const areaOfTriangle = 0.5 * base * height;
+
+console.log(areaOfTriangle);
+
+// 2 - Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
+
+const sideA = Number(prompt("Enter sideA  of the triangle : ", 100));
+const sideB = Number(prompt("Enter sideB  of the triangle :", 200));
+const sideC = Number(prompt("Enter sideC  of the triangle :", 300));
+
+const perimeter = sideA + sideB + sideC;
+
+console.log(perimeter);
+
+// 3 - Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+
+const lenghtOfRectangle = Number(
+  prompt("Enter the lenght  of the triangle : ", 100)
+);
+
+const widthOfTectangle = Number(
+  prompt("Enter the width  of the triangle :", 200)
+);
+
+const perimeterResult = 2 * (lenghtOfRectangle * widthOfTectangle);
+const areaResult = lenghtOfRectangle * widthOfTectangle;
+
+console.log(areaResult);
+console.log(perimeterResult);
+
+// 4 - Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+
+const radiusOfCircle = Number(
+  prompt("Enter the Radius of the Triangle :", 200)
+);
+
+const pi = Math.PI;
+const areaOfCirclePI = pi * radiusOfCircle * radiusOfCircle;
+const circumferenceOfCircle = 2 * pi * radiusOfCircle;
+
+console.log(radiusOfCircle);
+console.log(circumferenceOfCircle);
+
+// 5 - Calculate the slope, x-intercept and y-intercept of y = 2x -2
+const slopValue = Number(prompt("Enter the slop X-intercept value :", 100));
+const resultSlope = 2 * slopValue - 2;
+
+console.log(resultSlope);
+
+// 6 - Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
+
+// m = (y2-y1) / (x2-x1)
+// (2, 2) and point(6,10)
+
+const slopeBetweenPoint = (10 - 2) / (6 - 2);
+console.log(slopeBetweenPoint);
+
+// 7 - Compare the slope of above two questions.
+
+// 8 - Calculate the value of y (y = x2 + 6x + 9).
+// Try to use different x values and figure out at what x value y is 0.
+// y = x^2 + 6x + 9
+
+const xValue = 9;
+const yValue = Math.pow(xValue, 2) + 6 * xValue + 9;
+
+console.log(yValue);
+
+// 9 - Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+
+const houres = Number(prompt("Enter the slop X-intercept value :", 28));
+const ratePerHoures = Number(prompt("Enter the slop X-intercept value :", 40));
+
+const payResult = houres * ratePerHoures;
+
+// 10 - If the length of your name is greater than 7 say, your name is long else say your name is short.
+
+const myName = "Saad";
+
+myName.length > 7
+  ? console.log(`My Name is long!`)
+  : console.log(`My Name is short!`);
+
+// 11 - Compare your first name length and your family name length and you should get this output.
+
+const myFirstName = "saad";
+const myLastName = "Azghour";
+
+console.log(myFirstName.length === myLastName.length);
+
+// My Last Name, Azghour is longer than your First name, Saad!
+myFirstName.length < myLastName.length
+  ? console.log(
+      `My Last Name, ${myLastName} is longer than my First name, ${myFirstName}!`
+    )
+  : "";
+
+// 12 - Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
+
+const isMyAge = 250;
+const isYourAge = 25;
+
+const olderOrYounger =
+  isMyAge < isYourAge ? isYourAge - isMyAge : isMyAge - isYourAge;
+
+console.log(`I am ${olderOrYounger} years older than you!`);
+
+// 13 - Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+
+const yearOfUser = Number(prompt("Enter year of the birth Date! :", 1993));
+const dateNow = new Date().getFullYear();
+const getYears = dateNow - yearOfUser;
+// console.log(getYears);
+
+getYears >= 18
+  ? console.log("You can drive now!")
+  : console.log("Please, wait a certain amount of years!");
+
+// 14 - Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years!
+
+const yearsLive = Number(prompt("Enter number of years you live: ", 100));
+const inSecondPersonLive = 60 * 60 * 24 * 365 * yearsLive;
+
+console.log(`You lived ${inSecondPersonLive} seconds!!`); // 3153600000
+
+// 15 - Create a human readable time format using the Date time object.
+// YYYY-MM-DD HH:mm
+// DD-MM-YYYY HH:mm
+// DD/MM/YYYY HH:mm
+
+const formatDate = new Date();
+const formatYear = formatDate.getFullYear();
+const formatMonth = formatDate.getMonth();
+const formatDay = formatDate.getDate();
+const formatHours = formatDate.getHours();
+const formatMinutes = formatDate.getMinutes();
+
+console.log(
+  `${formatYear}-${formatMonth}-${formatDay} ${formatHours}:${formatMinutes}`
+);
+
+console.log(
+  `${formatDay}-${formatMonth}-${formatYear} ${formatHours}:${formatMinutes}`
+);
+
+console.log(
+  `${formatDay}/${formatMonth}/${formatYear} ${formatHours}:${formatMinutes}`
+);
+
+// Exercises:
+// Exercises: Level 3

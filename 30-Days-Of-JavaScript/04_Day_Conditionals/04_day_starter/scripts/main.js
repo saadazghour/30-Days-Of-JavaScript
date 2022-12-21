@@ -308,3 +308,26 @@ isDay === "saturday" || isDay === "sunday"
 // Exercises:
 // Exercises: Level 3
 // Write a program which tells the number of days in a month.
+
+const monthNumber = "February";
+
+if (
+  monthNumber === "january" ||
+  monthNumber === "march" ||
+  monthNumber === "may" ||
+  monthNumber === "july" ||
+  monthNumber === "august" ||
+  monthNumber === "october" ||
+  monthNumber === "december"
+) {
+  console.log(`${monthNumber} has 31 days.`);
+} else if (
+  monthNumber === "april" ||
+  monthNumber === "june" ||
+  monthNumber === "September" ||
+  monthNumber === "November"
+) {
+  console.log(`${monthNumber} has 30 days`);
+} else {
+  console.log("February has 28 or 29 days"); //
+}

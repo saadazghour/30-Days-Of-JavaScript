@@ -336,3 +336,61 @@ switch (monthNumber) {
 }
 
 // Write a program which tells the number of days in a month, now consider leap year.
+
+const isLeapYear = 1996;
+const monthNum = "February";
+
+if (
+  (isLeapYear % 4 === 0 && isLeapYear % 100 !== 0) ||
+  isLeapYear % 400 === 0
+) {
+  console.log(`The year ${isLeapYear} is a leap year!!`);
+  switch (monthNum) {
+    case "january":
+    case "march":
+    case "may":
+    case "july":
+    case "august":
+    case "october":
+    case "december":
+      console.log(`${monthNum} has 31 days.`);
+      break;
+    case "april":
+    case "june":
+    case "September":
+    case "November":
+      console.log(`${monthNum} has 30 days`);
+      break;
+    case "February":
+      console.log("February has 28 or 29 days"); //
+      break;
+    default:
+      console.log("Invalid month Entered!!");
+      break;
+  }
+} else {
+  console.log(`The year ${isLeapYear} is not a leap year!!`);
+  switch (monthNum) {
+    case "january":
+    case "march":
+    case "may":
+    case "july":
+    case "august":
+    case "october":
+    case "december":
+      console.log(`${monthNum} has 31 days.`);
+      break;
+    case "april":
+    case "june":
+    case "September":
+    case "November":
+      console.log(`${monthNum} has 30 days`);
+      break;
+    case "February":
+      console.log("February has 28 or 29 days"); //
+      break;
+    default:
+      console.log("Invalid month Entered!!");
+      break;
+  }
+}

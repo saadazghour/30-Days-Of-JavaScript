@@ -241,3 +241,63 @@ _country[_lastItem] = "Korea"; // Replacing Kenya by Korea
 console.log(_country);
 
 // 6 - Methods to manipulate array
+
+// There are different methods to manipulate an array. These are some of the available methods to deal with arrays:Array, length, concat, indexOf, slice, splice, join, toString, includes, lastIndexOf, isArray, fill, push, pop, shift, unshift !
+
+// 1 - Array Constructor:
+// Array:To create an array.
+
+const arrConstructor = Array(); // Create an empty array
+console.log(arrConstructor); // []
+
+const eightEmptyValues = Array(8); // It creates eight empty values
+console.log(eightEmptyValues); // []
+
+// 2 - Creating static values with fill :
+// fill: Fill all the array elements with a static value.
+
+const staticValues = Array();
+console.log(staticValues);
+
+const ValuesFill = Array(8).fill("Saad"); // It creates eight element values filled with 'Saad'
+console.log(ValuesFill);
+
+const numberFilled = Array(8).fill(0); // It creates eight element values filled with 0
+console.log(numberFilled);
+
+const four4values = Array(4).fill(4); // It creates 4 element values filled with 4
+console.log(four4values);
+
+// 3 - Concatenating array using concat :
+// concat:To concatenate two arrays.
+
+const firstList = [1, 2, 3, 4];
+const secondList = [5, 6, 7, 8];
+
+const listResult = firstList.concat(secondList);
+console.log(listResult);
+
+const listFruits = ["banana", "orange", "mango", "lemon"]; // array of fruits
+const listVegetables = ["Tomato", "Potato", "Cabbage", "Onion", "Carrot"]; // array of vegetables
+const fruitsAndVegetablesResult = listFruits.concat(listVegetables); // concatenate the two arrays
+
+console.log(fruitsAndVegetablesResult);
+
+// 4 - Getting array length :
+// Length:To know the size of the array.
+
+const lengthNumbers = [1, 2, 3, 4];
+console.log(lengthNumbers.length); // 4  is the size of the array
+
+// 5 - Getting index an element in arr array :
+// indexOf:To check if an item exist in an array. If it exists it returns the index else it returns -1.
+
+const numbersIndex = [1, 2, 3, 4, 5, 6];
+console.log(numbersIndex.indexOf(5));
+console.log(numbersIndex.indexOf(0));
+console.log(numbersIndex.indexOf(1));
+console.log(numbersIndex.indexOf(6));
+console.log(numbersIndex.indexOf(7));
+
+// 6 - Check an element if it exist in an array :
+// Check items in a list.

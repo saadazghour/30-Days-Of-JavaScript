@@ -301,3 +301,173 @@ console.log(numbersIndex.indexOf(7));
 
 // 6 - Check an element if it exist in an array :
 // Check items in a list.
+// let us check if a banana exist in the array
+
+const fruitsCheck = ["banana", "apple", "orange", "peach", "orange", "mango"];
+const indexOf = fruitsCheck.indexOf("banana");
+
+indexOf === -1
+  ? new Error("This fruit does not exist in the array")
+  : console.log("This fruit does exist in the array");
+
+// let us check if an avocado exist in the array
+const fruitsExist = fruitsCheck.indexOf("avocado");
+
+fruitsExist === -1
+  ? console.log("This fruit does not exist in the array")
+  : console.log("This fruit does exist in the Array");
+
+// 7 - Getting last index of an element in array
+// lastIndexOf: It gives the position of the last item in the array. If it exist, it returns the index else it returns -1.
+
+const lastIndexNumbers = [1, 2, 3, 4, 5, 3, 1, 2];
+
+console.log(lastIndexNumbers.lastIndexOf(2));
+console.log(lastIndexNumbers.lastIndexOf(0));
+console.log(lastIndexNumbers.lastIndexOf(1));
+console.log(lastIndexNumbers.lastIndexOf(4));
+console.log(lastIndexNumbers.lastIndexOf(6));
+console.log(lastIndexNumbers.lastIndexOf(3));
+
+// 8 - includes: To check if an item exist in an array. If it exist it returns the true else it returns false.
+
+const numbersIncludes = [1, 2, 3, 4, 5, 3, 1, 2];
+
+console.log(numbersIncludes.includes(1)); // true
+console.log(numbersIncludes.includes(3)); // true
+console.log(numbersIncludes.includes(2)); // true
+console.log(numbersIncludes.includes(0)); // false
+console.log(numbersIncludes.includes(4)); // true
+console.log(numbersIncludes.includes(-1)); // false
+
+const tech = ["HTML", "CSS", "JavaScript", "React", "Redux", "Node", "MongoDB"]; // List of web technologies
+
+console.log(tech.includes("Node")); // true
+console.log(tech.includes("Go")); // false
+
+// 9 - Checking Array
+// Array.isArray:To check if the data type is an array
+
+const checkArraysNumbers = [1, 2, 3, 7, 8, 9, 10, 0];
+console.log(Array.isArray(checkArraysNumbers));
+
+const numbersCheck = 10;
+
+console.log(Array.isArray(numbersCheck));
+
+// 10 - Converting array to string
+// toString: Converts array to string
+
+const arrayConverts = [1, 2, 3, 4, 5, 6];
+console.log(arrayConverts.toString()); // 1,2,3,4,5,6
+
+const names = ["Saad", "Yassine", "Mohammed", "Abdellah"];
+console.log(names.toString()); // Saad,Yassine,Mohamed,Abdellah
+
+// 11 - Joining array elements :
+// join: It is used to join the elements of the array, the argument we passed in the join method will be joined in the array and return as a string. By default, it joins with a comma, but we can pass different string parameter which can be joined between the items.
+
+const joinNumbers = [1, 2, 3, 4, 5, 6];
+console.log(joinNumbers.join("")); // 123456
+
+const joinNames = ["Saad", "Yassine", "Mohammed", "Abdellah"];
+
+console.log(joinNames.join()); // Saad,Yassine,Mohammed,Abdellah
+console.log(joinNames.join("")); // SaadYassineMohammedAbdellah
+console.log(joinNames.join(" ")); // Saad Yassine Mohammed Abdellah
+console.log(joinNames.join(", ")); // Saad, Yassine, Mohammed, Abdellah
+console.log(joinNames.join(" # ")); // Saad # Yassine # Mohammed # Abdellah
+
+// 12 - Slice array elements :
+// Slice: To cut out a multiple items in range. It takes two parameters:starting and ending position. It doesn't include the ending position.
+
+const sliceNumbers = [1, 2, 3, 4, 5, 6];
+console.log(sliceNumbers.slice()); //  [1, 2, 3, 4, 5, 6];
+console.log(sliceNumbers.slice(0)); //  [1, 2, 3, 4, 5, 6];
+console.log(sliceNumbers.slice(0, sliceNumbers.length)); // it copies all  item
+console.log(sliceNumbers.slice(1, 4)); // [2,3,4] // it doesn't include the ending position
+
+// 13 - Splice method in array
+// Splice: It takes three parameters: Starting position, number of times to be removed and number of items to be added.
+
+const spliceNumbers = [1, 2, 3, 4, 5, 6];
+// @ts-ignore
+console.log(spliceNumbers.splice()); // [], remove all items
+console.log(spliceNumbers.splice(0, 1)); // [1] remove the first item
+console.log(spliceNumbers.splice(0, spliceNumbers.length)); // [ 2, 3, 4, 5, 6 ]
+console.log(spliceNumbers); // Whole things are removed, we have empty array []
+
+const numbersSplice = [1, 2, 3, 4, 5, 6];
+numbersSplice.splice(3, 3, 7, 8, 9); // [1, 2, 3, 7, 8, 9]
+console.log(numbersSplice);
+
+// [1, 2, 3, 7, 8, 9] // It removes three item and replace three items, at index 3 .
+console.log(numbersSplice.splice(3, 3, 7, 8, 9)); //
+console.log(numbersSplice); // [1, 2, 3, 7, 8, 9]
+
+// 14 - Adding item to an array using push
+// Push: adding item in the end. To add item to the end of an existing array we use the push method.
+
+const arrayItems = ["item1", "item2", "item3"];
+arrayItems.push("Item4");
+console.log(arrayItems);
+
+const arrayNumbers = [1, 2, 3, 4, 5, 6];
+arrayNumbers.push(7, 8);
+console.log(arrayNumbers); // [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+
+// 15 - Removing the end element using pop.
+// remove one item from the end.
+arrayNumbers.pop();
+console.log(arrayNumbers); // [ 1, 2, 3, 4, 5, 6, 7 ]
+
+// 16 - Removing an element from the beginning
+// shift: Removing one array element in the beginning of the array.
+arrayNumbers.shift();
+console.log(arrayNumbers); // [ 2, 3, 4, 5, 6, 7 ]
+
+// 17 - Add an element from the beginning
+//unshift: Adding array element in the beginning of the array.
+arrayNumbers.unshift(0);
+console.log(arrayNumbers); // [ 0, 2, 3, 4, 5, 6, 7 ]
+
+// 18 - Reversing array order
+// reverse: reverse the order of an array.
+const reverseArray = arrayNumbers.reverse();
+console.log(reverseArray); // [ 7, 6, 5, 4, 3, 2, 0 ]  // Reverse array order
+
+// 19 - Sorting elements in array
+// sort: arrange array elements in ascending order. Sort takes a call back function, we will see how we use sort with a call back function in the coming sections.
+
+const webSorting = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+console.log(webSorting.sort()); // [ 'CSS', 'HTML', 'JavaScript', 'MongoDB', 'Node', 'React', 'Redux' ]
+// After sorting we can reverse it.
+console.log(webSorting.reverse()); // [ 'Redux', 'React', 'Node', 'MongoDB', 'JavaScript', 'HTML', 'CSS' ]
+
+// Array of arrays
+// Array can store different data types including an array itself. Let us create an array of arrays
+
+const firstNums = [1, 2, 3];
+const secondNums = [4, 5, 6];
+const arrayOfArrays = [firstNums, secondNums];
+
+console.log(arrayOfArrays[1]);
+
+const frontEnd = ["HTML", "Css", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+const fullStack = [frontEnd, backEnd];
+
+console.log(fullStack.length);
+console.log(fullStack[0]);
+console.log(fullStack[1]);
+
+// --------------  Exercise ------------------

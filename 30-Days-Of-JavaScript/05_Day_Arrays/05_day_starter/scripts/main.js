@@ -466,8 +466,8 @@ const frontEnd = ["HTML", "Css", "JS", "React", "Redux"];
 const backEnd = ["Node", "Express", "MongoDB"];
 const fullStack = [frontEnd, backEnd];
 
-console.log(fullStack.length);
-console.log(fullStack[0]);
-console.log(fullStack[1]);
+console.log(fullStack.length); // 2
+console.log(fullStack[0]); // [ 'HTML', 'Css', 'JS', 'React', 'Redux' ]
+console.log(fullStack[1]); // [ 'Node', 'Express', 'MongoDB' ]
 
 // --------------  Exercise ------------------

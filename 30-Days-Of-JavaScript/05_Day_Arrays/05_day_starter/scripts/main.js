@@ -533,13 +533,6 @@ console.log(itCompanies[itCompanies.length - 1]);
 // Print out each company
 console.log(itCompanies); // TO DO
 // Change each company name to uppercase one by one and print them out
-console.log(itCompanies[0].toUpperCase());
-console.log(itCompanies[1].toUpperCase());
-console.log(itCompanies[2].toUpperCase());
-console.log(itCompanies[3].toUpperCase());
-console.log(itCompanies[4].toUpperCase());
-console.log(itCompanies[5].toUpperCase());
-console.log(itCompanies[6].toUpperCase());
 
 const newCompany = [];
 for (let i = 0; i < itCompanies.length; i++) {

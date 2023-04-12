@@ -1,4 +1,5 @@
 // console.log(countries);
+import { countriesTwo } from "../data/countries";
 
 // alert("Open the browser console whenever you work on JavaScript");
 // alert("Open the console and check if the countries has been loaded");
@@ -569,5 +570,33 @@ console.log(itCompanies.pop());
 console.log(itCompanies);
 console.log(itCompanies.splice(0, itCompanies.length)); // []
 // Exercise: Level 2 :
+// 1 - Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
 
+// 2 - First remove all the punctuations and change the string to array and count the number of words in the array
+
+const text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+
+// @ts-ignore
+const remove = text.replaceAll(/[.,]/gi, "");
+console.log(remove.split(" ").length); // 13
+// 3 - In the following shopping cart add, remove, edit items
+const shoppingCartArray = ["Milk", "Coffee", "Tea", "Honey"];
+// add 'Meat' in the beginning of your shopping cart if it has not been already added
+// check if it has already been added here!
+shoppingCartArray.includes("Meat")
+  ? "Item not added"
+  : shoppingCartArray.unshift("Meat");
+
+// add Sugar at the end of you shopping cart if it has not been already added
+shoppingCartArray.includes("Sugar")
+  ? "Item not added"
+  : shoppingCartArray.push("Sugar");
+
+// remove 'Honey' if you are allergic to honey
+console.log(shoppingCartArray.splice(4, 1));
+// modify Tea to 'Green Tea'
+console.log(shoppingCartArray.splice(3, 1, "Green Tea"));
+// In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+console.log(countriesTwo);
 // Exercise: Level 3 :

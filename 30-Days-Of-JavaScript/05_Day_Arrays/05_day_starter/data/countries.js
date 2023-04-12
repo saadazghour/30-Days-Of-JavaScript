@@ -1,4 +1,4 @@
-const countries = [
+export const countriesTwo = [
   "Afghanistan",
   "Albania",
   "Algeria",

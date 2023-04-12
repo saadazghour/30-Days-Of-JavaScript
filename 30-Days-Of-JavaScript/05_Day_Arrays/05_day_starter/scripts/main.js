@@ -540,6 +540,14 @@ console.log(itCompanies[3].toUpperCase());
 console.log(itCompanies[4].toUpperCase());
 console.log(itCompanies[5].toUpperCase());
 console.log(itCompanies[6].toUpperCase());
+
+const newCompany = [];
+for (let i = 0; i < itCompanies.length; i++) {
+  newCompany.push(itCompanies[i].toUpperCase());
+}
+
+console.log(newCompany.join(", ")); // FACEBOOK, GOOGLE, MICROSOFT, APPLE, IBM, ORACLE, AMAZON;
+
 // Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
 console.log(itCompanies.join(", ").concat(" are big IT companies."));
 // Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found

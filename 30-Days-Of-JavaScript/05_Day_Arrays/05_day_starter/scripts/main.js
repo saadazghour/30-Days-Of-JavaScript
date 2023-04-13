@@ -859,3 +859,13 @@ if (sorted.length % 2 === 0) {
 }
 
 // Find the average age(all items divided by number of items)
+const agesNew = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+let totalAge = 0;
+for (let i = 0; i < agesNew.length; i++) {
+  totalAge += agesNew[i];
+}
+
+const averageResult = totalAge / agesNew.length;
+
+console.log(`The average age is: ${averageResult}`);

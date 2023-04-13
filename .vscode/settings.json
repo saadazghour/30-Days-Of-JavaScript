@@ -177,7 +177,6 @@
   //   // ErrorLens Configuration!!
   //   "errorLens.enabled": true,
   //   "errorLens.fontSize": "25",
-  //   "errorLens.fontWeight": "bold",
   //   "errorLens.fontFamily": "Comic Sans MS",
   //   "errorLens.onSave": true,
   //   "errorLens.enabledDiagnosticLevels": ["error", "warning", "hint"],
@@ -924,7 +923,9 @@
 
   "editor.wordWrap": "on",
   "editor.colorDecorators": true,
-  "editor.fontWeight": "400",
+  "editor.fontWeight": "600",
+  "errorLens.fontWeight": "bold",
+
   "editor.suggestFontSize": 20,
   "sync.syncExtensions": true,
   "editor.suggestLineHeight": 30,
@@ -1432,5 +1433,10 @@
   "tabnine.experimentalAutoImports": true,
   "[python]": {
     "editor.formatOnType": true
-  }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "quokka.automaticRestart": true,
+  "totalTypeScript.hideAllTips": false,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "totalTypeScript.hideBasicTips": false
 }

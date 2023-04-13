@@ -1,33 +1,23 @@
 {
-  //   "workbench.colorTheme": "Night Owl",
   //   // "java.compile.nullAnalysis.mode": "automatic",
 
   //   "editor.suggest.snippetsPreventQuickSuggestions": true,
 
-  //   "editor.fontSize": 25,
+  // "editor.fontSize": 25,
   //   // "editor.fontSize": 18,
   //   "editor.quickSuggestionsDelay": 30,
-  //   "editor.suggestFontSize": 20,
-  //   // "sync.syncExtensions": true,
-  //   "editor.suggestLineHeight": 30,
-  //   // "javascript.validate.enable": false,
-  //   "editor.letterSpacing": 0.5,
-  //   "workbench.editor.tabSizing": "shrink",
-  //   "html.format.enable": true,
+
   //   "html.format.preserveNewLines": true,
   //   // "files.trimTrailingWhitespace": true,
   //   "editor.tabSize": 2,
-  //   "editor.cursorWidth": 5,
   //   // this isn't really underline but we hack it to be a thicker cursor
-  //   "editor.cursorStyle": "line",
-  //   "editor.wordWrap": "on",
+  // "editor.cursorStyle": "line",
   //   "editor.multiCursorModifier": "ctrlCmd",
-  //   "editor.fontWeight": "600",
-  //   "editor.cursorBlinking": "solid",
-  //   "editor.colorDecorators": true,
-  //   "editor.minimap.enabled": true,
-  //   "editor.rulers": [80, 100],
-  //   "editor.minimap.showSlider": "always",
+  // "editor.cursorBlinking": "solid",
+
+  // "editor.minimap.enabled": true,
+  // "editor.rulers": [80, 100],
+  // "editor.minimap.showSlider": "always",
   //   "workbench.startupEditor": "newUntitledFile",
   //   "extensions.ignoreRecommendations": false,
   //   "files.exclude": {
@@ -166,7 +156,7 @@
   //   "editor.copyWithSyntaxHighlighting": false,
   //   "cSpell.enableFiletypes": ["mdx"],
   //   "vscode_custom_css.imports": [
-  //     // "file://Users/wesbos/Dropbox/vscode-theme-cobalt2/css-hacks.css"
+  //     // "file://Users/usersName/Dropbox/vscode-theme-cobalt2/css-hacks.css"
   //     "file://Users/21261/Css/hacks.css"
   //   ],
   //   // "vscode_custom_css.policy": true,
@@ -932,6 +922,17 @@
 
   /** my config! **/
 
+  "editor.wordWrap": "on",
+  "editor.colorDecorators": true,
+  "editor.fontWeight": "400",
+  "editor.suggestFontSize": 20,
+  "sync.syncExtensions": true,
+  "editor.suggestLineHeight": 30,
+  "editor.letterSpacing": 0.5,
+  "workbench.editor.tabSizing": "shrink",
+  "html.format.enable": true,
+  "editor.cursorWidth": 3,
+
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": true,
   "editor.lightbulb.enabled": false,
@@ -958,8 +959,17 @@
   "editor.folding": false,
   "files.exclude": {
     "**/.env": true,
-    "USE_GITIGNORE": true
+    "USE_GITIGNORE": true,
+    "**/.cache": false,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.next": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/dist": false
   },
+
   "files.associations": {
     "*.md": "mdx"
   },
@@ -1419,5 +1429,8 @@
       "}"
     ]
   },
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "[python]": {
+    "editor.formatOnType": true
+  }
 }

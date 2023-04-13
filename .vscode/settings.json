@@ -1,0 +1,1423 @@
+{
+  //   "workbench.colorTheme": "Night Owl",
+  //   // "java.compile.nullAnalysis.mode": "automatic",
+
+  //   "editor.suggest.snippetsPreventQuickSuggestions": true,
+
+  //   "editor.fontSize": 25,
+  //   // "editor.fontSize": 18,
+  //   "editor.quickSuggestionsDelay": 30,
+  //   "editor.suggestFontSize": 20,
+  //   // "sync.syncExtensions": true,
+  //   "editor.suggestLineHeight": 30,
+  //   // "javascript.validate.enable": false,
+  //   "editor.letterSpacing": 0.5,
+  //   "workbench.editor.tabSizing": "shrink",
+  //   "html.format.enable": true,
+  //   "html.format.preserveNewLines": true,
+  //   // "files.trimTrailingWhitespace": true,
+  //   "editor.tabSize": 2,
+  //   "editor.cursorWidth": 5,
+  //   // this isn't really underline but we hack it to be a thicker cursor
+  //   "editor.cursorStyle": "line",
+  //   "editor.wordWrap": "on",
+  //   "editor.multiCursorModifier": "ctrlCmd",
+  //   "editor.fontWeight": "600",
+  //   "editor.cursorBlinking": "solid",
+  //   "editor.colorDecorators": true,
+  //   "editor.minimap.enabled": true,
+  //   "editor.rulers": [80, 100],
+  //   "editor.minimap.showSlider": "always",
+  //   "workbench.startupEditor": "newUntitledFile",
+  //   "extensions.ignoreRecommendations": false,
+  //   "files.exclude": {
+  //     "**/.cache": false,
+  //     "**/.DS_Store": true,
+  //     "**/.git": true,
+  //     "**/.hg": true,
+  //     "**/.next": true,
+  //     "**/.svn": true,
+  //     "**/CVS": true,
+  //     "**/dist": false
+  //   },
+
+  //   // "files.associations": {
+  //   //   "*.react.js": "javascriptreact",
+  //   //   "*.jsx": "javascriptreact",
+  //   //   "*.js": "javascriptreact"
+  //   // },
+
+  //   "workbench.editor.tabCloseButton": "off",
+  //   "emmet.includeLanguages": {
+  //     "javascript": "javascriptreact",
+  //     "typescript": "html"
+  //   },
+  //   "emmet.triggerExpansionOnTab": true,
+
+  //   // Always include all words from the current document.
+  //   "javascript.suggest.alwaysAllWords": true,
+  //   "javascript.suggestionActions.enabled": true,
+
+  //   // Complete functions with their parameter signature.
+  //   "javascript.suggest.completeFunctionCalls": true,
+
+  //   // this lets you quick open multiple items in a row and now have the previous ones closed on you
+  //   "workbench.editor.enablePreviewFromQuickOpen": false,
+  //   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  //   // These are all my auto-save configs
+  //   // turn it off for JS
+  //   "editor.formatOnSave": true,
+  //   "[javascript]": {
+  //     // "editor.formatOnSave": false
+  //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //     "editor.suggestSelection": "recentlyUsed"
+  //     // "editor.defaultFormatter": null
+  //   },
+  //   // "[typescript]": {
+  //   //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   //   "editor.suggestSelection": "recentlyUsed"
+  //   // },
+
+  //   // "prettier.disableLanguages": [
+  //   //   "javascript",
+  //   //   "javascriptreact",
+  //   //   "json",
+  //   //   "markdown"
+  //   // ],
+
+  //   "[javascriptreact]": {
+  //     "editor.formatOnSave": false,
+  //     "editor.showUnused": true
+  //   },
+  //   "[typescript]": {
+  //     "editor.formatOnSave": false
+  //     // "editor.defaultFormatter": "vscode.typescript-language-features"
+  //   },
+  //   "[typescriptreact]": {
+  //     // "editor.formatOnSave": false
+  //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  //   },
+  //   // Optional: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
+  //   // "prettier.disableLanguages": [
+  //   //   "js",
+  //   //   "javascriptreact",
+  //   //   "typescript",
+  //   //   "typescriptreact"
+  //   // ],
+  //   "editor.snippetSuggestions": "top",
+  //   "eslint.alwaysShowStatus": true,
+  //   "editor.autoIndent": "keep",
+  //   "window.closeWhenEmpty": true,
+  //   "editor.detectIndentation": true,
+  //   "editor.showFoldingControls": "always",
+  //   "editor.find.seedSearchStringFromSelection": "always",
+  //   "editor.matchBrackets": "always",
+  //   "window.openFilesInNewWindow": "off",
+  //   "workbench.editor.enablePreview": true,
+  //   "editor.scrollBeyondLastLine": true,
+  //   "editor.useTabStops": true,
+  //   "editor.formatOnPaste": true,
+  //   "[jade]": {
+  //     // "togglequotes.chars": [
+  //     //   "\"",
+  //     //   "'",
+  //     //   "`"
+  //     // ]
+  //   },
+  //   "editor.parameterHints.enabled": false,
+  //   "editor.suggestSelection": "first",
+  //   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  //   "workbench.settings.editor": "json",
+
+  //   "editor.fontFamily": "Fira Code, operator Mono, Menlo, Monaco, 'Courier New', monospace",
+  //   "editor.fontLigatures": true,
+
+  //   "workbench.tree.indent": 20,
+  //   "polacode.shadow": "rgba(0, 0, 0, 0.55) 0px 0 0",
+  //   "polacode.transparentBackground": true,
+  //   "polacode.target": "snippet",
+  //   // "terminal.integrated.shell.osx": "/bin/zsh",
+  //   "terminal.integrated.shellIntegration.enabled": true,
+  //   "terminal.integrated.fontSize": 20,
+  //   "editor.lineHeight": 45,
+  //   "editor.codeActionsOnSave": {
+  //     "source.fixAll.eslint": true
+  //   },
+
+  //   "typescript.suggest.paths": false,
+  //   "javascript.suggest.paths": false,
+  //   "path-intellisense.showHiddenFiles": true,
+  //   "path-intellisense.autoSlashAfterDirectory": true,
+  //   "path-intellisense.autoTriggerNextSuggestion": true,
+
+  //   "typescript.tsserver.log": "verbose",
+  //   "propTypes.autoImport": "ES6",
+  //   "kite.showWelcomeNotificationOnStartup": false,
+  //   "liveshare.featureSet": "stable",
+  //   "eslint.validate": [
+  //     "typescript",
+  //     "typescriptreact",
+  //     "javascript",
+  //     "javascriptreact"
+  //   ],
+  //   "cSpell.enabled": true,
+  //   "editor.renderControlCharacters": true,
+  //   "editor.renderWhitespace": "trailing",
+  //   "editor.copyWithSyntaxHighlighting": false,
+  //   "cSpell.enableFiletypes": ["mdx"],
+  //   "vscode_custom_css.imports": [
+  //     // "file://Users/wesbos/Dropbox/vscode-theme-cobalt2/css-hacks.css"
+  //     "file://Users/21261/Css/hacks.css"
+  //   ],
+  //   // "vscode_custom_css.policy": true,
+  //   "selectby.regexes": {
+  //     "regex1": {
+  //       "backward": "/\\*",
+  //       "forward": "\\*/",
+  //       "forwardInclude": true,
+  //       "backwardInclude": true,
+  //       "showSelection": true
+  //     }
+  //   },
+  //   "workbench.iconTheme": "vscode-icons",
+  //   "editor.bracketPairColorization.enabled": true,
+  //   "editor.guides.bracketPairs": "active",
+  //   "vsicons.presets.hideExplorerArrows": true,
+
+  //   // ErrorLens Configuration!!
+  //   "errorLens.enabled": true,
+  //   "errorLens.fontSize": "25",
+  //   "errorLens.fontWeight": "bold",
+  //   "errorLens.fontFamily": "Comic Sans MS",
+  //   "errorLens.onSave": true,
+  //   "errorLens.enabledDiagnosticLevels": ["error", "warning", "hint"],
+
+  //   "workbench.colorCustomizations": {
+  //     "[Night Owl]": {
+  //       "activityBar.background": "#000C1D",
+  //       "activityBar.border": "#102a44",
+  //       "editorGroup.border": "#102a44",
+  //       "sideBar.background": "#001122",
+  //       "sideBar.border": "#102a44",
+  //       "sideBar.foreground": "#8BADC1"
+  //     },
+
+  //     "editorUnnecessaryCode.border": "#dd7aab",
+  //     "errorLens.hintForeground": "#ffc600A1",
+  //     "errorLens.hintBackground": "#ffc60003",
+  //     "errorLens.errorBackground": "#ff000005",
+
+  //     "[Night Owl (No Italics)]": {
+  //       "activityBar.background": "#000C1D",
+  //       "activityBar.border": "#102a44",
+  //       "editorGroup.border": "#102a44",
+  //       "sideBar.background": "#001122",
+  //       "sideBar.border": "#102a44",
+  //       "sideBar.foreground": "#8BADC1"
+  //     }
+  //   },
+
+  //   "errorLens.exclude": ["never (read|used)"],
+  //   "css.validate": false,
+  //   "less.validate": false,
+  //   "scss.validate": false,
+  //   "better-comments.tags": [
+  //     {
+  //       "tag": "!",
+  //       "color": "#FF2D00",
+  //       "strikethrough": false,
+  //       "underline": false,
+  //       "backgroundColor": "transparent",
+  //       "bold": false,
+  //       "italic": false
+  //     },
+  //     {
+  //       "tag": "?",
+  //       "color": "#3498DB",
+  //       "strikethrough": false,
+  //       "underline": false,
+  //       "backgroundColor": "transparent",
+  //       "bold": false,
+  //       "italic": false
+  //     },
+  //     {
+  //       "tag": "//",
+  //       "color": "#474747",
+  //       "strikethrough": true,
+  //       "underline": false,
+  //       "backgroundColor": "transparent",
+  //       "bold": false,
+  //       "italic": false
+  //     },
+  //     {
+  //       "tag": "todo",
+  //       "color": "#ffc600",
+  //       "strikethrough": false,
+  //       "underline": false,
+  //       "backgroundColor": "transparent",
+  //       "bold": false,
+  //       "italic": false
+  //     },
+  //     {
+  //       "tag": "*",
+  //       "color": "#98C379",
+  //       "strikethrough": false,
+  //       "underline": false,
+  //       "backgroundColor": "transparent",
+  //       "bold": false,
+  //       "italic": false
+  //     },
+  //     {
+  //       "tag": "Solution",
+  //       "color": "#193549",
+  //       "strikethrough": false,
+  //       "underline": true,
+  //       "backgroundColor": "#ffc600",
+  //       "bold": true,
+  //       "italic": true
+  //     },
+  //     {
+  //       "tag": "Task",
+  //       "color": "#ffc600",
+  //       "strikethrough": false,
+  //       "underline": true,
+  //       "backgroundColor": "Transparent",
+  //       "bold": true,
+  //       "italic": true
+  //     }
+  //   ],
+  //   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  //   "[vue]": {
+  //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  //   },
+  //   "[html]": {
+  //     "editor.defaultFormatter": "vscode.html-language-features"
+  //   },
+  //   "[json]": {
+  //     // "editor.formatOnSave": false
+  //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  //   },
+  //   "js/ts.implicitProjectConfig.checkJs": true,
+  //   "diffEditor.ignoreTrimWhitespace": false,
+  //   "editor.inlineSuggest.enabled": true,
+  //   "debug.allowBreakpointsEverywhere": true,
+  //   "debug.showBreakpointsInOverviewRuler": true,
+  //   "javascript.updateImportsOnFileMove.enabled": "always",
+  //   "csharp.suppressDotnetInstallWarning": true,
+  //   "[jsonc]": {
+  //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  //   },
+  //   "window.menuBarVisibility": "compact",
+  //   // Github
+  //   "githubPullRequests.queries": [
+  //     {
+  //       "label": "Assigned To Me",
+  //       "query": "is:open assignee:${user}"
+  //     }
+  //   ],
+
+  //   // "mssql.connections": [
+  //   //   {
+  //   //     "server": "tcp:maecprotocol-dbserver.database.windows.net,1433",
+  //   //     "database": "maecprotocol",
+  //   //     "authenticationType": "SqlLogin",
+  //   //     "user": "maecprotocol",
+  //   //     "password": "",
+  //   //     "emptyPasswordInput": false,
+  //   //     "savePassword": true
+  //   //   }
+  //   // ],
+
+  //   "terminal.integrated.profiles.windows": {
+  //     "PowerShell": {
+  //       "source": "PowerShell",
+  //       "icon": "terminal-powershell"
+  //     },
+  //     "Command Prompt": {
+  //       "path": [
+  //         "${env:windir}\\Sysnative\\cmd.exe",
+  //         "${env:windir}\\System32\\cmd.exe"
+  //       ],
+  //       "args": [],
+  //       "icon": "terminal-cmd"
+  //     },
+  //     "Git Bash": {
+  //       "source": "Git Bash"
+  //     }
+  //     // "Ubuntu (WSL)": {
+  //     //   "path": "C:\\WINDOWS\\System32\\wsl.exe",
+  //     //   "args": ["-d", "Ubuntu"]
+  //     // }
+  //   },
+  //   "workbench.editorAssociations": {
+  //     "git-rebase-todo": "default"
+  //   },
+
+  //   "tabnine.experimentalAutoImports": true,
+  //   "totalTypeScript.hideAllTips": false,
+  //   "totalTypeScript.hideBasicTips": false,
+  //   "[python]": {
+  //     "editor.formatOnType": true
+  //   },
+
+  //   /////////////////////////////////////// Configuration
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   // "editor.detectIndentation": true,
+  //   "editor.lightbulb.enabled": false,
+  //   // "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+  //   // "editor.fontLigatures": false,
+  //   // "editor.rulers": [80],
+  //   // "editor.snippetSuggestions": "inline",
+  //   "editor.suggest.showKeywords": false,
+  //   "editor.wordBasedSuggestions": false,
+  //   "editor.suggest.localityBonus": true,
+  //   "editor.acceptSuggestionOnCommitCharacter": false,
+  //   // "enitor.acceptSuggestionOnEnter": "off",
+
+  //   // "editor.tabSize": 2,
+  //   // "editor.renderWhitespace": "boundary",
+  //   "editor.glyphMargin": true,
+  //   "editor.folding": true,
+  //   // "files.exclude": {
+  //   //   "**/.env": true,
+  //   //   "USE_GITIGNORE": true
+  //   // },
+
+  //   "files.associations": {
+  //     "*.md": "mdx"
+  //   },
+  //   "files.defaultLanguage": "{activeEditorLanguage}",
+  //   "javascript.validate.enable": true,
+
+  //   "search.exclude": {
+  //     "**/node_modules": true,
+  //     "**/bower_components": true,
+  //     "**/coverage": true,
+  //     "**/dist": true,
+  //     "**/build": true,
+  //     "**/.build": true,
+  //     "**/.gh-pages": true
+  //   },
+
+  //   // "editor.codeActionsOnSave": {
+  //   //   "source.fixAll.eslint": true
+  //   // },
+  //   // "eslint.validate": [
+  //   //   "javascript",
+  //   //   "javascriptreact",
+  //   //   "typescript",
+  //   //   "typescriptreact"
+  //   // ],
+  //   "eslint.options": {
+  //     "overrideConfig": {
+  //       "rules": {
+  //         "no-debugger": "off"
+  //       }
+  //     }
+  //   },
+  //   // "terminal.integrated.shellArgs.osx": ["-l"],
+  //   "terminal.integrated.scrollback": 10000,
+  //   "explorer.openEditors.visible": 0,
+  //   "editor.lineNumbers": "on",
+  //   // "workbench.colorTheme": "Night Owl",
+  //   // "workbench.iconTheme": "material-icon-theme",
+  //   // "workbench.startupEditor": "none",
+  //   "workbench.panel.defaultLocation": "right",
+  //   "workbench.editor.limit.enabled": true,
+  //   "workbench.editor.limit.perEditorGroup": false,
+  //   "workbench.editor.limit.value": 10,
+  //   "debug.javascript.codelens.npmScripts": "never",
+  //   "breadcrumbs.enabled": true,
+  //   // "local-history.absolute": true,
+  //   // "local-history.path": "/Users/userName/.vscode-history",
+  //   "grunt.autoDetect": "off",
+  //   "npm.runSilent": true,
+  //   "gulp.autoDetect": "off",
+  //   "explorer.confirmDragAndDrop": false,
+  //   // "atomKeymap.promptV3Features": true,
+  //   // "editor.multiCursorModifier": "ctrlCmd",
+  //   // "editor.formatOnPaste": false,
+  //   // "editor.minimap.enabled": false,
+  //   // "spellright.language": ["en"],
+  //   // "spellright.documentTypes": ["markdown", "plaintext", "mdx"],
+  //   // "spellright.parserByClass": {
+  //   //   "mdx": {
+  //   //     "parser": "markdown"
+  //   //   }
+  //   // },
+  //   // "javascript.updateImportsOnFileMove.enabled": "never",
+  //   "typescript.updateImportsOnFileMove.enabled": "never",
+  //   // "editor.cursorSmoothCaretAnimation": true,
+  //   "editor.smoothScrolling": true,
+  //   "php.suggest.basic": false,
+  //   // "editor.suggestSelection": "first",
+  //   // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  //   // "[jsonc]": {
+  //   //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  //   // },
+  //   "eslint.packageManager": "npm",
+  //   "npm.packageManager": "npm",
+  //   "editor.acceptSuggestionOnEnter": "off",
+  //   "editor.tokenColorCustomizations": {
+  //     "textMateRules": []
+  //   },
+  //   // "editor.fontSize": 22,
+  //   // "terminal.integrated.fontSize": 20,
+  //   // "workbench.statusBar.visible": true,
+  //   // "editor.cursorBlinking": "solid",
+  //   // "editor.inlineSuggest.enabled": true,
+  //   // "redhat.telemetry.enabled": false,
+  //   // "editor.formatOnSave": true,
+  //   "emmet.showAbbreviationSuggestions": true,
+  //   "emmet.showExpandedAbbreviation": "always",
+
+  //   "github.copilot.enable": {
+  //     "*": true,
+  //     "yaml": false,
+  //     "plaintext": false,
+  //     "markdown": false,
+  //     "jsonc": false,
+  //     "mdx": true,
+  //     "typescriptreact": true
+  //   },
+
+  //   "git.autofetch": true,
+  //   // "timeline.excludeSources": [],
+  //   // "deno.lint": false,
+  //   "[prisma]": {
+  //     "editor.defaultFormatter": "Prisma.prisma"
+  //   },
+  //   // "git.path": "/opt/homebrew/bin/git",
+
+  //   // "playwright.reuseBrowser": true
+  //   /**/
+  //   // egghead
+  //   /*
+  //   "editor.fontSize": 20,
+  //   "terminal.integrated.fontSize": 15,
+  //   "scm.diffDecorations": "none",
+  //   "editor.lineNumbers": "off",
+  //   "workbench.editor.showTabs": false,
+  //   "workbench.statusBar.visible": false,
+  //   "editor.cursorBlinking": "solid",
+  //   "window.zoomLevel": 1,
+  //   "breadcrumbs.enabled": false,
+  //   "editor.parameterHints.enabled": false,
+  //   "editor.suggestOnTriggerCharacters": false,
+  //   "explorer.decorations.colors": false,
+  //   "explorer.decorations.badges": false,
+  //   "workbench.activityBar.visible": false
+  //   /**/
+  //   // build react apps
+  //   /*
+  //   "editor.fontSize": 20,
+  //   "terminal.integrated.fontSize": 15,
+  //   "scm.diffDecorations": "none",
+  //   "workbench.statusBar.visible": false,
+  //   "editor.cursorBlinking": "solid",
+  //   "window.zoomLevel": -1,
+  //   "editor.parameterHints.enabled": false,
+  //   "editor.suggestOnTriggerCharacters": false,
+  //   "explorer.decorations.colors": false,
+  //   "explorer.decorations.badges": false
+  //   /**/
+  //   // workshop
+  //   /*
+  //   "editor.fontSize": 16,
+  //   "terminal.integrated.fontSize": 16,
+  //   "scm.diffDecorations": "none",
+  //   "workbench.statusBar.visible": false,
+  //   "editor.cursorBlinking": "solid",
+  //   "workbench.colorTheme": "Night Owl Light",
+  //   "explorer.decorations.colors": false,
+  //   "explorer.decorations.badges": false,
+  //   "workbench.activityBar.visible": false,
+  //   "workbench.editor.limit.value": 100
+  //   /**/
+  //   // Talk
+  //   /*
+  //   "editor.fontSize": 22,
+  //   "terminal.integrated.fontSize": 20,
+  //   "scm.diffDecorations": "none",
+  //   "editor.lineNumbers": "off",
+  //   "workbench.statusBar.visible": false,
+  //   "workbench.activityBar.visible": false,
+  //   "editor.cursorBlinking": "solid",
+  //   "window.zoomLevel": 2,
+  //   "workbench.colorTheme": "Night Owl Light",
+  //   "breadcrumbs.filePath": "off",
+  //   "breadcrumbs.symbolPath": "off",
+  //   "editor.parameterHints.enabled": false,
+  //   "editor.quickSuggestions": {
+  //     "comments": "off",
+  //     "strings": "off",
+  //     "other": "off"
+  //   },
+  //   "editor.suggestOnTriggerCharacters": false,
+  //   "explorer.decorations.colors": false,
+  //   "explorer.decorations.badges": false
+  //   /**/
+
+  //   ///////////////////////// Snippet //////////////////
+  //   /*
+  //    // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and
+  //    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  //    // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+  //    // Example:
+  //    "Print to console": {
+  //   "prefix": "log",
+  //   "body": [
+  //     "console.log('$1');",
+  //     "$2"
+  //   ],
+  //   "description": "Log output to console"
+  //   }
+  // */
+
+  //   // Commented for now!!
+
+  //   // "console.log": {
+  //   //   "prefix": "cl",
+  //   //   "body": "console.log(${1:'here'})$0"
+  //   // },
+  //   // "console.log('var', var)": {
+  //   //   "prefix": "vl",
+  //   //   "body": "console.log('$1', $1)$0"
+  //   // },
+  //   // "console.log({var})": {
+  //   //   "prefix": "ol",
+  //   //   "body": "console.log({$1})$0"
+  //   // },
+  //   // "import x from '": {
+  //   //   "prefix": "imp",
+  //   //   "body": "import ${2:*} from '$1'$3"
+  //   // },
+  //   // "eslint rule": {
+  //   //   "prefix": "esl",
+  //   //   "body": ["/*", "eslint", "  $1: \"off\",", "*/"]
+  //   // },
+  //   // "eslint disable next line": {
+  //   //   "prefix": "eslnl",
+  //   //   "body": "// eslint-disable-next-line $1"
+  //   // },
+  //   // "eslint disable line": {
+  //   //   "prefix": "esll",
+  //   //   "body": "// eslint-disable-line $1"
+  //   // },
+  //   // "constructor": {
+  //   //   "prefix": "ctor",
+  //   //   "body": ["constructor(...args) {", "  super(...args)", "  $0", "}"]
+  //   // },
+  //   // "try/catch": {
+  //   //   "prefix": "try",
+  //   //   "body": ["try {", "  $1", "} catch (error) {", "  $0", "}"]
+  //   // },
+  //   // "async function": {
+  //   //   "prefix": "afun",
+  //   //   "body": ["async function $1($2) {", "  $0", "}"]
+  //   // },
+  //   // "throw log": {
+  //   //   "prefix": "tl",
+  //   //   "body": "throw new Error(JSON.stringify({$0}, null, 2))"
+  //   // },
+  //   // "spaced console.log": {
+  //   //   "prefix": "scl",
+  //   //   "body": [
+  //   //     "console.log('**************************************************************************\\\\n\\\\n\\\\n')",
+  //   //     "console.log($0)",
+  //   //     "console.log('\\\\n\\\\n\\\\n**************************************************************************')"
+  //   //   ]
+  //   // },
+  //   // "Switch Statement": {
+  //   //   "prefix": "switch",
+  //   //   "body": [
+  //   //     "switch (${1:key}) {",
+  //   //     "  case ${2:value}: {",
+  //   //     "    $0",
+  //   //     "    break",
+  //   //     "  }",
+  //   //     "  default: {",
+  //   //     "    break",
+  //   //     "  }",
+  //   //     "}"
+  //   //   ]
+  //   // },
+  //   // "Reducer": {
+  //   //   "prefix": "reducer",
+  //   //   "body": [
+  //   //     "function ${1:someReducer}(state, action) {",
+  //   //     "  switch (action.type) {",
+  //   //     "    case ${2:'value'}: {",
+  //   //     "      return $0",
+  //   //     "    }",
+  //   //     "    default: {",
+  //   //     "      throw new Error(`Unhandled action type: ${action.type}`)",
+  //   //     "    }",
+  //   //     "  }",
+  //   //     "}"
+  //   //   ]
+  //   // },
+  //   // "Switch case": {
+  //   //   "prefix": "case",
+  //   //   "body": ["case ${2:'value'}: {", "  return $0", "}"]
+  //   // },
+  //   // "import React": {
+  //   //   "prefix": "ir",
+  //   //   "body": ["import * as React from 'react'\n"]
+  //   // },
+  //   // "React.useState": {
+  //   //   "prefix": "us",
+  //   //   "body": [
+  //   //     "const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = React.useState(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
+  //   //   ]
+  //   // },
+  //   // "React.useEffect": {
+  //   //   "prefix": "uf",
+  //   //   "body": ["React.useEffect(() => {", "  $0", "}, [])"]
+  //   // },
+  //   // "React.useReducer": {
+  //   //   "prefix": "ur",
+  //   //   "body": [
+  //   //     "const [state, dispatch] = React.useReducer(${1:someReducer}, {",
+  //   //     "  $0",
+  //   //     "})"
+  //   //   ]
+  //   // },
+  //   // "React.useRef": {
+  //   //   "prefix": "urf",
+  //   //   "body": ["const ${1:someRef} = React.useRef($2)$0"]
+  //   // },
+  //   // "React Component": {
+  //   //   "prefix": "rc",
+  //   //   "body": [
+  //   //     "class $1 extends React.Component {",
+  //   //     "  render() {",
+  //   //     "    $0",
+  //   //     "  }",
+  //   //     "}"
+  //   //   ]
+  //   // },
+  //   // "React: componentWillMount": {
+  //   //   "prefix": "cwm",
+  //   //   "body": ["componentWillMount() {", "  $0", "}"]
+  //   // },
+  //   // "React: componentDidMount": {
+  //   //   "prefix": "cdm",
+  //   //   "body": ["componentDidMount() {", "  $0", "}"]
+  //   // },
+  //   // "React: componentWillReceiveProps": {
+  //   //   "prefix": "cwrp",
+  //   //   "body": ["componentWillReceiveProps(nextProps) {", "  $0", "}"]
+  //   // },
+  //   // "React: componentWillUpdate": {
+  //   //   "prefix": "cwu",
+  //   //   "body": ["componentWillUpdate(nextProps, nextState) {", "  $0", "}"]
+  //   // },
+  //   // "React: componentDidUpdate": {
+  //   //   "prefix": "cdu",
+  //   //   "body": ["componentDidUpdate(prevProps, prevState) {", "  $0", "}"]
+  //   // },
+  //   // "React: componentWillUnmount": {
+  //   //   "prefix": "cwu",
+  //   //   "body": ["componentWillUnmount() {", "  $0", "}"]
+  //   // },
+  //   // "Jest test": {
+  //   //   "prefix": "test",
+  //   //   "body": ["test('$1', () => {", "  $0", "})"]
+  //   // },
+  //   // "Jest async test": {
+  //   //   "prefix": "atest",
+  //   //   "body": ["test('$1', async () => {", "  $0", "})"]
+  //   // },
+  //   // "Mocha it block": {
+  //   //   "prefix": "it",
+  //   //   "body": ["it('$1', () => {", "  $2", "})"]
+  //   // },
+  //   // "Mocha describe block": {
+  //   //   "prefix": "desc",
+  //   //   "body": ["describe('$1', () => {", "  $2", "})"]
+  //   // },
+  //   // "split-guide final": {
+  //   //   "prefix": "sgf",
+  //   //   "body": ["// FINAL_START", "$1", "// FINAL_END"]
+  //   // },
+  //   // "split-guide workshop": {
+  //   //   "prefix": "sgw",
+  //   //   "body": ["// WORKSHOP_START", "$1", "// WORKSHOP_END"]
+  //   // },
+  //   // "split-guide comment": {
+  //   //   "prefix": "sgc",
+  //   //   "body": ["// COMMENT_START", "$1", "// COMMENT_END"]
+  //   // },
+
+  //   /////////// Remix Snipped //////////////////////////////////////////////////////////////////
+  //   // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  //   // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  //   // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  //   // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  //   // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  //   // Placeholders with the same ids are connected.
+  //   // Example:
+  //   // "Print to console": {
+  //   //   "scope": "javascript,typescript",
+  //   //   "prefix": "log",
+  //   //   "body": [
+  //   //     "console.log('$1');",
+  //   //     "$2"
+  //   //   ],
+  //   //   "description": "Log output to console"
+  //   // }
+  //   "Remix Loader": {
+  //     "scope": "javascript,typescript,javascriptreact,typescriptreact",
+  //     "prefix": "rmxLoader",
+  //     "body": [
+  //       "import type { LoaderArgs } from \"@remix-run/node\"",
+  //       "import { json } from \"@remix-run/node\"",
+  //       "import { useLoaderData } from \"@remix-run/react\"",
+  //       "",
+  //       "export async function loader({request}: LoaderArgs) {",
+  //       "  return json({});",
+  //       "};",
+  //       ""
+  //     ]
+  //   },
+  //   "Remix Action": {
+  //     "scope": "javascript,typescript,javascriptreact,typescriptreact",
+  //     "prefix": "rmxAction",
+  //     "body": [
+  //       "import type { ActionArgs } from \"@remix-run/node\"",
+  //       "import { redirect, json } from \"@remix-run/node\"",
+  //       "import { useActionData } from \"@remix-run/react\"",
+  //       "",
+  //       "export async function action({request}: ActionArgs) {",
+  //       "  const formData = await request.formData();",
+  //       "  $0",
+  //       "};",
+  //       ""
+  //     ]
+  //   },
+  //   "Remix Route Component": {
+  //     "scope": "javascript,typescript,javascriptreact,typescriptreact",
+  //     "prefix": "rmxComponent",
+  //     "body": [
+  //       "export default function $0() {",
+  //       "  const data = useLoaderData<typeof loader>();",
+  //       "",
+  //       "  return null;",
+  //       "}"
+  //     ]
+  //   },
+  //   "Remix CatchBoundary": {
+  //     "scope": "javascript,typescript,javascriptreact,typescriptreact",
+  //     "prefix": "rmxCatchBoundary",
+  //     "body": [
+  //       "export function CatchBoundary() {",
+  //       "  const caught = useCatch();",
+  //       "",
+  //       "  if (caught.status === 404) {",
+  //       "    return (",
+  //       "      <div>",
+  //       "        Not found",
+  //       "      </div>",
+  //       "    );",
+  //       "  }",
+  //       "",
+  //       "  throw new Error(`Unexpected caught response with status: ${caught.status}`);",
+  //       "}"
+  //     ]
+  //   },
+
+  //   "Remix ErrorBoundary": {
+  //     "scope": "javascript,typescript,javascriptreact,typescriptreact",
+  //     "prefix": "rmxErrorBoundary",
+  //     "body": [
+  //       "export function ErrorBoundary({ error }: { error: Error }) {",
+  //       "  console.error(error);",
+  //       "",
+  //       "  return (",
+  //       "    <div>",
+  //       "      An unexpected error occurred: {error.message}",
+  //       "    </div>",
+  //       "  );",
+  //       "}"
+  //     ]
+  //   },
+  //   "bracket-pair-colorizer-2.depreciation-notice": false,
+  //   "[go]": {
+  //     "editor.insertSpaces": false
+  //   },
+  //   "[mdx]": {
+  //     "editor.wordWrap": "bounded",
+  //     "editor.wordWrapColumn": 80
+  //   },
+  //   "window.zoomLevel": -2,
+  //   "errorLens.excludeBySource": ["ts(2304)"],
+  //   "wallaby.codeLensFeature.profiler": false
+
+  //   ////////  Keybindings Snippets
+  //   //   {
+  //   //   "comment": "This is just really handy. I use it all the time in Atom.",
+  //   //   "key": "shift+cmd+\\",
+  //   //   "command": "workbench.files.action.focusFilesExplorer"
+  //   // },
+  //   // {
+  //   //   "comment": "Because I want enter to open the file, I need some way to rename it, this seemed as good as any other method. 'm' for 'move'",
+  //   //   "key": "m",
+  //   //   "command": "renameFile",
+  //   //   "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  //   // },
+  //   // {
+  //   //   "comment": "This allows me to open the file on enter instead which makes more sense to me.",
+  //   //   "key": "enter",
+  //   //   "command": "-renameFile",
+  //   //   "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  //   // },
+  //   // {
+  //   //   "comment": "This makes my zoom behavior more like chrome",
+  //   //   "key": "cmd+0",
+  //   //   "command": "workbench.action.zoomReset"
+  //   // },
+  //   // {
+  //   //   "comment": "This disables the enter key for autocomplete. Use tab instead. It's annoying when I'm typing quickly and want to go to the next line but have to first clear the autocomplete menu. So I just disabled the enter key here.",
+  //   //   "key": "enter",
+  //   //   "command": "-acceptSelectedSuggestionOnEnter",
+  //   //   "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+  //   // },
+  //   // {
+  //   //   "comment": "This disables the tab key for autocomplete. Instead we have another one which only applies when not in snippet mode.",
+  //   //   "key": "tab",
+  //   //   "command": "-acceptSelectedSuggestion",
+  //   //   "when": "suggestWidgetVisible && textInputFocus"
+  //   // },
+  //   // {
+  //   //   "key": "tab",
+  //   //   "command": "acceptSelectedSuggestion",
+  //   //   "when": "suggestWidgetVisible && textInputFocus && !editorTabMovesFocus && !inSnippetMode"
+  //   // },
+  //   // {
+  //   //   "key": "shift+cmd+space",
+  //   //   "command": "editor.action.triggerParameterHints",
+  //   //   "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  //   // },
+  //   // {
+  //   //   "key": "shift+cmd+space",
+  //   //   "command": "-editor.action.triggerParameterHints",
+  //   //   "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  //   // },
+  //   // {
+  //   //   "key": "cmd+a",
+  //   //   "command": "explorer.newFile",
+  //   //   "when": "filesExplorerFocus && !inputFocus"
+  //   // },
+  //   // {
+  //   //   "key": "shift+cmd+a",
+  //   //   "command": "explorer.newFolder",
+  //   //   "when": "filesExplorerFocus && !inputFocus"
+  //   // },
+  //   // {
+  //   //   "key": "ctrl+w",
+  //   //   "command": "expand_region",
+  //   //   "when": "editorTextFocus"
+  //   // },
+  //   // {
+  //   //   "key": "ctrl+shift+w",
+  //   //   "command": "undo_expand_region",
+  //   //   "when": "editorTextFocus && editorHasSelection"
+  //   // },
+  //   // {
+  //   //   "key": "cmd+shift+d",
+  //   //   "when": "editorTextFocus",
+  //   //   "command": "-editor.action.copyLinesDownAction"
+  //   // }
+
+  /** my config! **/
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": true,
+  "editor.lightbulb.enabled": false,
+  "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": false,
+  "editor.rulers": [80],
+  "editor.snippetSuggestions": "inline",
+  "editor.suggest.showKeywords": false,
+  "editor.wordBasedSuggestions": false,
+  "editor.suggest.localityBonus": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "enitor.acceptSuggestionOnEnter": "off",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggestSelection": "recentlyUsed"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggestSelection": "recentlyUsed"
+  },
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "editor.glyphMargin": false,
+  "editor.folding": false,
+  "files.exclude": {
+    "**/.env": true,
+    "USE_GITIGNORE": true
+  },
+  "files.associations": {
+    "*.md": "mdx"
+  },
+  "files.defaultLanguage": "{activeEditorLanguage}",
+  "javascript.validate.enable": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.build": true,
+    "**/.gh-pages": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.options": {
+    "overrideConfig": {
+      "rules": {
+        "no-debugger": "off"
+      }
+    }
+  },
+  // "terminal.integrated.shellArgs.osx": ["-l"],
+  "terminal.integrated.scrollback": 10000,
+  "explorer.openEditors.visible": 0,
+  "editor.lineNumbers": "on",
+  "workbench.colorTheme": "Night Owl",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.panel.defaultLocation": "right",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": false,
+  "workbench.editor.limit.value": 10,
+  "debug.javascript.codelens.npmScripts": "never",
+  "breadcrumbs.enabled": true,
+  "local-history.absolute": true,
+  // "local-history.path": "/Users/userName/.vscode-history",
+  "grunt.autoDetect": "off",
+  "npm.runSilent": true,
+  "gulp.autoDetect": "off",
+  "explorer.confirmDragAndDrop": false,
+  // "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": false,
+  "editor.minimap.enabled": false,
+  "spellright.language": ["en"],
+  "spellright.documentTypes": ["markdown", "plaintext", "mdx"],
+  "spellright.parserByClass": {
+    "mdx": {
+      "parser": "markdown"
+    }
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "php.suggest.basic": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.packageManager": "npm",
+  "npm.packageManager": "npm",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
+  "editor.fontSize": 22,
+  "terminal.integrated.fontSize": 20,
+  "workbench.statusBar.visible": true,
+  "editor.cursorBlinking": "solid",
+  "editor.inlineSuggest.enabled": true,
+  "redhat.telemetry.enabled": false,
+  "editor.formatOnSave": true,
+  "emmet.showAbbreviationSuggestions": false,
+  "emmet.showExpandedAbbreviation": "never",
+
+  // "github.copilot.enable": {
+  //   "*": true,
+  //   "yaml": false,
+  //   "plaintext": false,
+  //   "markdown": false,
+  //   "jsonc": false,
+  //   "mdx": true,
+  //   "typescriptreact": true
+  // },
+
+  "git.autofetch": true,
+  "deno.lint": false,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  // "git.path": "/opt/homebrew/bin/git",
+  "playwright.reuseBrowser": true,
+  /**/
+  // egghead
+  /*
+  "editor.fontSize": 20,
+  "terminal.integrated.fontSize": 15,
+  "scm.diffDecorations": "none",
+  "editor.lineNumbers": "off",
+  "workbench.editor.showTabs": false,
+  "workbench.statusBar.visible": false,
+  "editor.cursorBlinking": "solid",
+  "window.zoomLevel": 1,
+  "breadcrumbs.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "explorer.decorations.colors": false,
+  "explorer.decorations.badges": false,
+  "workbench.activityBar.visible": false
+  /**/
+  // build react apps
+  /*
+  "editor.fontSize": 20,
+  "terminal.integrated.fontSize": 15,
+  "scm.diffDecorations": "none",
+  "workbench.statusBar.visible": false,
+  "editor.cursorBlinking": "solid",
+  "window.zoomLevel": -1,
+  "editor.parameterHints.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "explorer.decorations.colors": false,
+  "explorer.decorations.badges": false
+  /**/
+  // workshop
+  /*
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "scm.diffDecorations": "none",
+  "workbench.statusBar.visible": false,
+  "editor.cursorBlinking": "solid",
+  "workbench.colorTheme": "Night Owl Light",
+  "explorer.decorations.colors": false,
+  "explorer.decorations.badges": false,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.limit.value": 100
+  /**/
+  // Talk
+  /*
+  "editor.fontSize": 22,
+  "terminal.integrated.fontSize": 20,
+  "scm.diffDecorations": "none",
+  "editor.lineNumbers": "off",
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "editor.cursorBlinking": "solid",
+  "window.zoomLevel": 2,
+  "workbench.colorTheme": "Night Owl Light",
+  "breadcrumbs.filePath": "off",
+  "breadcrumbs.symbolPath": "off",
+  "editor.parameterHints.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "explorer.decorations.colors": false,
+  "explorer.decorations.badges": false
+  /**/
+
+  /**/
+  // Snippets
+  /*
+
+  /*
+   // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and
+   // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+   // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+   // Example:
+   "Print to console": {
+  "prefix": "log",
+  "body": [
+    "console.log('$1');",
+    "$2"
+  ],
+  "description": "Log output to console"
+  }
+*/
+  "console.log": {
+    "prefix": "cl",
+    "body": "console.log(${1:'here'})$0"
+  },
+  "console.log('var', var)": {
+    "prefix": "vl",
+    "body": "console.log('$1', $1)$0"
+  },
+  "console.log({var})": {
+    "prefix": "ol",
+    "body": "console.log({$1})$0"
+  },
+  "import x from '": {
+    "prefix": "imp",
+    "body": "import ${2:*} from '$1'$3"
+  },
+  "eslint rule": {
+    "prefix": "esl",
+    "body": ["/*", "eslint", "  $1: \"off\",", "*/"]
+  },
+  "eslint disable next line": {
+    "prefix": "eslnl",
+    "body": "// eslint-disable-next-line $1"
+  },
+  "eslint disable line": {
+    "prefix": "esll",
+    "body": "// eslint-disable-line $1"
+  },
+  "constructor": {
+    "prefix": "ctor",
+    "body": ["constructor(...args) {", "  super(...args)", "  $0", "}"]
+  },
+  "try/catch": {
+    "prefix": "try",
+    "body": ["try {", "  $1", "} catch (error) {", "  $0", "}"]
+  },
+  "async function": {
+    "prefix": "afun",
+    "body": ["async function $1($2) {", "  $0", "}"]
+  },
+  "throw log": {
+    "prefix": "tl",
+    "body": "throw new Error(JSON.stringify({$0}, null, 2))"
+  },
+  "spaced console.log": {
+    "prefix": "scl",
+    "body": [
+      "console.log('**************************************************************************\\\\n\\\\n\\\\n')",
+      "console.log($0)",
+      "console.log('\\\\n\\\\n\\\\n**************************************************************************')"
+    ]
+  },
+  "Switch Statement": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:key}) {",
+      "  case ${2:value}: {",
+      "    $0",
+      "    break",
+      "  }",
+      "  default: {",
+      "    break",
+      "  }",
+      "}"
+    ]
+  },
+  "Reducer": {
+    "prefix": "reducer",
+    "body": [
+      "function ${1:someReducer}(state, action) {",
+      "  switch (action.type) {",
+      "    case ${2:'value'}: {",
+      "      return $0",
+      "    }",
+      "    default: {",
+      "      throw new Error(`Unhandled action type: ${action.type}`)",
+      "    }",
+      "  }",
+      "}"
+    ]
+  },
+  "Switch case": {
+    "prefix": "case",
+    "body": ["case ${2:'value'}: {", "  return $0", "}"]
+  },
+  "import React": {
+    "prefix": "ir",
+    "body": ["import * as React from 'react'\n"]
+  },
+  "React.useState": {
+    "prefix": "us",
+    "body": [
+      "const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = React.useState(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
+    ]
+  },
+  "React.useEffect": {
+    "prefix": "uf",
+    "body": ["React.useEffect(() => {", "  $0", "}, [])"]
+  },
+  "React.useReducer": {
+    "prefix": "ur",
+    "body": [
+      "const [state, dispatch] = React.useReducer(${1:someReducer}, {",
+      "  $0",
+      "})"
+    ]
+  },
+  "React.useRef": {
+    "prefix": "urf",
+    "body": ["const ${1:someRef} = React.useRef($2)$0"]
+  },
+  "React Component": {
+    "prefix": "rc",
+    "body": [
+      "class $1 extends React.Component {",
+      "  render() {",
+      "    $0",
+      "  }",
+      "}"
+    ]
+  },
+  "React: componentWillMount": {
+    "prefix": "cwm",
+    "body": ["componentWillMount() {", "  $0", "}"]
+  },
+  "React: componentDidMount": {
+    "prefix": "cdm",
+    "body": ["componentDidMount() {", "  $0", "}"]
+  },
+  "React: componentWillReceiveProps": {
+    "prefix": "cwrp",
+    "body": ["componentWillReceiveProps(nextProps) {", "  $0", "}"]
+  },
+  "React: componentWillUpdate": {
+    "prefix": "cwu",
+    "body": ["componentWillUpdate(nextProps, nextState) {", "  $0", "}"]
+  },
+  "React: componentDidUpdate": {
+    "prefix": "cdu",
+    "body": ["componentDidUpdate(prevProps, prevState) {", "  $0", "}"]
+  },
+  "React: componentWillUnmount": {
+    "prefix": "cwu",
+    "body": ["componentWillUnmount() {", "  $0", "}"]
+  },
+  "Jest test": {
+    "prefix": "test",
+    "body": ["test('$1', () => {", "  $0", "})"]
+  },
+  "Jest async test": {
+    "prefix": "atest",
+    "body": ["test('$1', async () => {", "  $0", "})"]
+  },
+  "Mocha it block": {
+    "prefix": "it",
+    "body": ["it('$1', () => {", "  $2", "})"]
+  },
+  "Mocha describe block": {
+    "prefix": "desc",
+    "body": ["describe('$1', () => {", "  $2", "})"]
+  },
+  "split-guide final": {
+    "prefix": "sgf",
+    "body": ["// FINAL_START", "$1", "// FINAL_END"]
+  },
+  "split-guide workshop": {
+    "prefix": "sgw",
+    "body": ["// WORKSHOP_START", "$1", "// WORKSHOP_END"]
+  },
+  "split-guide comment": {
+    "prefix": "sgc",
+    "body": ["// COMMENT_START", "$1", "// COMMENT_END"]
+  },
+
+  /**/
+  //  remix.code-snippets
+  //*
+
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  //   "scope": "javascript,typescript",
+  //   "prefix": "log",
+  //   "body": [
+  //     "console.log('$1');",
+  //     "$2"
+  //   ],
+  //   "description": "Log output to console"
+  // }
+
+  "Remix Loader": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "rmxLoader",
+    "body": [
+      "import type { LoaderArgs } from \"@remix-run/node\"",
+      "import { json } from \"@remix-run/node\"",
+      "import { useLoaderData } from \"@remix-run/react\"",
+      "",
+      "export async function loader({request}: LoaderArgs) {",
+      "  return json({});",
+      "};",
+      ""
+    ]
+  },
+  "Remix Action": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "rmxAction",
+    "body": [
+      "import type { ActionArgs } from \"@remix-run/node\"",
+      "import { redirect, json } from \"@remix-run/node\"",
+      "import { useActionData } from \"@remix-run/react\"",
+      "",
+      "export async function action({request}: ActionArgs) {",
+      "  const formData = await request.formData();",
+      "  $0",
+      "};",
+      ""
+    ]
+  },
+  "Remix Route Component": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "rmxComponent",
+    "body": [
+      "export default function $0() {",
+      "  const data = useLoaderData<typeof loader>();",
+      "",
+      "  return null;",
+      "}"
+    ]
+  },
+  "Remix CatchBoundary": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "rmxCatchBoundary",
+    "body": [
+      "export function CatchBoundary() {",
+      "  const caught = useCatch();",
+      "",
+      "  if (caught.status === 404) {",
+      "    return (",
+      "      <div>",
+      "        Not found",
+      "      </div>",
+      "    );",
+      "  }",
+      "",
+      "  throw new Error(`Unexpected caught response with status: ${caught.status}`);",
+      "}"
+    ]
+  },
+
+  "Remix ErrorBoundary": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "rmxErrorBoundary",
+    "body": [
+      "export function ErrorBoundary({ error }: { error: Error }) {",
+      "  console.error(error);",
+      "",
+      "  return (",
+      "    <div>",
+      "      An unexpected error occurred: {error.message}",
+      "    </div>",
+      "  );",
+      "}"
+    ]
+  },
+  "tabnine.experimentalAutoImports": true
+}

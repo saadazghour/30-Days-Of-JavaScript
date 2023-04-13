@@ -816,3 +816,46 @@ const fullStackResult = frontEndNew.concat(backEndNew);
 console.log(fullStackResult);
 
 // Exercise: Level 3 :
+// 1 - The following is an array of 10 students ages:
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+// Sort the array and find the min and max age
+
+console.log(ages.sort());
+console.log(Math.max(...ages));
+console.log(Math.min(...ages));
+
+// using for loop, find the Max age!
+
+let maxItem = ages[0];
+for (let i = 0; i < ages.length; i++) {
+  if (ages[i] > maxItem) {
+    maxItem = ages[i];
+  }
+}
+
+console.log(maxItem); // 26
+
+let minItem = ages[0];
+for (let i = 0; i < ages.length; i++) {
+  if (ages[i] < minItem) {
+    minItem = ages[i];
+  }
+}
+
+console.log(minItem); // 19
+
+// Find the median age(one middle item or two middle items divided by two)
+const medianItem = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+const sorted = medianItem.sort((a, b) => a - b);
+const middle = Math.floor(sorted.length / 2);
+console.log(sorted);
+
+if (sorted.length % 2 === 0) {
+  console.log((sorted[middle - 1] + sorted[middle]) / 2); // 24
+} else {
+  console.log(sorted[middle]);
+}
+
+// Find the average age(all items divided by number of items)

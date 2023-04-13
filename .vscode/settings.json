@@ -957,7 +957,7 @@
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
   "editor.glyphMargin": false,
-  "editor.folding": false,
+  "editor.folding": true,
   "files.exclude": {
     "**/.env": true,
     "USE_GITIGNORE": true,

@@ -165,7 +165,7 @@ for (let i = 0; i <= 6; i++) {
     continue;
   }
 
-  console.log(i);
+  console.log(i); // 0 1 2 4 5 6
 }
 
 // Exercises!!

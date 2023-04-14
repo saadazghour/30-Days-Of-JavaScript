@@ -1025,7 +1025,7 @@
   "editor.formatOnPaste": false,
   "editor.minimap.enabled": false,
   "spellright.language": ["en"],
-  "spellright.documentTypes": ["markdown", "plaintext", "mdx"],
+  "spellright.documentTypes": ["markdown", "plaintext", "mdx", "javascript"],
   "spellright.parserByClass": {
     "mdx": {
       "parser": "markdown"

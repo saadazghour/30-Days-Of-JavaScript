@@ -169,3 +169,100 @@ for (let i = 0; i <= 6; i++) {
 }
 
 // Exercises!!
+// Exercises: Level 1
+
+const countriesExercice = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+const webTechsExercice = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+const mernStackExercice = ["MongoDB", "Express", "React", "Node"];
+
+// Iterate 0 to 10 using for loop, do the same using while and do while loop
+
+for (let i = 0; i <= 10; i++) {
+  console.log(i); // 0 1 2 3 4 5 6 7 8 9 10
+}
+
+let iterate = 0;
+while (iterate <= 10) {
+  console.log(iterate); // 0 1 2 3 4 5 6 7 8 9 10
+  iterate++;
+}
+
+let iterate1 = 0;
+
+do {
+  console.log(iterate1);
+  iterate1++;
+} while (iterate1 <= 10);
+
+// Iterate 10 to 0 using for loop, do the same using while and do while loop
+
+for (let i = 10; i >= 0; i--) {
+  console.log(i);
+}
+
+let iterateMinus = 10;
+while (iterateMinus >= 0) {
+  console.log(iterateMinus);
+  iterateMinus--;
+}
+
+let iterateMinus1 = 10;
+
+do {
+  console.log(iterateMinus1);
+  iterateMinus1--;
+} while (iterateMinus1 >= 0);
+
+// Iterate 0 to n using for loop
+const n = 6;
+
+for (let i = 0; i <= n; i++) {
+  console.log(i);
+}
+
+// Write a loop that makes the following pattern using console.log():
+
+// #
+// ##
+// ###
+// ####
+// #####
+// ######
+// #######
+
+for (let i = 1; i <= 7; i++) {
+  // console.log(i)
+  let line = "";
+  // The inner for loop appends '#' to the line variable for each iteration.
+  for (let j = 1; j <= i; j++) {
+    line += "#";
+  }
+  console.log(line);
+}
+
+// // using another Method!
+// for (let i = 0; i <= 7; i++) {
+//   console.log("#", )
+// }

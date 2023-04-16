@@ -262,7 +262,194 @@ for (let i = 1; i <= 7; i++) {
   console.log(line);
 }
 
-// // using another Method!
-// for (let i = 0; i <= 7; i++) {
-//   console.log("#", )
+// Using Another Method for with the same Result.
+for (let idx = 1; idx <= 7; idx++) {
+  console.log("#".repeat(idx));
+}
+
+// Use loop to print the following pattern:
+
+// 0 x 0 = 0
+// 1 x 1 = 1
+// 2 x 2 = 4
+// 3 x 3 = 9
+// 4 x 4 = 16
+// 5 x 5 = 25
+// 6 x 6 = 36
+// 7 x 7 = 49
+// 8 x 8 = 64
+// 9 x 9 = 81
+// 10 x 10 = 100
+
+for (let idx = 0; idx <= 10; idx++) {
+  console.log(`${idx} * ${idx} = ${idx * idx}`);
+}
+
+// Using loop print the following pattern
+
+// i    i^2   i^3
+// 0    0     0
+// 1    1     1
+// 2    4     8
+// 3    9     27
+// 4    16    64
+// 5    25    125
+// 6    36    216
+// 7    49    343
+// 8    64    512
+// 9    81    729
+// 10   100   1000
+
+for (let idx = 0; idx <= 10; idx++) {
+  console.log(`${idx} ${idx * idx}  ${idx * idx * idx}`);
+}
+
+// You can us the exponent operator  ** to calculate the power of a number.
+
+for (let idx = 0; idx <= 10; idx++) {
+  console.log(`${idx} ${idx ** 2} ${idx ** 3}`);
+}
+
+// Use for loop to iterate from 0 to 100 and print only even numbers
+
+for (let idx = 0; idx <= 100; idx++) {
+  if (idx % 2 === 0) {
+    console.log(idx);
+  }
+}
+
+// Use for loop to iterate from 0 to 100 and print only odd numbers
+
+for (let idx = 0; idx <= 100; idx++) {
+  if (idx % 2 !== 0) {
+    console.log(idx);
+  }
+}
+
+// Use for loop to iterate from 0 to 100 and print only prime numbers
+// A prime number is a number that is only divisible by 1 and itself.
+
+// TODO:
+// for (let idx = 0; idx <= 100; idx++) {
+//   // console.log(idx);
+//   let isPrime = true;
+
+//   for (let j = 2; j < idx; j++) {
+//     // Checks if the number is divisible by any of the numbers in that range
+//     if (idx % j === 0) {
+//       // Then it's not Prime.
+//       isPrime = false;
+//       // break
+//     }
+//   }
+
+//   if (isPrime) {
+//     console.log("Is Prime", idx);
+//   }
 // }
+
+// for (let idx = 0; idx <= 100; idx++) {
+//   let isPrime = true;
+//   for (let i = 2; i < idx; i++) {
+//     if (idx % i === 0) {
+//       isPrime = false;
+//     }
+//   }
+//   if (isPrime) {
+//     console.log(idx);
+//   }
+// }
+
+// Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+
+let allSum = 0;
+for (let idx = 0; idx <= 100; idx++) {
+  allSum += idx;
+}
+
+console.log(`The sum of all numbers from 0 to 100 is ${allSum}`); // The sum of all numbers from 0 to 100 is 5050.
+
+// Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+let sumEvens = 0;
+let sumOdds = 0;
+
+for (let idx = 0; idx <= 100; idx++) {
+  if (idx % 2 === 0) {
+    sumEvens += idx;
+  } else if (idx % 2 !== 0) {
+    sumOdds += idx;
+  }
+}
+
+console.log(sumEvens); // 2550
+console.log(sumOdds); // 2500
+
+// Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+
+let sumEvensArray = 0;
+let sumOddsArray = 0;
+
+for (let idx = 0; idx <= 100; idx++) {
+  if (idx % 2 === 0) {
+    sumEvensArray += idx;
+  } else if (idx % 2 !== 0) {
+    sumOddsArray += idx;
+  }
+}
+
+const sumArray = [sumEvensArray, sumOddsArray];
+console.log(sumArray); // [2550, 2500]
+
+// Develop a small script which generate array of 5 random numbers
+
+const randomArray = [];
+
+for (let idx = 0; idx < 5; idx++) {
+  const randomNumbers = Math.floor(Math.random() * 10);
+  randomArray.push(randomNumbers);
+}
+
+console.log(randomArray);
+
+// Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+const randomArrayUnique = [];
+
+for (let idx = 0; idx < 5; idx++) {
+  const randomNumbers = Math.floor(Math.random() * 10);
+
+  if (!randomArrayUnique.includes(randomNumbers)) {
+    randomArrayUnique.push(randomNumbers);
+  }
+}
+
+console.log(randomArrayUnique);
+
+// Develop a small script which generate a six characters random id:
+
+let randomId = "";
+let randomCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+for (let idx = 0; idx < 6; idx++) {
+  const randomIndex = Math.floor(Math.random() * randomCharacters.length);
+  randomId += randomCharacters[randomIndex];
+}
+
+console.log(randomId);
+
+// Using function to generate Random Id, and the function should return the Id  and the function should be Called only once.
+const generateRandomId = () => {
+  let randomId = "";
+  let randomCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+  for (let idx = 0; idx < 6; idx++) {
+    const randomIndex = Math.floor(Math.random() * randomCharacters.length);
+    // console.log(randomIndex);
+    randomId += randomCharacters[randomIndex];
+  }
+
+  return randomId;
+};
+
+const Id = generateRandomId();
+console.log(Id);

@@ -437,7 +437,7 @@ for (let idx = 0; idx < 6; idx++) {
 
 console.log(randomId);
 
-// Using function to generate Random Id, and the function should return the Id  and the function should be Called only once.
+// Using function to generate Random Id, and the function should return the Id and the function should be Called only once.
 const generateRandomId = () => {
   let randomId = "";
   let randomCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -453,3 +453,119 @@ const generateRandomId = () => {
 
 const Id = generateRandomId();
 console.log(Id);
+
+// Exercises: Level 2
+// Develop a small script which generate any number of characters random id:
+
+const generateRandomIdsByParams = (anyNumberChar) => {
+  let randomIdsResult = "";
+  let charactersRandom =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (let idx = 0; idx < anyNumberChar; idx++) {
+    // charactersRandom.charAt(
+    //   Math.floor(Math.random() * charactersRandom.length)
+    // );
+
+    const randomIndex = Math.floor(Math.random() * charactersRandom.length);
+    randomIdsResult += charactersRandom[randomIndex];
+  }
+
+  return randomIdsResult;
+};
+
+const randomIdsResult = generateRandomIdsByParams(12);
+console.log(randomIdsResult);
+
+// Write a script which generates a random hexadecimal number.
+
+const generateRandomHexadecimalNumber = () => {
+  // Generate a random decimal number between 0 and 1
+  const randomDecimal = Math.random();
+
+  // 0xffffffff, Is a hexadecimal literal that represents the maximum value of a 32-bit unsigned integer, and it's represent the maximum value of a 32-bit.
+
+  // ( randomDecimal * 0xffffffff ) --> Random integer between 0 and 4294967295.
+  // Converting to hexadecimal format using the toString(16)
+
+  return Math.floor(randomDecimal * 0xffffffff).toString(16);
+};
+
+const randomHexa = generateRandomHexadecimalNumber();
+console.log(randomHexa);
+
+// Write a script which generates a random "RGB" "COLOR" number.
+const generateRandomColor = () => {
+  // generate a random number between 0 and 255 for the RGB component
+  // red , green, blue .
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+
+  return `rgb ${r}, ${g}, ${b}`;
+};
+
+const randomRgb = generateRandomColor();
+console.log(randomRgb);
+
+const AboveCountries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+// Using the above countries array, create the following new array.
+// ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+
+const newAboveCountries = [];
+for (let idx = 0; idx < AboveCountries.length; idx++) {
+  newAboveCountries.push(AboveCountries[idx].toUpperCase());
+}
+
+console.log(newAboveCountries);
+
+// Using the above countries array, create an array for countries length'.
+// [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+
+for (let idx = 0; idx < AboveCountries.length; idx++) {
+  console.log(AboveCountries[idx].length); // [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+}
+
+// Use the AboveCountries array to create the following array of arrays:
+
+//  [
+//   ['Albania', 'ALB', 7],
+//   ['Bolivia', 'BOL', 7],
+//   ['Canada', 'CAN', 6],
+//   ['Denmark', 'DEN', 7],
+//   ['Ethiopia', 'ETH', 8],
+//   ['Finland', 'FIN', 7],
+//   ['Germany', 'GER', 7],
+//   ['Hungary', 'HUN', 7],
+//   ['Ireland', 'IRE', 7],
+//   ['Iceland', 'ICE', 7],
+//   ['Japan', 'JAP', 5],
+//   ['Kenya', 'KEN', 5]
+// ]
+
+const newAboveCountriesArray = [];
+
+for (let idx = 0; idx < AboveCountries.length; idx++) {
+  newAboveCountriesArray.push([
+    AboveCountries[idx],
+    AboveCountries[idx].substring(0, 3).toUpperCase(),
+    AboveCountries[idx].length,
+  ]);
+}
+
+console.log(newAboveCountriesArray);
+
+// In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.

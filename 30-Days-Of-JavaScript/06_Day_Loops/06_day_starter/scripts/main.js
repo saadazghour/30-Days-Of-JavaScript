@@ -1096,11 +1096,10 @@ for (let idx = 0; idx < allCountries.length; idx++) {
 
 console.log(resultWords);
 
-console.log(allCountries);
-
 // Reverse the countries array and capitalize each country and stored it as an array
 
 // Using reverse method .
+console.log(allCountries);
 const reverseCountries = allCountries.reverse();
 const resultReverse = [];
 

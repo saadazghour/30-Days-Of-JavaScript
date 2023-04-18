@@ -498,9 +498,11 @@ console.log(randomHexa);
 const generateRandomColor = () => {
   // generate a random number between 0 and 255 for the RGB component
   // red , green, blue .
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
+
+  const random = Math.random();
+  const r = Math.floor(random * 256);
+  const g = Math.floor(random * 256);
+  const b = Math.floor(random * 256);
 
   return `rgb ${r}, ${g}, ${b}`;
 };
@@ -514,10 +516,11 @@ const AboveCountries = [
   "Canada",
   "Denmark",
   "Ethiopia",
-  "Finland",
   "Germany",
   "Hungary",
+  "Finland",
   "Ireland",
+  "Iceland",
   "Japan",
   "Kenya",
 ];
@@ -559,13 +562,227 @@ for (let idx = 0; idx < AboveCountries.length; idx++) {
 const newAboveCountriesArray = [];
 
 for (let idx = 0; idx < AboveCountries.length; idx++) {
+  const country = AboveCountries[idx];
+
   newAboveCountriesArray.push([
-    AboveCountries[idx],
-    AboveCountries[idx].substring(0, 3).toUpperCase(),
-    AboveCountries[idx].length,
+    country,
+    country.substring(0, 3).toUpperCase(),
+    country.length,
   ]);
 }
 
 console.log(newAboveCountriesArray);
 
 // In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+
+const result = [];
+const resultWithout = [];
+
+for (let idx = 0; idx < AboveCountries.length; idx++) {
+  const country = AboveCountries[idx];
+  if (country.includes("land")) {
+    result.push(country);
+  } else {
+    resultWithout.push(country);
+  }
+}
+
+console.log(result);
+console.log(resultWithout);
+
+const aboveCountries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Germany",
+  "Hungary",
+  "Finland",
+  "Ireland",
+  "Iceland",
+  "Japan",
+  "Kenya",
+  "AIMOROCCO",
+  "AI",
+];
+
+const countriesUppercase = [];
+for (let idx = 0; idx < aboveCountries.length; idx++) {
+  countriesUppercase.push(aboveCountries[idx].toUpperCase());
+}
+
+console.log(countriesUppercase);
+
+// In above countries array, check if there is a country or countries end with a substring IA. If there are countries end with, print it as array. If there is no country containing the word AI, print 'These are countries ends without IA'.
+
+console.log(countriesUppercase);
+
+const newResult = [];
+const newResultWithout = [];
+
+for (let idx = 0; idx < countriesUppercase.length; idx++) {
+  const country = countriesUppercase[idx];
+
+  if (country.endsWith("IA")) {
+    newResult.push(country);
+  } else if (!country.includes("AI")) {
+    newResultWithout.push(country);
+  }
+}
+
+console.log(newResult); // [ 'ALBANIA', 'BOLIVIA', 'ETHIOPIA' ]
+console.log(`These are countries ends without IA : ${newResultWithout}`); // CANADA,DENMARK,GERMANY,HUNGARY,FINLAND,IRELAND,ICELAND,JAPAN,KENYA
+
+console.log(countriesUppercase); // This is the original above countries array.
+
+// Using the above countries array, find the country containing the biggest number of characters.
+
+let maxLength = 0;
+let biggestNumCharactere = "";
+
+for (let idx = 0; idx < countriesUppercase.length; idx++) {
+  const country = countriesUppercase[idx];
+
+  if (country.length > maxLength) {
+    maxLength = country.length;
+    biggestNumCharactere = country;
+    console.log(maxLength);
+  }
+}
+
+console.log(maxLength);
+console.log(biggestNumCharactere);
+
+// Approach with reduce method.
+const countriesUppercaseResult = countriesUppercase.reduce((a, b) => {
+  // console.log(a, b);
+  return a.length > b.length ? a : b;
+});
+
+console.log(countriesUppercaseResult); // AIMOROCCO
+
+console.log(countriesUppercase); // This is the original above countries Array.
+// Using the above countries array, find the country containing only 5 characters.
+
+let maxLengthFive = [];
+let onlyFiveCharactere = [];
+
+for (let idx = 0; idx < countriesUppercase.length; idx++) {
+  const country = countriesUppercase[idx];
+
+  if (country.length === 5) {
+    maxLengthFive.push(country.length);
+    onlyFiveCharactere.push(country);
+  } else {
+    console.log(`Not containing five characters! ${country}`);
+  }
+}
+
+console.log(maxLengthFive);
+console.log(onlyFiveCharactere);
+
+// Find the longest word in the webTechsLongest Array
+const webTechsLongest = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+let longestLength = 0;
+let longestWord = "";
+
+for (let idx = 0; idx < webTechsLongest.length; idx++) {
+  const webTechNew = webTechsLongest[idx];
+  // console.log(webTechNew.length)
+
+  if (webTechNew.length > longestLength) {
+    longestLength = webTechNew.length;
+    longestWord = webTechNew;
+  }
+}
+
+console.log(longestWord);
+console.log(longestLength);
+
+// Use the webTechsLongest array to create the following array of arrays:
+// [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+
+const arrayOfArray = [];
+
+for (let idx = 0; idx < webTechsLongest.length; idx++) {
+  const webTechNew = webTechsLongest[idx];
+  // console.log(webTechNew);
+
+  arrayOfArray.push([webTechNew, webTechNew.length]);
+}
+
+console.log(arrayOfArray);
+
+// An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array MERNSTACK
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+const acronymResult = [];
+
+for (let idx = 0; idx < mernStack.length; idx++) {
+  const wordIndex = mernStack[idx];
+  acronymResult.push(wordIndex[0]);
+}
+
+console.log(acronymResult.join("")); // MERN
+
+// Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+
+const newTehArr = [
+  "HTML",
+  "CSS",
+  "JS",
+  "React",
+  "Redux",
+  "Node",
+  "Express",
+  "MongoDB",
+];
+for (const item of newTehArr) {
+  console.log(item);
+}
+
+// This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+
+const fruits = ["banana", "orange", "mango", "lemon"];
+const reverseFruits = [];
+
+for (let idx = fruits.length - 1; idx >= 0; idx--) {
+  const fruit = fruits[idx];
+
+  reverseFruits.push(fruit);
+}
+
+console.log(reverseFruits);
+
+// Print all the elements of array as shown below.
+
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+// HTML
+// CSS
+// JS
+// REACT
+// NODE
+// EXPRESS
+// MONGODB
+
+// The outer loop iterates over the two inner arrays
+for (let idx = 0; idx < fullStack.length; idx++) {
+  const arrayItems = fullStack[idx];
+  // While the inner loop iterates over each element in the current inner array
+  for (let j = 0; j < arrayItems.length; j++) {
+    console.log(arrayItems[j]);
+  }
+}

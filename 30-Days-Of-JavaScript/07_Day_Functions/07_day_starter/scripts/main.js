@@ -238,3 +238,136 @@ console.log(squareFunc(10)); // 100
 
 // Self Invoking Functions
 // Self invoking functions are anonymous functions which do not need to be called to return a value.
+// But instead of just printing if we want to return and store the data, we do as shown below!
+
+(function (number) {
+  console.log(number ** 2);
+})(2);
+
+const selfInvoking = (function (number) {
+  console.log(number ** 2);
+  return number ** 2;
+})(2);
+
+console.log(selfInvoking);
+
+// Arrow Function
+
+// Arrow function is an alternative to write a function, however function declaration and arrow function have some minor differences.
+// Arrow function uses arrow instead of the keyword function to declare a function. Let us see both function declaration and arrow function.
+
+// This is how we write normal or declaration function
+// Let us change this declaration function to an arrow function
+
+function firstDeclaration(myName) {
+  console.log(myName);
+  return myName;
+}
+
+console.log(firstDeclaration("Saad Azghour")); // Saad Azghour
+
+const firstArrow = (myName) => {
+  console.log(myName);
+  return myName;
+};
+
+console.log(firstArrow("Saad Azghour")); // Saad Azghour
+
+// if we have only one line in the code block, it can be written as follows, explicit return
+const arrowOneLine = (myName) => myName;
+
+console.log(arrowOneLine("Saad Azghour"));
+
+const changeToUpperCase = (countries) => {
+  const result = [];
+  for (const country of countries) {
+    result.push(country.toUpperCase());
+  }
+
+  return result;
+};
+
+const countriesUpperCase = [
+  "Finland",
+  "Sweden",
+  "Norway",
+  "Denmark",
+  "Iceland",
+];
+
+console.log(changeToUpperCase(countriesUpperCase));
+
+// Function with default parameters
+
+// Sometimes we pass default values to parameters, when we invoke the function if we do not pass an argument the default value will be used. Both function declaration and arrow function can have a default value or values.
+function myNameFunc(defaultValue = "Saad Azghour") {
+  // Your code goes here.
+  return defaultValue;
+}
+
+console.log(myNameFunc());
+
+function greeting(name = "Saad Azghour") {
+  return `Hello, ${name}`;
+}
+
+console.log(greeting()); // Hello, Saad Azghour
+console.log(greeting("Saad")); // Hello, Saad
+
+function generateFullName(firstName = "Saad", lastName = "Azghour") {
+  return `${firstName} ${lastName}`;
+}
+
+console.log(generateFullName()); // Saad Azghour
+console.log(generateFullName("Mark", "Zekerberg")); // Mark Zekerberg
+
+function calculateAge(birthYear, currentYear = "2023") {
+  return `You age is : ${currentYear - birthYear}`;
+}
+
+console.log(calculateAge(1993)); // You age is : 30
+
+// function declaration with default parameters!
+function weightOfObject(mass, gravity = 9.81) {
+  const weight = mass * gravity + " N"; // the value has to be changed to string first
+  return weight;
+}
+
+// 9.81 gravity at the surface of Earth.
+console.log("Weight of an object in Newton: ", weightOfObject(100));
+// gravity at surface of Moon
+console.log("Weight of an object in Newton: ", weightOfObject(100, 1.62));
+
+// Let us see how we write the above functions with arrow functions
+const weightOfObjectArroc = (mass, gravity = 9.81) => {
+  const weight = mass * gravity + " N"; // the value has to be changed to string first
+  return weight;
+};
+
+console.log(weightOfObjectArroc(100)); // 9.81 N
+console.log(weightOfObjectArroc(100, 1.62)); // 162 N
+
+const generateFullNameArrow = (firstName = "Saad", lastName = "Azghour") => {
+  return `${firstName} ${lastName}`;
+};
+
+console.log(generateFullNameArrow());
+
+const calculateAgeArrow = (birthYear, currentYear = "2023") =>
+  `You age is : ${currentYear - birthYear}`;
+
+console.log(calculateAgeArrow(1993)); //  You age is : 30
+
+// Function declaration versus Arrow function
+// It Will be covered in other section.
+
+// Exercises
+// Declare a function fullName and it print out your full name.
+
+function fullNameNew(fullName) {
+  return `${fullName}`;
+}
+
+console.log(fullNameNew("Saad Azghour")); // Saad Azghour
+
+// Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.

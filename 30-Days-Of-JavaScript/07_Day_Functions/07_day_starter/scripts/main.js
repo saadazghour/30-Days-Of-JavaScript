@@ -535,7 +535,7 @@ function findMax(first, second, third) {
 
 console.log(findMax(1, 2, 6));
 
-// Using another method to find max
+// Alternative solution, to find max
 function findMaxNew(first, second, third) {
   const arr = [first, second, third];
   let maxResult = arr[0];
@@ -552,3 +552,299 @@ function findMaxNew(first, second, third) {
 
 console.log(findMaxNew(1, 50, 20)); // 50
 console.log(findMaxNew(0, -10, -2)); // 0
+
+// Exercises: Level 2
+// Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
+
+// Detailed explanation of the algorithm:
+
+// This implementation first declares variables x and y to hold the values of the two variables in the solution. It then checks for the special cases where a or b is zero, since these equations can be solved for just one of the variables. If a is zero, we solve for y using the equation by + c = 0, and if b is zero, we solve for x using the equation ax + c = 0. In each case, we return an object with the calculated value and null for the other variable.
+
+function solveLinEquation(a, b, c) {
+  // ax + by + c = 0.
+  // a = 2;
+  // b = -3;
+  // c = 1;
+
+  if (a === 0 && b === 0) {
+    throw new Error`Invalid input : both 'a' and 'b' cannot be Zero`();
+  }
+
+  let x, y;
+
+  if (a === 0) {
+    // If a is zero, the equation is of the form "by + c = 0", so we can solve for y
+    y = -c / b;
+    // Return an object with null value of x and calculated value of y
+    return { x: null, y };
+  } else if (b === 0) {
+    // If b is zero, the equation is of the form "ax + c = 0", so we can solve for x
+    x = -c / a;
+    return { x, y: null };
+  } else {
+    // If neither a nor b is zero, we can solve for x and y using the given equation
+    x = -c / a;
+    y = (-a / b) * x;
+    return { x, y };
+  }
+}
+
+// testing the function with different values
+// 2x + 3y - 4 = 0
+
+console.log(solveLinEquation(2, 3, -4)); // { x: 2, y: -1.3333333333333333 }
+console.log(solveLinEquation());
+
+// Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+
+// Detailed  explanation of the algorithm:
+
+// The solveQuadEquation function first calculates the discriminant which is rootTerm variable in bellow solution, of the quadratic equation using the formula b^2 - 4ac. If the discriminant which is rootTerm variable in bellow solution, is negative, the quadratic equation has no real roots and the function returns an object with an error message.
+
+// If the discriminant which is rootTerm variable in bellow solution, is non-negative, the function calculates the two roots of the quadratic equation using the quadratic formula (-b ± sqrt(b^2 - 4ac)) / 2a. If the two roots are equal, the quadratic equation has one root, and the function returns an object with that root value. If the two roots are different, the quadratic equation has two roots, and the function returns an object with both root values.
+
+// The function is tested with example inputs and the output is logged to the console. The expected output for each test case is also provided in the comments.
+
+function solveQuadratic(a = 1, b = 1, c = 1) {
+  // ax2 + bx + c = 0.
+
+  // Calculate the rootTerm of the quadratic equation
+  let rootTerm = b ** 2 - 4 * a * c;
+  // console.log(rootTerm)
+
+  if (rootTerm < 0) {
+    // Check if the rootTerm is negative, which means the quadratic equation has no real roots
+    return { 0: `The quadratic equation has no real roots` };
+  }
+
+  // Calculate the roots of the quadratic equation
+  const root1 = (-b + Math.sqrt(rootTerm)) / (2 * a);
+  const root2 = (-b - Math.sqrt(rootTerm)) / (2 * a);
+  // console.log(root1)
+  // console.log(root2)
+
+  // Check if the quadratic equation has one or two roots
+  if (root1 === root2) {
+    // The quadratic equation has one real root
+    return { root: root1 };
+  } else {
+    // The quadratic equation has two real roots
+    return { root1: root1, root2: root2 };
+  }
+}
+
+console.log(solveQuadratic()); // { 0: 'The quadratic equation has no real roots' }
+console.log(solveQuadratic(1, 4, 4)); // {root: -2}
+console.log(solveQuadratic(1, -1, -2)); // {root1: 2, root2: -1}
+console.log(solveQuadratic(1, 7, 12)); // {root1: -3, root2: -4}
+console.log(solveQuadratic(1, 0, -4)); // {root1: 2, root2: -2}
+console.log(solveQuadratic(1, -1, 0)); // {root1: 1, root2: 0}
+
+// Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+
+function printArray(arr) {
+  let result = [];
+  for (const item of arr) {
+    result.push(item);
+  }
+
+  return result.join(" ");
+}
+
+console.log(printArray([1, 2, 3, 4, 5, 6])); // 1 2 3 4 5 6
+
+// Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+
+function showDateTime(date) {
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  const second = date.getSeconds();
+
+  return `${day}/${month}/${year} ${hour}:${minute}:${second}`;
+}
+
+// Using the Date object, test the function showDateTime.
+console.log(showDateTime(new Date())); // 20/4/2023 11:6:52
+
+// Declare a function name swapValues. This function swaps value of x to y.
+
+function swapValues(x, y) {
+  let temp = x;
+  x = y;
+  y = temp;
+
+  return [x, y];
+}
+
+console.log(swapValues(10, 20)); // [20,10]
+
+// Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+
+function reverseArray(arr) {
+  const resutlReverse = [];
+  for (let idx = arr.length - 1; idx >= 0; idx--) {
+    resutlReverse.push(arr[idx]);
+  }
+
+  return resutlReverse;
+}
+
+console.log(reverseArray([1, 2, 3, 4, 5])); // [5,4,3,2,1])
+
+// Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+
+function capitalizeArray(arr) {
+  let result = [];
+  for (let idx = 0; idx < arr.length; idx++) {
+    const word = arr[idx];
+    result.push(word.toUpperCase());
+  }
+
+  return result;
+}
+
+console.log(capitalizeArray(["hello", "world"])); // ["HELLO", "WORLD"]
+
+// Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+
+function addItem(item) {
+  let arr = [];
+  arr.push(item);
+  return arr;
+}
+
+console.log(addItem("hello")); // ["hello"]
+
+// Alternative solution
+function addItemNew(item) {
+  return [item];
+}
+
+console.log(addItemNew("hello")); // ["hello"]
+
+// Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+
+function removeItem(idx) {
+  const arr = [1, 2, 3, 4, 5]; // create an example array
+
+  arr.splice(idx, 1); // remove an item from the array
+  return arr;
+}
+
+console.log(removeItem(1)); // [1, 3, 4, 5]
+
+// Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+
+function sumOfNumbers(num) {
+  let sum = 0;
+
+  // The range, from 0 to num
+  for (let idx = 0; idx < num; idx++) {
+    console.log(idx);
+    sum += num;
+  }
+
+  return sum;
+}
+
+console.log(sumOfNumbers(5)); // 15
+
+// Declare a function name sumOfOdds, It takes a number parameter and it adds all the odd numbers in that - range.
+
+function sumOfOdds(num) {
+  let oddsResult = 0;
+
+  for (let idx = 0; idx < num; idx++) {
+    if (idx % 2 !== 0) {
+      console.log(idx);
+      oddsResult += idx;
+    }
+  }
+  return oddsResult;
+}
+
+console.log(sumOfOdds(6)); // 9
+
+// Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+
+function sumOfEven(num) {
+  let evenResult = 0;
+
+  for (let idx = 0; idx < num; idx++) {
+    if (idx % 2 === 0) {
+      console.log(idx);
+      evenResult += idx;
+    }
+  }
+
+  return evenResult;
+}
+
+console.log(sumOfEven(6)); // 6
+
+// Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+function evensAndOdds(num) {
+  let evensCount = 0;
+  let oddsCount = 0;
+
+  const digits = num.toString().split("");
+
+  for (let idx = 0; idx < digits.length; idx++) {
+    const digit = digits[idx];
+    console.log(digit);
+    if (digit % 2 === 0) {
+      evensCount++;
+    } else {
+      oddsCount++;
+    }
+  }
+
+  console.log(`Number of evens digits ${evensCount}`);
+  console.log(`Number od odds digit are ${oddsCount}`);
+
+  return `Number od odds digit are ${evensCount}, Number of evens digits ${oddsCount}`;
+}
+
+console.log(evensAndOdds(123456789));
+
+// Write a function which takes any number of arguments and return the sum of the arguments
+function sumOfAll(...args) {
+  console.log(args);
+  let result = 0;
+
+  for (let idx = 0; idx < args.length; idx++) {
+    const num = args[idx];
+    result += num;
+  }
+
+  return result;
+}
+
+console.log(sumOfAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)); // 55
+
+// Writ a function which generates a randomUserIp.
+
+function randomUserIp() {
+  const ipResult = [];
+  for (let idx = 0; idx < 4; idx++) {
+    ipResult.push(Math.floor(Math.random() * 255));
+  }
+
+  return ipResult.join(".");
+}
+
+console.log(randomUserIp());
+
+// Write a function which generates a randomMacAddress
+function randomMacAddress() {
+  const hexDigits = "0123456789abcdef";
+  let macAddress = "";
+
+  // return
+}
+
+console.log(randomMacAddress());

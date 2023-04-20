@@ -370,4 +370,185 @@ function fullNameNew(fullName) {
 
 console.log(fullNameNew("Saad Azghour")); // Saad Azghour
 
-// Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.
+// Declare a function newFullName and now it takes firstName, lastName as a parameter and it returns your full - name.
+
+function newFullName(firstName, lastName) {
+  return `Your full name ${firstName} - ${lastName}`;
+}
+
+console.log(newFullName("Saad", "Azghour")); // Your full name Saad - Azghour
+
+// Declare a function addNumbers and it takes two parameters and it returns sum.
+
+function addNumbers(numberOne, numberTwo) {
+  const sum = `${numberOne + numberTwo}`;
+  return sum;
+}
+
+console.log(addNumbers(4, 4)); // 8
+
+// An area of a rectangle is calculated as follows: area = length x width. Write a function which calculates areaOfRectangle.
+
+function areaRectangle(length, width = 10) {
+  const resultArea = length * width;
+  return resultArea;
+}
+
+console.log(areaRectangle(15));
+
+// A perimeter of a rectangle is calculated as follows: perimeter= 2x(length + width). Write a function which calculates perimeterOfRectangle.
+
+function perimeterRectangle(length, width = 10) {
+  const resultPerimeter = 2 * (length + width);
+  return resultPerimeter;
+}
+
+console.log(perimeterRectangle(100));
+
+// A volume of a rectangular prism is calculated as follows: volume = length x width x height. Write a function which calculates volumeOfRectPrism.
+
+function volumeOfRectPrism(length, width = 10, height) {
+  const volumeResult = length * width * height;
+  return volumeResult;
+}
+
+// TODO:
+// Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
+
+console.log(volumeOfRectPrism(10, 60, 30)); // 18000
+console.log(volumeOfRectPrism(10, undefined, 30)); // 3000
+
+// Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
+
+function areaOfCircleResult(n) {
+  const areaResult = n ** 3;
+  return areaResult;
+}
+
+console.log(areaOfCircleResult(6)); // 216
+
+// Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle
+
+function circumOfCircle() {
+  const radius = 5;
+  const result = 2 * Math.PI * radius;
+
+  return result;
+}
+
+console.log(circumOfCircle()); // 31.41592653589793
+
+// Density of a substance is calculated as follows: density= mass/volume. Write a function which calculates density.
+
+function densityOfSubstance(mass, volume) {
+  const densityResult = mass / volume;
+  return densityResult;
+}
+
+console.log(densityOfSubstance(60, 10)); //  6
+
+// Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a function which calculates a speed of a moving object, speed.
+
+function calculateSpeed(totalDistance, totalAmount) {
+  // totalDistance, In meters
+  // totalAmount, In seconds
+  const speedResult = totalDistance / totalAmount;
+  return speedResult;
+}
+
+console.log(calculateSpeed(100, 10)); // 10 meters per second.
+
+// Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
+
+function weightOfSubstance(mass = 5, gravity = 9.81) {
+  const weightResult = mass * gravity;
+  return weightResult;
+}
+
+console.log(weightOfSubstance()); // with default param,  it will be 49.050000000000004
+console.log(weightOfSubstance(10)); // 98.10000000000001
+
+// Temperature in oC can be converted to oF using this formula: oF = (oC x 9/5) + 32. Write a function which convert oC to oF convertCelsiusToFahrenheit.
+
+function convertCelsiusToFahrenheit(oC) {
+  const oFResult = (oC * 9) / 5 + 32;
+  return oFResult;
+}
+
+console.log(convertCelsiusToFahrenheit(12)); // 53.6
+
+// Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is underweight, normal, overweight or obese based the information given below.
+
+function bodyMassIndex(weight, height) {
+  // weight = 70; // kg
+  // height = 1.7; // meters
+
+  const bmiResult = weight / height ** 2;
+  console.log(bmiResult);
+
+  if (bmiResult < 18.5) {
+    return "Underweight";
+  } else if (bmiResult >= 18.5 && bmiResult <= 24.9) {
+    return "Normal Weight";
+  } else if (bmiResult > 25 && bmiResult <= 29.9) {
+    return "Overweight";
+  } else {
+    return "Obese";
+  }
+
+  return bmiResult;
+}
+
+console.log(bodyMassIndex(77, 1.76)); // Normal Weight
+
+// Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+
+function checkSeason(month) {
+  if (month === "December" || month === "January" || month === "February") {
+    return "Winter";
+  } else if (month === "March" || month === "April" || month === "May") {
+    return "Spring";
+  } else if (month === "June" || month === "July" || month === "August") {
+    return "Summer";
+  } else {
+    return "Autumn";
+  }
+}
+
+console.log(checkSeason("April"));
+
+// Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
+
+function findMax(first, second, third) {
+  let maxResult = first;
+
+  if (second > maxResult) {
+    maxResult = second;
+  }
+
+  if (third > maxResult) {
+    maxResult = third;
+  }
+
+  return maxResult;
+}
+
+console.log(findMax(1, 2, 6));
+
+// Using another method to find max
+function findMaxNew(first, second, third) {
+  const arr = [first, second, third];
+  let maxResult = arr[0];
+
+  for (let idx = 0; idx < arr.length; idx++) {
+    const num = arr[idx];
+    if (num > maxResult) {
+      maxResult = num;
+    }
+  }
+
+  return maxResult;
+}
+
+console.log(findMaxNew(1, 50, 20)); // 50
+console.log(findMaxNew(0, -10, -2)); // 0

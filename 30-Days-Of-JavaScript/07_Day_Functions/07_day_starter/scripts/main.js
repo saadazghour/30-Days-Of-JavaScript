@@ -837,7 +837,7 @@ function randomUserIp() {
   return ipResult.join(".");
 }
 
-console.log(randomUserIp());
+console.log(randomUserIp()); // 183.253.235.226, it's random IP
 
 // Write a function which generates a randomMacAddress
 function randomMacAddress() {

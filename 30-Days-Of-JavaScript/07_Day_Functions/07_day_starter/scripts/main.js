@@ -840,11 +840,28 @@ function randomUserIp() {
 console.log(randomUserIp()); // 183.253.235.226, it's random IP
 
 // Write a function which generates a randomMacAddress
+// Example randomMacAddress is "AB:CD:EF:12:34:56"
 function randomMacAddress() {
-  const hexDigits = "0123456789abcdef";
   let macAddress = "";
 
-  // return
+  // ranging from 00 to FF
+  for (let idx = 0; idx < 6; idx++) {
+    // Generating six pairs of two-digit hexadecimal numbers (ranging from 00 to FF), separated by colons
+    // The padStart method is used to ensure that each hexadecimal number is always two digits long, even if it starts with a 0.
+
+    macAddress += Math.floor(Math.random() * 255)
+      .toString(16)
+      .padStart(2, "0");
+
+    if (idx < 5) {
+      macAddress += ":";
+    }
+  }
+
+  console.log(macAddress.toUpperCase());
+  return macAddress.toUpperCase();
 }
 
 console.log(randomMacAddress());
+
+// Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.

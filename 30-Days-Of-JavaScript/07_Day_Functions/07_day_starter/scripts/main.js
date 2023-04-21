@@ -865,3 +865,27 @@ function randomMacAddress() {
 console.log(randomMacAddress());
 
 // Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+function randomHexaNumberGenerator() {
+  // Generates a random number between 0 and 16777215
+  // which is the maximum decimal value that can be represented by 6 hexadecimal digits.
+  randomHexaNumber = Math.floor(Math.random() * 16777216).toString(16);
+  return randomHexaNumber.toUpperCase();
+}
+
+console.log(randomHexaNumberGenerator()); // 56C74B
+
+// Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+
+function userIdGenerator() {
+  let id = "";
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (let idx = 0; idx < 7; idx++) {
+    id += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+
+  return id.toUpperCase();
+}
+
+console.log(userIdGenerator()); // BD8CHTJ

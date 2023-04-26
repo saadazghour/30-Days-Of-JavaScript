@@ -812,6 +812,7 @@ function evensAndOdds(num) {
 console.log(evensAndOdds(123456789));
 
 // Write a function which takes any number of arguments and return the sum of the arguments
+
 function sumOfAll(...args) {
   console.log(args);
   let result = 0;
@@ -841,6 +842,7 @@ console.log(randomUserIp()); // 183.253.235.226, it's random IP
 
 // Write a function which generates a randomMacAddress
 // Example randomMacAddress is "AB:CD:EF:12:34:56"
+
 function randomMacAddress() {
   let macAddress = "";
 
@@ -865,6 +867,7 @@ function randomMacAddress() {
 console.log(randomMacAddress());
 
 // Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+
 function randomHexaNumberGenerator() {
   // Generates a random number between 0 and 16777215
   // which is the maximum decimal value that can be represented by 6 hexadecimal digits.
@@ -889,3 +892,138 @@ function userIdGenerator() {
 }
 
 console.log(userIdGenerator()); // BD8CHTJ
+
+// Exercises: Level 3
+// Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
+function userIdGeneratedByUser() {
+  let userId = [];
+  let characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  let numIds = parseInt(prompt("Enter the number of Ids"));
+  let numChars = parseInt(prompt("Enter the number of characters"));
+
+  numIds = 10; // assign values for testing purpose only.
+  numChars = 2; // assign values for testing purpose only.
+
+  console.log(numIds);
+  console.log(numChars);
+
+  if (numIds < 1 || numIds > 10) {
+    alert("Please enter a number between 1 and 10");
+    return;
+  }
+
+  for (let idx = 0; idx < numIds; idx++) {
+    let id = "";
+
+    for (let j = 0; j < numChars; j++) {
+      id += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    userId.push(id.toUpperCase());
+  }
+
+  return userId;
+}
+
+console.log(userIdGeneratedByUser()); // BD8CHTJ
+
+// Write a function name rgbColorGenerator and it generates rgb colors.
+
+function rgbColorGenerator(params) {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+console.log(rgbColorGenerator()); // rgb(63, 24, 51)
+
+// Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+
+function arrayOfHexaColors(numColors) {
+  let colors = [];
+
+  for (let idx = 0; idx < numColors; idx++) {
+    // 16777215 (which is equivalent to 0xFFFFFF in hexadecimal)
+
+    const hexadecimal = 16777215;
+    const color = `#${Math.floor(Math.random() * hexadecimal).toString(16)}`;
+    colors.push(color);
+  }
+
+  console.log(`Numbers of colors is: ${colors.length}, ${colors}`);
+  return colors;
+}
+
+console.log(arrayOfHexaColors(4));
+
+// Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+
+function arrayOfRgbColors(numRgb) {
+  let rgbs = [];
+
+  for (let idx = 0; idx < numRgb; idx++) {
+    const rgb = Math.floor(Math.random() * 255);
+    rgbs.push(rgb);
+  }
+
+  console.log(`Numbers of RGB is: ${rgbs.length}, ${rgbs}`);
+  return rgbs;
+}
+
+console.log(arrayOfRgbColors(4));
+
+// Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+
+function convertHexaToRgb(params) {}
+
+console.log(convertHexaToRgb());
+
+// Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
+
+function convertRgbToHexa(params) {}
+
+console.log(convertRgbToHexa());
+
+// Write a function generateColors which can generate any number of hexa or rgb colors.
+function generateColors(params) {}
+
+console.log(generateColors());
+
+// console.log(generateColors('hexa', 3)) // ['#a3e12f', '#03ed55', '#eb3d2b']
+// console.log(generateColors('hexa', 1)) // '#b334ef'
+// console.log(generateColors('rgb', 3)) // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
+// console.log(generateColors('rgb', 1)) // 'rgb(33,79, 176)'
+
+// Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
+function shuffleArray(arr) {
+  const shuffledArr = [...arr]; // Create a copy of the original array
+  console.log(shuffledArr);
+
+  for (let idx = shuffledArr.length - 1; idx > 0; idx--) {
+    // Generate a random index
+    const randomIdx = Math.floor(Math.random() * (idx + 1));
+    console.log(randomIdx);
+    // Swap the numbers
+    shuffledArr[idx] = shuffledArr[randomIdx];
+
+    // TODO:
+    // [shuffledArr[idx], shuffledArr[randomIdx]] = [
+    //   shuffledArr[randomIdx],
+    //   shuffledArr[idx],
+    // ];
+  }
+
+  return shuffledArr;
+}
+
+console.log(shuffleArray([1, 2, 3, 4, 5])); // It's random, [ 1, 2, 3, 1, 3 ]
+
+// Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+function factorial(params) {}
+
+console.log(factorial(4));

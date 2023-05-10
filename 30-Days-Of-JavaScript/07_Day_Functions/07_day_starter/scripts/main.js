@@ -1024,6 +1024,103 @@ function shuffleArray(arr) {
 console.log(shuffleArray([1, 2, 3, 4, 5])); // It's random, [ 1, 2, 3, 1, 3 ]
 
 // Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
-function factorial(params) {}
+function factorial(num) {
+  let result = 1;
 
-console.log(factorial(4));
+  for (let idx = 1; idx <= num; idx++) {
+    console.log(idx); //  1, 2, 3, 4, 5
+    result *= idx;
+  }
+
+  return result;
+}
+
+// 5! = 5 * 4 * 3 * 2 * 1 = 120
+console.log(factorial(5)); // 120
+
+// Note that this implementation is just one possible way to define an isEmpty function and may not cover all cases or requirements.
+
+// Call your function isEmpty, it takes a parameter and it checks if it is empty or not
+function isEmpty(params) {
+  // check if the parameter is empty.
+  if (params === undefined || params === null || params === "") {
+    return true;
+  }
+
+  // check if the parameter is an array or an string
+  if (typeof params === "string" || Array.isArray(params)) {
+    return params.length === 0;
+  }
+
+  // check if the parameter is an objects
+  if (typeof params === "object") {
+    return Object.keys(params).length === 0;
+  }
+}
+
+console.log(
+  isEmpty({
+    name: "saadazghour",
+    age: "30",
+  })
+);
+
+// Call your function sum, it takes any number of arguments and it returns the sum.
+// Using the rest parameter.
+
+function sum(...args) {
+  let result = 0;
+  for (let idx = 0; idx < args.length; idx++) {
+    console.log(args[idx]); // 1, 2, 3, 4
+    result += args[idx];
+  }
+
+  return result;
+}
+
+console.log(sum(1, 2, 3, 4)); // 10
+
+// Alternative solution!
+function sumAlternative() {
+  let result = 0;
+
+  for (let i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+
+  return result;
+}
+
+console.log(sumAlternative(1, 2, 3, 4)); // 10
+
+// Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+function sumOfArrayItems(arr) {
+  let result = 0;
+
+  for (let idx = 0; idx < arr.length; idx++) {
+    // check if the items is a number
+    const nums = arr[idx];
+    console.log(nums);
+
+    if (typeof nums !== "number") {
+      console.log(`Please enter a number`);
+    } else {
+      result += nums;
+    }
+
+    console.log(nums);
+  }
+
+  return result;
+}
+
+console.log(sumOfArrayItems([1, 2, 3, 4])); // 10
+
+// Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback
+function averageItems(arr) {
+  let resultAvg = 0;
+
+  return resultAvg;
+}
+
+console.log(averageItems([1, 2, 3, 4])); // 10

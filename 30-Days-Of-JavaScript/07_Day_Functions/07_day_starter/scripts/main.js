@@ -1118,9 +1118,177 @@ console.log(sumOfArrayItems([1, 2, 3, 4])); // 10
 
 // Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback
 function averageItems(arr) {
-  let resultAvg = 0;
+  let sum = 0;
+  let count = 0;
 
+  for (let idx = 0; idx < arr.length; idx++) {
+    const nums = arr[idx];
+    console.log(nums);
+
+    if (typeof nums !== "number") {
+      console.log(`Please enter a number`);
+    } else {
+      sum += nums;
+      // track numbers of items in every iterations.
+      count++;
+    }
+  }
+
+  // console.log(sum)
+  // console.log(count)
+
+  const resultAvg = sum / count; // 1.5
   return resultAvg;
 }
 
-console.log(averageItems([1, 2, 3, 4])); // 10
+console.log(averageItems([1, 2, 3, 4])); // 2.5
+
+// Write a function called modifyArray takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+function modifyArray(arr) {
+  if (arr.length < 5) {
+    return `Item not found!`;
+  } else {
+    arr[4] = "Modified Item fifth";
+    return arr;
+  }
+}
+
+console.log(
+  modifyArray(["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"])
+);
+
+// Write a function called isPrime, which checks if a number is prime number.
+function isPrime(num) {
+  // A Prime number is only divisible by 1 and itself, and cannot be expressed as a product of two smaller positive integers.
+  // For example, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, and 97 are the first few prime numbers.
+
+  for (let idx = 2; idx < num; idx++) {
+    console.log(idx); // 2, 3, 4
+    if (num % idx === 0) {
+      return `Is not Prime number`;
+    }
+  }
+
+  return `Is Prime number`;
+}
+
+console.log(isPrime(5));
+
+// Write a functions which checks if all items are unique in the array.
+function checkUnique(arr) {
+  for (let idx = 0; idx < arr.length; idx++) {
+    const el1 = arr[idx];
+    console.log(el1); // 1, 2, 3, 4, 5
+
+    for (let idx2 = idx + 1; idx2 < arr.length; idx2++) {
+      const el2 = arr[idx2];
+
+      if (el1 === el2) {
+        return `Not all items are unique`;
+      }
+    }
+  }
+
+  return `All items are unique`;
+}
+
+console.log(checkUnique([1, 2, 3, 4, 5])); // All items are unique
+console.log(checkUnique([1, 2, 3, 4, 5, 2])); //  Not all items are unique
+
+// Write a function which checks if all the items of the array are the same data type.
+function checkSameDataType(arr) {
+  for (let idx = 0; idx < arr.length; idx++) {
+    const el1 = arr[idx];
+    console.log(el1); // 1, 2, 3, 4
+
+    for (let idx2 = idx + 1; idx2 < arr.length; idx2++) {
+      const el2 = arr[idx2];
+
+      if (typeof el1 !== typeof el2) {
+        return `Not all items has the same data type`;
+      }
+    }
+  }
+
+  return `All items has the same data type`;
+}
+
+console.log(checkSameDataType([1, 2, 3, 4, 5, 2, true])); // Not all items has the same data type
+console.log(checkSameDataType([1, 2, 3, 4])); // All items has the same data type
+
+// JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
+
+// Variable names can only contain letters, digits, underscores (_), and dollar signs ($)
+function isValidVariable(variable) {
+  if (variable === "_" || variable === "$") {
+    return `Valid variable`;
+  }
+
+  if (/^\d/.test(variable)) {
+    // Variable starts with a digit
+    return `Invalid variable, it's start with a digit`;
+  } else if (!/^[$A-Z_][0-9A-Z_$]*$/i.test(variable)) {
+    // Variable contains invalid characters
+    return `Invalid variable, Contains invalid characters`;
+  }
+
+  // check if the variable is valid.
+  if (variable === undefined || variable === null || variable === "") {
+    return `Invalid variable`;
+  }
+
+  // check if the variable is an array or an string
+  if (typeof variable === "string" || Array.isArray(variable)) {
+    return `Invalid variable`;
+  }
+
+  // check if the variable is an objects
+  // check if the variable is a number
+  // check if the variable is a boolean
+  // check if the variable is a function
+  if (
+    typeof variable === "number" ||
+    typeof variable === "boolean" ||
+    typeof variable === "function" ||
+    typeof variable === "object"
+  ) {
+    return `Invalid variable`;
+  }
+}
+
+console.log(isValidVariable("$")); // Valid variable
+
+// Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+function randomNumUnique(arr) {
+  resultRandom = [];
+
+  while (resultRandom.length < 7) {
+    let randomNumbers = Math.floor(Math.random() * 10);
+
+    if (!resultRandom.includes(randomNumbers)) {
+      resultRandom.push(randomNumbers);
+    }
+  }
+
+  return resultRandom;
+}
+
+console.log(randomNumUnique()); // [1, 2, 3, 4, 5, 6, 7], It's random numbers.
+
+// Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
+
+const countryReverse = ["Finland", "Sweden", "Norway", "Denmark", "Iceland"];
+
+function reverseCountries(arr) {
+  const copyArr = [...arr];
+  let reversedArray = [];
+
+  for (let idx = copyArr.length - 1; idx >= 0; idx--) {
+    const country = copyArr[idx];
+    reversedArray.push(country);
+  }
+
+  return reversedArray;
+}
+
+console.log(reverseCountries(countryReverse)); // [ 'Iceland', 'Denmark', 'Norway', 'Sweden', 'Finland' ]

@@ -315,3 +315,38 @@ console.log(copyPersonFull.hasOwnProperty("firstName")); // true
 
 // **************** Exercises ****************************
 // Exercises: Level 1
+
+// Create an empty object called dog
+const dog = {};
+// Print the dog object on the console
+console.log(dog); // {}
+// Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return woof woof
+
+dog.name = "Tiger";
+dog.legs = 4;
+dog.color = "Black";
+dog.age = 5;
+
+dog.bark = function () {
+  return "woof woof";
+};
+
+// Get name, legs, color, age and bark values from the dog object
+console.log(dog.name); // Tiger
+console.log(dog.legs); // 4
+console.log(dog.color); // Black
+console.log(dog.age); // 5
+console.log(dog.bark()); //  woof woof
+console.log(dog);
+
+// Alternative way to get values from the dog object
+console.log(Object.values(dog)); // [ 'Tiger', 4, 'Black', 5, [λ: bark] ]
+
+// Set new properties the dog object: breed, getDogInfo
+dog.breed = "German Shepherd";
+dog.getDogInfo = function () {
+  return `The dog name is ${this.name} and it's a ${this.breed} and it's ${this.age} years old.`;
+};
+
+console.log(dog.getDogInfo()); // The dog name is Tiger and it's a German Shepherd and it's 5 years old.
+console.log(dog); // { name: 'Tiger', legs: 4, color: 'Black', age: 5, bark: [λ: bark], breed: 'German Shepherd', getDogInfo: [λ: getDogInfo] }

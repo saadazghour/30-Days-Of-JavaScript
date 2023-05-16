@@ -142,3 +142,167 @@ const person = {};
 
 // Creating an objecting with values
 // Now, the person object has firstName, lastName, age, location, skills and isMarried properties. The value of properties or keys could be a string, number, boolean, an object, null, undefined or a function.
+
+// Let us see some examples of object. Each key has a value in the object.
+
+const rectangle = {
+  length: 10,
+  width: 5,
+};
+
+console.log(rectangle); // {length: 10, width: 5}
+
+const personReal = {
+  firstName: "Saad",
+  lastName: "Azghour",
+  age: 30,
+  country: "Morocco",
+  city: "Casablanca",
+  skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node", "Python"],
+  isMarried: false,
+};
+
+// Getting values from an object
+// We can access values of object using two methods:
+
+// using dots . followed by key name if the key-name is a one word
+// using square bracket and a quote
+
+// **************************************************************
+// Creating object methods
+
+// Now, the person object has getFullName properties. The getFullName is function inside the person object and we call it an object method. The this key word refers to the object itself. We can use the word this to access the values of different properties of the object. We can not use an arrow function as object method because the word this refers to the window inside an arrow function instead of the object itself. Example of object:
+
+const personFull = {
+  firstName: "Saad",
+  lastName: "Azghour",
+  age: 30,
+  country: "Morocco",
+  city: "Casablanca",
+  skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node", "Python"],
+  isMarried: false,
+
+  getFullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+
+  "phone number": "+3584545454545",
+};
+
+// accessing values using dots .
+
+console.log(personFull.firstName); // Saad
+console.log(personFull.lastName); // Azghour
+console.log(personFull.age); // 30
+console.log(personFull.location); // undefined
+
+// value can be accessed using square bracket and key name
+console.log(personFull["firstName"]); // Saad
+console.log(personFull["lastName"]); // Azghour
+console.log(personFull["age"]); // 30
+console.log(personFull["location"]); // undefined
+
+// for instance to access the phone number we only use the square bracket method
+console.log(personFull["phone number"]); // +3584545454545
+
+console.log(personFull.getFullName()); // Saad Azghour
+
+// Setting new key for an object
+// An object is a mutable data structure and we can modify the content of an object after it gets created.
+// Setting a new keys in an object
+
+personFull.nationality = "Moroccan";
+personFull.country = "Morocco";
+personFull.title = "Software Engineer";
+personFull.skills.push("Next");
+personFull.skills.push("Remix");
+personFull.isMarried = true;
+
+console.log(personFull.skills);
+
+personFull.getPersonInfo = function (params) {
+  let skillsWithoutLastSkill = this.skills
+    .splice(0, this.skills.length - 1)
+    .join(", ");
+
+  let lastSkill = this.skills.splice(this.skills.length - 1)[0];
+  console.log(lastSkill); // Remix
+
+  let skills = `${skillsWithoutLastSkill} and ${lastSkill}`;
+  console.log(skills); // HTML, CSS, JavaScript, React, Redux, Node, Python, and Remix
+
+  let fullName = this.getFullName();
+  console.log(fullName); // Saad Azghour
+
+  this.isMarried = false;
+
+  let statement = `${fullName} is a ${this.title} from ${
+    this.country
+  } and he is ${this.age} years old. He teach ${skills}. He is ${
+    this.isMarried ? this.isMarried : "not"
+  } Married.`;
+
+  return statement;
+};
+
+console.log(personFull);
+console.log(personFull.getPersonInfo());
+
+// Just examples of splice method.
+const myArray = ["apple", "banana", "orange", "kiwi"];
+
+console.log(myArray.splice(2, 1)); // orange
+console.log(myArray); // apple, banana, kiwi
+console.log(myArray.splice(1, 2, "pear")); // banana, kiwi
+
+console.log(myArray); // apple, pear
+console.log(myArray.splice(2, 0, "grape", "melon")); // [], empty Array
+console.log(myArray); // apple, pear, grape, melon
+
+// Object Methods
+// There are different methods to manipulate an object. Let us see some of the available methods.
+
+// ***** Object.assign: To copy an object without modifying the original object
+// Object methods are functions that are defined on objects.
+
+// Object methods: Object.assign, Object.keys, Object.values, Object.entries
+// hasOwnProperty
+
+console.log(personFull);
+
+// lastName: 'Azghour',
+// age: 30,
+// country: 'Morocco',
+// city: 'Casablanca',
+// skills: [],
+// isMarried: false,
+// getFullName: [λ: getFullName],
+// 'phone number': '+3584545454545',
+// nationality: 'Moroccan',
+// title: 'Software Engineer',
+// getPersonInfo: [λ] }
+
+const copyPersonFull = Object.assign({}, personFull);
+
+(copyPersonFull.address = {
+  street: "Heitamienkatu 16",
+  pobox: 2002,
+  city: "Helsinki",
+}),
+  console.log(copyPersonFull); // {firstName: 'XXXX', lastName: 'Azghour', age: 30, country: 'Morocco', city: 'Casablanca', skills: [], isMarried: false, getFullName: [λ: getFullName], 'phone number': '+3584545454545'}
+
+// Getting object keys using Object.keys()
+console.log(Object.keys(copyPersonFull).join(", ")); // firstName, lastName, age, country, city, skills, isMarried, getFullName, 'phone number', 'nationality', 'title', 'getPersonInfo', 'address'
+
+// Get Address Key
+console.log(Object.keys(copyPersonFull.address)); // ["street", "pobox", "city"]
+
+// Getting object values using Object.values()
+console.log(Object.values(copyPersonFull)); // // [ 'Saad','Azghour',30,'Morocco','Casablanca',[],false,[λ: getFullName],'+3584545454545','Moroccan','Software Engineer',[λ],{ street: 'Heitamienkatu 16', pobox: 2002, city: 'Helsinki' } ]
+
+// Getting object keys and values using Object.entries()
+// ******** Object.entries: To get the keys and values in an array
+
+console.log(Object.entries(copyPersonFull)); // [ [ 'firstName', 'Saad' ], [ 'lastName', 'Azghour' ], [ 'age', 30 ], [ 'country', 'Morocco' ], [ 'city', 'Casablanca' ], [ 'skills', [] ], [ 'isMarried', false ], [ 'getFullName', [λ: getFullName] ], [ 'phone number', '+3584545454545' ], [ 'nationality', 'Moroccan' ], [ 'title', 'Software Engineer' ], [ 'getPersonInfo', [λ] ], [ 'address',   { street: 'Heitamienkatu 16', pobox: 2002, city: 'Helsinki' } ] ]
+
+//

@@ -305,4 +305,13 @@ console.log(Object.values(copyPersonFull)); // // [ 'Saad','Azghour',30,'Morocco
 
 console.log(Object.entries(copyPersonFull)); // [ [ 'firstName', 'Saad' ], [ 'lastName', 'Azghour' ], [ 'age', 30 ], [ 'country', 'Morocco' ], [ 'city', 'Casablanca' ], [ 'skills', [] ], [ 'isMarried', false ], [ 'getFullName', [λ: getFullName] ], [ 'phone number', '+3584545454545' ], [ 'nationality', 'Moroccan' ], [ 'title', 'Software Engineer' ], [ 'getPersonInfo', [λ] ], [ 'address',   { street: 'Heitamienkatu 16', pobox: 2002, city: 'Helsinki' } ] ]
 
-//
+//  *****************************************************
+
+// Checking properties using hasOwnProperty()
+// hasOwnProperty: To check if a specific key or property exist in an object
+
+console.log(copyPersonFull);
+console.log(copyPersonFull.hasOwnProperty("firstName")); // true
+
+// **************** Exercises ****************************
+// Exercises: Level 1

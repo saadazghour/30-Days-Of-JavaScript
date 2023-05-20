@@ -770,8 +770,8 @@ let countries = {
 
 let countryArray = [];
 for (const country in countries) {
-  const countryName = countries[country];
-  countryArray.push(countryName.toUpperCase());
+  const countryName = countries[country].toUpperCase();
+  countryArray.push(countryName);
 }
 
 console.log(countryArray);

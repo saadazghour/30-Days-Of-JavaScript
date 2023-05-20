@@ -350,3 +350,430 @@ dog.getDogInfo = function () {
 
 console.log(dog.getDogInfo()); // The dog name is Tiger and it's a German Shepherd and it's 5 years old.
 console.log(dog); // { name: 'Tiger', legs: 4, color: 'Black', age: 5, bark: [λ: bark], breed: 'German Shepherd', getDogInfo: [λ: getDogInfo] }
+
+// Exercises: Level 2
+
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+};
+
+// Find the person who has many skills in the users object.
+let personMaxSkills = "";
+let maxSkills = 0;
+
+for (const obj in users) {
+  console.log(obj);
+
+  const skillsCount = users[obj].skills.length;
+  console.log(skillsCount); // 3, 8, 5, 4, 6, 4, 7
+
+  if (skillsCount > maxSkills) {
+    maxSkills = skillsCount;
+    personMaxSkills = obj;
+  }
+}
+
+console.log(personMaxSkills); // Asab
+
+// Count logged in users, count users having greater than equal to 50 points from the following object.
+let count = 0;
+for (const obj in users) {
+  const loggedIn = users[obj].isLoggedIn;
+  const points = users[obj].points;
+
+  console.log(loggedIn);
+  if (loggedIn === true || points >= 50) {
+    count++;
+  }
+}
+
+console.log(count); // 3
+
+// Find people who are MERN stack developer from the users object
+
+let findMern = [];
+for (const obj in users) {
+  // console.log(obj)
+
+  const mernStack = users[obj].skills.includes(
+    "MongoDB",
+    "Express",
+    "React",
+    "Node"
+  );
+
+  console.log(mernStack); // false, true, false, false, false, false, true
+  if (mernStack === true) {
+    findMern.push(obj);
+  }
+}
+
+console.log(findMern); // [ 'Asab', 'Paul' ]
+
+// Set your name in the users object without modifying the original users object
+
+const copyUsers = Object.assign({}, users);
+// Alernative copy of users object
+// const copyUsres = { ...users };
+
+for (const obj in copyUsers) {
+  copyUsers[obj].name = "saadazghour";
+}
+
+console.log(copyUsers);
+
+// Get all keys or properties of copyUsers object
+let getKeys = [];
+
+for (const obj in copyUsers) {
+  const objKeys = Object.keys(copyUsers[obj]);
+  getKeys.push(objKeys);
+}
+
+// email ,skills ,age ,isLoggedIn ,points , name
+//  email ,skills ,age ,isLoggedIn ,points ,name
+//  email ,skills ,age ,isLoggedIn ,points ,name
+//  email ,skills ,age ,isLoggedIn ,points ,name
+//  email ,skills ,age ,isLoggedIn ,points ,name
+//  email ,skills ,age ,isLoggedIn ,points ,name
+//  email ,skills ,age ,isLoggedIn ,points ,name
+
+console.log(getKeys.join(", "));
+
+// Get all the values of copyUsers object
+let getValues = [];
+
+for (const obj in copyUsers) {
+  const objValues = Object.values(copyUsers[obj]);
+  getValues.push(objValues);
+}
+
+console.log(getValues.join(", "));
+
+// Use the countries object to print a country name.
+let countries = {
+  AFG: "Afghanistan",
+  ALB: "Albania",
+  DZA: "Algeria",
+  ASM: "American Samoa",
+  AND: "Andorra",
+  AGO: "Angola",
+  AIA: "Anguilla",
+  ATA: "Antarctica",
+  ATG: "Antigua and Barbuda",
+  ARG: "Argentina",
+  ARM: "Armenia",
+  ABW: "Aruba",
+  AUS: "Australia",
+  AUT: "Austria",
+  AZE: "Azerbaijan",
+  BHS: "Bahamas (the)",
+  BHR: "Bahrain",
+  BGD: "Bangladesh",
+  BRB: "Barbados",
+  BLR: "Belarus",
+  BEL: "Belgium",
+  BLZ: "Belize",
+  BEN: "Benin",
+  BMU: "Bermuda",
+  BTN: "Bhutan",
+  BOL: "Bolivia (Plurinational State of)",
+  BES: "Bonaire, Sint Eustatius and Saba",
+  BIH: "Bosnia and Herzegovina",
+  BWA: "Botswana",
+  BVT: "Bouvet Island",
+  BRA: "Brazil",
+  IOT: "British Indian Ocean Territory (the)",
+  BRN: "Brunei Darussalam",
+  BGR: "Bulgaria",
+  BFA: "Burkina Faso",
+  BDI: "Burundi",
+  CPV: "Cabo Verde",
+  KHM: "Cambodia",
+  CMR: "Cameroon",
+  CAN: "Canada",
+  CYM: "Cayman Islands (the)",
+  CAF: "Central African Republic (the)",
+  TCD: "Chad",
+  CHL: "Chile",
+  CHN: "China",
+  CXR: "Christmas Island",
+  CCK: "Cocos (Keeling) Islands (the)",
+  COL: "Colombia",
+  COM: "Comoros (the)",
+  COD: "Congo (the Democratic Republic of the)",
+  COG: "Congo (the)",
+  COK: "Cook Islands (the)",
+  CRI: "Costa Rica",
+  HRV: "Croatia",
+  CUB: "Cuba",
+  CUW: "Curaçao",
+  CYP: "Cyprus",
+  CZE: "Czechia",
+  CIV: "Côte d'Ivoire",
+  DNK: "Denmark",
+  DJI: "Djibouti",
+  DMA: "Dominica",
+  DOM: "Dominican Republic (the)",
+  ECU: "Ecuador",
+  EGY: "Egypt",
+  SLV: "El Salvador",
+  GNQ: "Equatorial Guinea",
+  ERI: "Eritrea",
+  EST: "Estonia",
+  SWZ: "Eswatini",
+  ETH: "Ethiopia",
+  FLK: "Falkland Islands (the) [Malvinas]",
+  FRO: "Faroe Islands (the)",
+  FJI: "Fiji",
+  FIN: "Finland",
+  FRA: "France",
+  GUF: "French Guiana",
+  PYF: "French Polynesia",
+  ATF: "French Southern Territories (the)",
+  GAB: "Gabon",
+  GMB: "Gambia (the)",
+  GEO: "Georgia",
+  DEU: "Germany",
+  GHA: "Ghana",
+  GIB: "Gibraltar",
+  GRC: "Greece",
+  GRL: "Greenland",
+  GRD: "Grenada",
+  GLP: "Guadeloupe",
+  GUM: "Guam",
+  GTM: "Guatemala",
+  GGY: "Guernsey",
+  GIN: "Guinea",
+  GNB: "Guinea-Bissau",
+  GUY: "Guyana",
+  HTI: "Haiti",
+  HMD: "Heard Island and McDonald Islands",
+  VAT: "Holy See (the)",
+  HND: "Honduras",
+  HKG: "Hong Kong",
+  HUN: "Hungary",
+  ISL: "Iceland",
+  IND: "India",
+  IDN: "Indonesia",
+  IRN: "Iran (Islamic Republic of)",
+  IRQ: "Iraq",
+  IRL: "Ireland",
+  IMN: "Isle of Man",
+  ISR: "Israel",
+  ITA: "Italy",
+  JAM: "Jamaica",
+  JPN: "Japan",
+  JEY: "Jersey",
+  JOR: "Jordan",
+  KAZ: "Kazakhstan",
+  KEN: "Kenya",
+  KIR: "Kiribati",
+  PRK: "Korea (the Democratic People's Republic of)",
+  KOR: "Korea (the Republic of)",
+  KWT: "Kuwait",
+  KGZ: "Kyrgyzstan",
+  LAO: "Lao People's Democratic Republic (the)",
+  LVA: "Latvia",
+  LBN: "Lebanon",
+  LSO: "Lesotho",
+  LBR: "Liberia",
+  LBY: "Libya",
+  LIE: "Liechtenstein",
+  LTU: "Lithuania",
+  LUX: "Luxembourg",
+  MAC: "Macao",
+  MDG: "Madagascar",
+  MWI: "Malawi",
+  MYS: "Malaysia",
+  MDV: "Maldives",
+  MLI: "Mali",
+  MLT: "Malta",
+  MHL: "Marshall Islands (the)",
+  MTQ: "Martinique",
+  MRT: "Mauritania",
+  MUS: "Mauritius",
+  MYT: "Mayotte",
+  MEX: "Mexico",
+  FSM: "Micronesia (Federated States of)",
+  MDA: "Moldova (the Republic of)",
+  MCO: "Monaco",
+  MNG: "Mongolia",
+  MNE: "Montenegro",
+  MSR: "Montserrat",
+  MAR: "Morocco",
+  MOZ: "Mozambique",
+  MMR: "Myanmar",
+  NAM: "Namibia",
+  NRU: "Nauru",
+  NPL: "Nepal",
+  NLD: "Netherlands (the)",
+  NCL: "New Caledonia",
+  NZL: "New Zealand",
+  NIC: "Nicaragua",
+  NER: "Niger (the)",
+  NGA: "Nigeria",
+  NIU: "Niue",
+  NFK: "Norfolk Island",
+  MNP: "Northern Mariana Islands (the)",
+  NOR: "Norway",
+  OMN: "Oman",
+  PAK: "Pakistan",
+  PLW: "Palau",
+  PSE: "Palestine, State of",
+  PAN: "Panama",
+  PNG: "Papua New Guinea",
+  PRY: "Paraguay",
+  PER: "Peru",
+  PHL: "Philippines (the)",
+  PCN: "Pitcairn",
+  POL: "Poland",
+  PRT: "Portugal",
+  PRI: "Puerto Rico",
+  QAT: "Qatar",
+  MKD: "Republic of North Macedonia",
+  ROU: "Romania",
+  RUS: "Russian Federation (the)",
+  RWA: "Rwanda",
+  REU: "Réunion",
+  BLM: "Saint Barthélemy",
+  SHN: "Saint Helena, Ascension and Tristan da Cunha",
+  KNA: "Saint Kitts and Nevis",
+  LCA: "Saint Lucia",
+  MAF: "Saint Martin (French part)",
+  SPM: "Saint Pierre and Miquelon",
+  VCT: "Saint Vincent and the Grenadines",
+  WSM: "Samoa",
+  SMR: "San Marino",
+  STP: "Sao Tome and Principe",
+  SAU: "Saudi Arabia",
+  SEN: "Senegal",
+  SRB: "Serbia",
+  SYC: "Seychelles",
+  SLE: "Sierra Leone",
+  SGP: "Singapore",
+  SXM: "Sint Maarten (Dutch part)",
+  SVK: "Slovakia",
+  SVN: "Slovenia",
+  SLB: "Solomon Islands",
+  SOM: "Somalia",
+  ZAF: "South Africa",
+  SGS: "South Georgia and the South Sandwich Islands",
+  SSD: "South Sudan",
+  ESP: "Spain",
+  LKA: "Sri Lanka",
+  SDN: "Sudan (the)",
+  SUR: "Suriname",
+  SJM: "Svalbard and Jan Mayen",
+  SWE: "Sweden",
+  CHE: "Switzerland",
+  SYR: "Syrian Arab Republic",
+  TWN: "Taiwan",
+  TJK: "Tajikistan",
+  TZA: "Tanzania, United Republic of",
+  THA: "Thailand",
+  TLS: "Timor-Leste",
+  TGO: "Togo",
+  TKL: "Tokelau",
+  TON: "Tonga",
+  TTO: "Trinidad and Tobago",
+  TUN: "Tunisia",
+  TUR: "Turkey",
+  TKM: "Turkmenistan",
+  TCA: "Turks and Caicos Islands (the)",
+  TUV: "Tuvalu",
+  UGA: "Uganda",
+  UKR: "Ukraine",
+  ARE: "United Arab Emirates (the)",
+  GBR: "United Kingdom of Great Britain and Northern Ireland (the)",
+  UMI: "United States Minor Outlying Islands (the)",
+  USA: "United States of America (the)",
+  URY: "Uruguay",
+  UZB: "Uzbekistan",
+  VUT: "Vanuatu",
+  VEN: "Venezuela (Bolivarian Republic of)",
+  VNM: "Viet Nam",
+  VGB: "Virgin Islands (British)",
+  VIR: "Virgin Islands (U.S.)",
+  WLF: "Wallis and Futuna",
+  ESH: "Western Sahara",
+  YEM: "Yemen",
+  ZMB: "Zambia",
+  ZWE: "Zimbabwe",
+  ALA: "Åland Islands",
+};
+
+let countryArray = [];
+for (const country in countries) {
+  const countryName = countries[country];
+  countryArray.push(countryName.toUpperCase());
+}
+
+console.log(countryArray);
+
+// Exercises: Level 3

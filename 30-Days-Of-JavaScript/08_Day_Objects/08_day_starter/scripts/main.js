@@ -802,9 +802,9 @@ const personAccount = {
 
 console.log(personAccount.expenses.accountBalance()); // 10
 
-// **** Questions:2, 3 and 4 are based on the following two arrays: users and products ()
+// **** Questions:2, 3 and 4 are based on the following two arrays: usersDb and products ()
 
-const users = [
+const usersDb = [
   {
     _id: "ab12ex",
     username: "Alex",
@@ -877,7 +877,98 @@ const products = [
   },
 ];
 
-// Imagine you are getting the above users collection from a MongoDB database.
+// Imagine you are getting the above usersDb collection from a MongoDB database.
 
 // *** a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+
+function signUp(usersDb) {
+  for (const user in usersDb) {
+    if (usersDb[user].isLoggedIn === true) {
+      console.log(`You have already an account`);
+      return `You have already an account`;
+    }
+
+    console.log(usersDb[user]);
+    if (usersDb[user].isLoggedIn === false) {
+      usersDb.push({
+        _id: "eefamr",
+        fullName: "saadazghour",
+        email: "saad.azghour@gmail.com",
+        password: "XXXXXX",
+        createdAt: "08/01/2020 9:50 AM",
+        isLoggedIn: false,
+        createdAt: "08/01/2020 9:50 AM",
+      }); // push the new user to the usersDb collection
+
+      console.log(`You havn't an account, Sign-Up Successfuly!!`);
+      return `You havn't an account, Sign-Up Successfuly!!`;
+    }
+
+    return usersDb;
+  }
+}
+
+console.log(signUp(usersDb));
+
 // **** b. Create a function called signIn which allows user to sign in to the application
+
+function signIn(emailIn, passwordIn) {
+  for (const user in usersDb) {
+    if (
+      usersDb[user].email === emailIn &&
+      usersDb[user].password === passwordIn
+    ) {
+      console.log(`You are already signed in`);
+      usersDb[user].isLoggedIn = true; // change the isLoggedIn value to true
+      return `You are already signed in` || true;
+    }
+  }
+
+  return `You don't have an account` || false; // Return false if the user doesn't exist
+}
+
+const emailIn = "saad.azghour@gmail.com";
+const passwordIn = "XXXXXX";
+
+console.log(signIn(emailIn, passwordIn));
+
+// The products array has three elements and each of them has six properties.
+// **** a. Create a function called rateProduct which rates the product.
+
+console.log(products);
+function rateProduct(productId, userId, rating) {
+  // Find the product in the products array based on productId
+  const product = products.find((item) => item._id === productId);
+  // console.log(product);
+
+  if (product) {
+    // Check if the user has already rated the product
+    const userRating = product.ratings.find((item) => item.userId === userId);
+    console.log(userRating);
+
+    if (userRating) {
+      // If the user has already rated the product, update the existing rating
+      userRating.rate = rating;
+      return `You have already rated this product`;
+    } else {
+      // If the user has not rated the product yet, add a new rating
+      product.ratings.push({ userId, rate: rating });
+    }
+
+    return true; // Return true if the product is rated successfully
+  }
+
+  return false; // Return false if the product is not found
+}
+
+// Example usage
+console.log(rateProduct("eedfcf", "zwf8md", 4.8)); // true (product rated successfully)
+console.log(rateProduct("aegfal", "abc123", 12)); // true (product rated successfully)
+console.log(rateProduct("xyz123", "fg12cy", 4.5)); // false (product not found)
+console.log(products);
+
+// **** b. Create a function called averageRating which calculate the average rating of a product
+
+function averageRating(params) {}
+
+console.log(averageRating());

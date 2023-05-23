@@ -998,3 +998,36 @@ function averageRating(products, productId) {
 
 const productId = "eedfcf"; // Example product ID
 console.log(averageRating(products, productId));
+
+// Create a function called likeProduct. This function will helps to like to the product, if it is not liked and remove like if it was liked.
+
+console.log(products);
+function likeProduct(products, productId) {
+  console.log(productId);
+  const product = products.find((product) => product._id === productId);
+  console.log(product);
+
+  if (!product || product.likes.length === 0) {
+    return `No product found` || false;
+  }
+
+  console.log(product);
+
+  const productLiked = product.likes.find((item) => item === "fg12cy");
+  console.log(productLiked); // fg12cy
+
+  if (productLiked) {
+    // Remove the product from the likes array
+    console.log(product.likes.indexOf(productId)); // -1
+    product.likes.splice(product.likes.indexOf(productId), 1);
+    return `Product removed from likes`;
+  } else {
+    product.likes.push(productId);
+    return `Product liked successfully`;
+  }
+}
+
+console.log(likeProduct(products, "eedfcf")); // false // No product found
+console.log(likeProduct(products, "aegfal")); // true // Product removed from likes
+
+// Finally!!

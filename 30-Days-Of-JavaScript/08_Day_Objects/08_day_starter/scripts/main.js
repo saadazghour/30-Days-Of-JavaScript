@@ -968,7 +968,33 @@ console.log(rateProduct("xyz123", "fg12cy", 4.5)); // false (product not found)
 console.log(products);
 
 // **** b. Create a function called averageRating which calculate the average rating of a product
+function averageRating(products, productId) {
+  const product = products.find((product) => product._id === productId);
+  console.log(product);
 
-function averageRating(params) {}
+  if (!product || product.ratings.length === 0) {
+    return `No ratings found` || 0;
+  }
 
-console.log(averageRating());
+  const totalRating = product.ratings.length;
+  console.log(totalRating); // 2
+
+  let sumRating = 0;
+  const arr = product.ratings;
+
+  for (let idx = 0; idx < arr.length; idx++) {
+    const rate = arr[idx].rate;
+    console.log(rate); // 5, 4.8
+    sumRating += rate;
+  }
+
+  // Alternative solution of sumRating using reduce method.
+  // const sumRatings = product.ratings.reduce((sum, rating) => sum + rating.rate, 0);
+
+  const average = sumRating / totalRating;
+
+  return `The average rating is ${average}`;
+}
+
+const productId = "eedfcf"; // Example product ID
+console.log(averageRating(products, productId));

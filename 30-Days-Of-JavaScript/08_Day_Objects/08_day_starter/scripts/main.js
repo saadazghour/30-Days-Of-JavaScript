@@ -1007,10 +1007,6 @@ function likeProduct(products, productId) {
   const product = products.find((product) => product._id === productId);
   console.log(product);
 
-  if (!product || product.likes.length === 0) {
-    return `No product found` || false;
-  }
-
   console.log(product);
 
   const productLiked = product.likes.find((item) => item === "fg12cy");
@@ -1024,6 +1020,11 @@ function likeProduct(products, productId) {
   } else {
     product.likes.push(productId);
     return `Product liked successfully`;
+  }
+
+  // If the product is not found, return false or "No product found"
+  if (!product || product.likes.length === 0) {
+    return `No product found` || false;
   }
 }
 

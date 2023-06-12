@@ -81,13 +81,16 @@ console.log(sumArraySimplified(numbers)); // 15
 // Syntaxe
 // Example:
 
-const intervalCallback = setInterval(() => {
+// Resolve issue Callback must be a function!!
+function intervalCallback(params) {
   console.log("Hello set Interval Callback");
-});
+}
 
 // setInterval(callback, duration)
 // It's log, in every second, 1000ms, milliseconds is 1s.
-console.log(setInterval(intervalCallback, 1000)); // 1000 is the duration in milliseconds.
+
+// Stop execute the setInterval function.
+// console.log(setInterval(intervalCallback, 1000)); // 1000 is the duration in milliseconds.
 
 // Setting a time using a setTimeout
 // In JavaScript, we use setTimeout higher order function to execute some action at some time in the future. The setTimeout global method take a callback function and a duration as a parameter. The duration is in milliseconds and the callback wait for that amount of time.
@@ -95,10 +98,37 @@ console.log(setInterval(intervalCallback, 1000)); // 1000 is the duration in mil
 // Syntaxe
 // Example:
 
-const timeoutCallback = setTimeout(() => {
+function timeoutCallback(params) {
   console.log("Hello set Timeout Callback");
-});
+}
 
-console.log(setTimeout(timeoutCallback, 2000)); // 2000 is the duration in milliseconds, in every second, 2000ms, milliseconds is 2s.
+// // Stop execute the setTimeout function.
+// console.log(setTimeout(timeoutCallback, 2000)); // 2000 is the duration in milliseconds, in every second, 2000ms, milliseconds is 2s.
 
 // Functional Programming
+
+// Instead of writing regular loop, latest version of JavaScript introduced lots of built in methods which can help us to solve complicated problems. All builtin methods take callback function. In this section, we will see forEach, map, filter, reduce, find, every, some, and sort.
+
+// -------------------------------------------------------------
+
+// All builtin methods take callback function.
+// forEach method takes a callback function as a parameter.
+// map method takes a callback function as a parameter.
+// filter method takes a callback function as a parameter.
+// reduce method takes a callback function as a parameter.
+// find method takes a callback function as a parameter.
+// every method takes a callback function as a parameter.
+// some method takes a callback function as a parameter.
+// sort method takes a callback function as a parameter.
+
+// -------------------------------------------------------------
+
+// forEach :
+
+// forEach: Iterate an array elements. We use forEach only with arrays. It takes a callback function with elements, index parameter and array itself. The index and the array optional.
+
+const names = ["Saad", "Yassine", "Faycal", "Abdellah"];
+
+names.forEach((element, index, array) => {
+  console.log(element, index, array);
+});

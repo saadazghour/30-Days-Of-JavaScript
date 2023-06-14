@@ -325,26 +325,17 @@ console.log(areAllStr); // false
 // ***** Sorting string values
 
 const products = ["Milk", "Coffee", "Sugar", "Honey", "Apple", "Carrot"];
-const copyProsuct = [...products]; // recommended to copy the original data before you start using sort method.
+const copyProducts = [...products]; // recommended to copy the original data before you start using sort method.
 
-console.log(copyProsuct.sort()); // ["Apple", "Carrot", "Coffee", "Honey", "Milk", "Sugar"]
-
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// console.log(numbers.sort()); // [1, 10, 2, 3, 4, 5, 6, 7, 8, 9]
-
-// const numbersDesc = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-// console.log(numbersDesc.sort()); // [1, 10, 2, 3, 4, 5, 6, 7, 8, 9]
-
-// const numbersDesc2 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-// console.log(numbersDesc2.sort((a, b) => b - a)); // [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-
-// const numbersDesc3 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+// It's working for String Array but not for Numbers!
+console.log(copyProducts.sort()); // ["Apple", "Carrot", "Coffee", "Honey", "Milk", "Sugar"]
 
 // ***** Sorting Numeric values
 
 // As you can see in the example below, 100 came first after sorted in ascending order. Sort converts items to string , since '100' and other numbers compared, 1 which the beginning of the string '100' became the smallest. To avoid this, we use a compare call back function inside the sort method, which return a negative, zero or positive.
 
 const numbersValues = [9.81, 3.14, 100, 37];
+
 // Using sort method to sort number items provide a wrong result. see below
 // Sort convert items to string.
 console.log(numbersValues.sort()); // [100, 3.14, 37, 9.81]
@@ -360,5 +351,57 @@ const resultValues = copyNumbersValues.sort((a, b) => {
 
 console.log(resultValues); // [3.14, 9.81, 37, 100]
 
+const numbersSorted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbersSorted.sort((a, b) => a - b)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] // ascending order
+
+const numbersDesc = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+console.log(numbersDesc.sort((a, b) => b - a)); // [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] // descending order
+
 // ***** Sorting Object Arrays
 // Whenever we sort objects in an array, we use the object key to compare. Let us see the example below.
+
+const objArr = [
+  { key: 10 },
+  { key: 20 },
+  { key: 30 },
+  { key: 40 },
+  { key: 50 },
+  { key: 60 },
+];
+
+objArr.sort((a, b) => {
+  if (a.key < b.key) return -1;
+  if (a.key > b.key) return 1;
+  return 0;
+});
+
+console.log(objArr); // [ { key: 10 }, { key: 20 }, { key: 30 }, { key: 40 }, { key: 50 }, { key: 60 } ]
+
+// or
+
+objArr.sort((a, b) => {
+  if (a["key"] < b["key"]) return -1;
+  if (a["key"] > b["key"]) return 1;
+  return 0;
+});
+
+console.log(objArr); // [ { key: 10 }, { key: 20 }, { key: 30 }, { key: 40 }, { key: 50 }, { key: 60 } ]
+
+const users = [
+  { name: "Saad", age: 150 },
+  { name: "Yassine", age: 50 },
+  { name: "Mohammed", age: 100 },
+  { name: "Faycal", age: 22 },
+];
+
+const usersSortObjArr = users.sort((a, b) => {
+  if (a.age > b.age) return 1;
+  if (a.age < b.age) return -1;
+
+  return 0;
+});
+
+// Sorted ascending
+console.log(usersSortObjArr); // [ { name: 'Faycal', age: 22 } { name: 'Yassine', age: 50 } { name:      'Mohammed', age: 100 } { name: 'Saad', age: 150 } ]
+
+// ******************************  Exercises **********************************

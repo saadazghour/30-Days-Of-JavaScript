@@ -405,3 +405,126 @@ const usersSortObjArr = users.sort((a, b) => {
 console.log(usersSortObjArr); // [ { name: 'Faycal', age: 22 } { name: 'Yassine', age: 50 } { name:      'Mohammed', age: 100 } { name: 'Saad', age: 150 } ]
 
 // ******************************  Exercises **********************************
+
+// Exercises: Level 1
+
+const countriesExercice = [
+  "Morocco",
+  "Finland",
+  "Sweden",
+  "Denmark",
+  "Norway",
+  "IceLand",
+];
+const namesExercice = ["Saad", "Mohammed", "Faycal", "Yassine", "Abdellah"];
+const numbersExercice = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const productsExercice = [
+  { product: "banana", price: 3 },
+  { product: "mango", price: 6 },
+  { product: "potato", price: " " },
+  { product: "avocado", price: 8 },
+  { product: "coffee", price: 10 },
+  { product: "tea", price: "" },
+];
+
+// 1** Explain the difference between forEach, map, filter, and reduce.
+// See above each callback function are explained in detail.
+
+// 2 ** Define a callback function before you use it in forEach, map, filter or reduce.
+// forEach:
+
+const sumNumbersExercice = (array) => {
+  let sumCallback = 0;
+
+  const callBackResult = (num) => {
+    sumCallback += num;
+  };
+
+  // The forEach method calls the callBack function for each item in the array.
+  array.forEach(callBackResult);
+
+  return sumCallback;
+};
+
+console.log(sumNumbersExercice(numbersExercice)); // 55
+
+// 3 ** Use forEach to console.log each country in the countries array.
+countriesExercice.forEach((country) => {
+  console.log(country); // Morocco, Finland, Sweden, Denmark, Norway, IceLand
+});
+
+// 4 ** Use forEach to console.log each name in the names array.
+namesExercice.forEach((name) => {
+  console.log(name); // Saad, Mohammed, Faycal, Yassine, Abdellah
+});
+
+// 5 ** Use forEach to console.log each number in the numbers array.
+numbersExercice.forEach((number) => {
+  console.log(number); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+});
+
+// 6 ** Use map to create a new array by changing each country to uppercase in the countries array.
+const copyArr = [...countriesExercice];
+copyArr.map((country) => {
+  console.log(country.toLocaleUpperCase()); // MOROCCO, FINLAND, SWEDEN, DENMARK, NORWAY, ICELAND
+});
+
+// 7 ** Use map to create an array of countries length from countries array.
+copyArr.map((country) => {
+  console.log(country.length); // 7, 7, 7, 7, 7, 7;
+});
+
+// 8 ** Use map to create a new array by changing each number to square in the numbers array
+const copyNumbers = [...numbersExercice];
+console.log(copyNumbers);
+
+copyNumbers.map((num) => {
+  console.log(num * num); // 1, 4, 9, 16, 25, 36, 49, 64, 81, 100
+});
+
+// 9 ** Use map to change to each name to uppercase in the names array
+namesExercice.map((name) => {
+  console.log(name.toLocaleUpperCase()); // SAAD, MOHAMMED, FAYCAL, YASSINE, ABDELLAH
+});
+
+// 10 ** Use map to map the products array to its corresponding prices.
+productsExercice.map((product) => {
+  console.log(product); // { product: 'banana', price: 3 }  { product: 'mango', price: 6 }  { product: 'potato', price: ' ' }  { product: 'avocado', price: 8 }  { product: 'coffee', price: 10 }  { product: 'tea', price: '' }
+});
+
+// 11 ** Use filter to filter out countries containing land.
+console.log(copyArr); // Morocco, Finland, Sweden, Denmark, Norway, IceLand
+const resultFilter = copyArr.filter((country) => country.includes("land"));
+
+console.log(resultFilter); // [ 'Finland' ]
+
+// 12 ** Use filter to filter out countries having six character.
+copyArr.filter((country) => {
+  console.log(country.slice(0, 6)); // Morocc, Finlan, Sweden, Denmar, Norway, IceLan
+});
+
+// 13 ** Use filter to filter out countries containing six letters and more in the country array.
+console.log(copyArr); // Morocco, Finland, Sweden, Denmark, Norway, IceLand
+copyArr.filter((country) => {
+  console.log(country.length >= 6); // true, true, true, true, true, true
+});
+
+// 14 ** Use filter to filter out country start with 'E'.
+const countryStart = copyArr.filter((country) => country.startsWith("E"));
+console.log(countryStart); // []
+
+// 15 ** Use filter to filter out only prices with values.
+productsExercice.filter((product) => {
+  console.log(product.price); // 3, 6, 8, 10
+});
+
+// 16 ** Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
+console.log(copyArr); // Morocco, Finland, Sweden, Denmark, Norway, IceLand
+const getStringLists = (arr) => {
+  return arr.filter((country) => typeof country === "string");
+};
+
+// logged the result of the getStringLists function with the countries array only with string items.
+console.log(getStringLists(copyArr)); // [ 'Morocco', 'Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand' ]
+
+// 17 ** Use reduce to sum all the numbers in the numbers array.

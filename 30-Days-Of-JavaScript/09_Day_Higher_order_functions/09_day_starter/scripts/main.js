@@ -289,8 +289,8 @@ console.log(scoreResult); // { name: 'Saad', score: 95 }
 // findIndex: Return the position of the first element which satisfies the condition
 
 const findIndexArr = [1, 2, 3, 4, 5];
-const findIndexResult = findIndexArr.findIndex((num) => num > 3); // 3
-console.log(findIndexResult); // 3
+const findIndex = findIndexArr.findIndex((num) => num > 3); // 3
+console.log(findIndex); // 3
 
 const namesFindIndex = ["Saad", "Yassine", "Faycal", "Abdellah"];
 const agesFindIndex = [24, 22, 25, 32, 35, 18];
@@ -528,3 +528,100 @@ const getStringLists = (arr) => {
 console.log(getStringLists(copyArr)); // [ 'Morocco', 'Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand' ]
 
 // 17 ** Use reduce to sum all the numbers in the numbers array.
+const initial = 0;
+const sumResult = numbersExercice.reduce((previous, current) => {
+  return previous + current;
+}, initial);
+
+console.log(sumResult); // 55
+
+// 18 ** Use reduce to concatenate all the countries and to produce this sentence: Morocco, Finland, Sweden, Denmark, Norway, and IceLand are north European countries
+
+console.log(copyArr); // [ 'Morocco', 'Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand' ]
+
+const initialConcat = "";
+const resultConcat = copyArr.reduce((previous, current) => {
+  // console.log(previous, current);
+
+  const lastCountry = copyArr[copyArr.length - 1];
+
+  if (current === lastCountry) {
+    return `${previous} and ${current} are north European countries`;
+  }
+
+  return `${previous}, ${current} `;
+}, initialConcat);
+
+console.log(resultConcat); // Morocco, Finland, Sweden, Denmark, Norway, and IceLand are north European countries
+
+// 19 ** Explain the difference between some and every
+
+// some: Check if some of the elements are similar in one aspect. It returns boolean, only check for one element.
+// every: Check if all the elements are similar in one aspect. It returns boolean, check for every element.
+
+// ****************************************************************************
+
+// ** Use some to check if some names' length greater than seven in names array.
+// Saad, Mohammed, Faycal, Yassine, Abdellah
+// console.log(namesExercice);
+let copyNames = [...namesExercice];
+
+console.log(copyNames);
+copyNames = copyNames.splice(0, 4);
+copyNames.splice(1, 1, "Hass");
+
+console.log(copyNames); // [ 'Saad', 'Hass', 'Faycal', 'Yassine' ]
+
+const someResult = copyNames.some((name) => {
+  console.log(name.length > 7); // false, false, false, false
+  name.length > 7;
+});
+
+console.log(someResult); // false
+
+// Alternatively rnative way to write the same code above
+// const someResult = copyNames.some((name) => name.length > 7);
+
+// 21 ** Use every to check if all the countries contain the word land
+console.log(countriesExercice); // Morocco, Finland, Sweden, Denmark, Norway, IceLand
+
+const resulCountries = countriesExercice.every((country) => {
+  return country.includes("land");
+});
+
+console.log(resulCountries); // false
+
+// 22 ** Explain the difference between find and findIndex.
+
+// find: Return the first element which satisfies the condition
+// findIndex: Return the position of the first element which satisfies the condition
+
+// ****************************************************************************
+
+// 23 ** Use find to find the first country containing only six letters in the countries array
+const findResultCountry = countriesExercice.find(
+  (country) => country.length === 6
+);
+
+console.log(findResultCountry); // Sweden
+
+// 24 ** Use findIndex to find the position of the first country containing only six letters in the countries array
+const findIndexCountry = countriesExercice.findIndex(
+  (country) => country.length === 6
+);
+
+console.log(findIndexCountry); // 2
+
+// 25 ** Use findIndex to find the position of Norway if it doesn't exist in the array you will get -1.
+const resultFindIndex = countriesExercice.findIndex(
+  (country) => country === "Norway"
+);
+
+console.log(resultFindIndex); // 4
+
+// 26 ** Use findIndex to find the position of Russia if it doesn't exist in the array you will get -1.
+const newResult = countriesExercice.findIndex(
+  (country) => country === "Russia"
+);
+
+console.log(newResult); // -1
